@@ -26,13 +26,13 @@ Version 2.0 keeps the same design and adds what a professional installation need
 A five-room sample house runs on one Amp Multi. When the installer wires Kitchen and Dining as one zone, the panel says **Kitchen + Dining** and offers one volume. It never shows a control the wiring can't deliver.
 
 ### 🔀 Speakers That Move
-Carry the Sonos Play from the Patio into the Theater and it becomes a rear surround. The panel moves it on screen, so a quieter Patio is never a mystery.
+Carry the Sonos Play from the Patio into the Theater and it becomes a rear surround, using Sonos Positioning Technology, part of Sonos Fabric. The panel moves it on screen, so a quieter Patio is never a mystery.
 
 ### 🎧 Listeners, Not Just Rooms
-Headphones are a person, not a room. Maya can pull the dinner music to her Sonos Ace Ultra, and Priority One leaves her headphones alone.
+Headphones are a person, not a room. With headphone linking (Early Access, Sonos Ace Ultra only), Maya can pull the dinner music to her ears, and Priority One leaves her headphones alone.
 
 ### 🤝 Honest Priority One
-Other controllers act too: the Sonos app, Josh.ai, Sonos 27voice. When P1 brings the house back, it restores only what it can verify and names any room someone else changed in the meantime. Example: *"Patio was changed by Josh.ai after the silence, so it was left as is."*
+Other controllers act too: the Sonos app, Sonos 27web, Sonos 27voice, assistants connected through Sonos 27mcp, Josh.ai, and soon Sonos Custom Agents. When P1 brings the house back, it restores only what it can verify and names any room someone else changed in the meantime. Example: *"Patio was changed by Josh.ai after the silence, so it was left as is."*
 
 ### 📡 Offline Mode
 When the internet drops, the panel says what still works: TV, Bluetooth, Line-In, the local music library, P1, volume and grouping. Streaming tiles dim and explain why, instead of failing silently.

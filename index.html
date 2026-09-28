@@ -2116,7 +2116,7 @@ const DEMO = [
     run:() => { joinGroup(PA, K); rooms[PA].vol = 42; log(`Add ${disp(PA)} to ${disp(K)}`); render(); } },
   { time:'8:30 pm', title:'Movie night', text:'Someone carries the Sonos Play into the Theater. Sonos Positioning makes it a rear surround, and the panel moves it to the Theater\u2019s speaker list, so the Patio change is no mystery. Tap the room name to see it.',
     run:() => { cur = TH; pickSource('tv'); carryPortable(); } },
-  { time:'9:45 pm', title:'Maya\u2019s ears', text:'Maya pulls the dinner music into her Ace Ultra. She is a listener, not a room, and she shows up on the room page under Listeners.',
+  { time:'9:45 pm', title:'Maya\u2019s ears', text:'With headphone linking (Early Access on Sonos Ace Ultra), Maya pulls the dinner music into her headphones. She is a listener, not a room, and she shows up on the room page under Listeners.',
     run:() => { cur = K; linkAce(); } },
   { time:'10:30 pm', title:'Priority One', text:'One press silences every room. The TV mutes, because live TV cannot pause. Maya\u2019s headphones keep playing: silence covers rooms, not ears. The pilot has to test that rule with real families.',
     run:() => { cur = K; priorityOne(); } },
