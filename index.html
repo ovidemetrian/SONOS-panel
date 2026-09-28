@@ -1,6 +1,7 @@
 <!doctype html>
 <!--
-  SONOS Panel concept, v1.9 (labelled 44 px room strip, no-scroll grouping, room count instead of fixed four)
+  SONOS Panel concept, v2.0 (calm colour-bubble room bar from v1.9b, Amp Multi zones, portable surround, listeners, honest Priority One resume, installer view, Saturday demo)
+  Built on v1.9 (labelled 44 px room strip, no-scroll grouping, room count instead of fixed four)
   © 2026 Ovidiu Mircea Demetrian / Media Content Delivery, LLC. All rights reserved.
   Interface design, layout, colour system and interaction concept by Ovi Demetrian.
   No copying, redistribution or derivative use without written permission.
@@ -13,7 +14,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="theme-color" content="#121212">
-<title>SONOS Panel — v1.9 concept</title>
+<title>SONOS Panel — v2.0 concept</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -543,7 +544,8 @@ input[type=range]{ flex:1; accent-color:var(--rc,#ffc400); height:28px; }
 .strip[data-n="5"] .pill .pl, .strip[data-n="6"] .pill .pl{ font-size:10.5px; white-space:nowrap; }
 @media (max-width:370px){ .strip[data-n="5"] .pill, .strip[data-n="6"] .pill{ padding:4px 5px; } .strip[data-n="5"] .pill .pl, .strip[data-n="6"] .pill .pl{ font-size:10px; } .strip[data-n="6"]{ gap:4px; } }
 
-/* v1.9b: calmer room bar. Left: room name, with the activity under it. Right: colour bubbles, each a 44 px target. */
+
+/* v1.9b (restored in v2.0): calmer room bar. Left: room name, with the activity under it. Right: colour bubbles, each a 44 px target. */
 .roombar{ display:flex !important; flex-direction:row; flex-wrap:nowrap !important; align-items:center; gap:8px; }
 .activity{ flex:1 1 auto !important; min-width:0; display:flex; flex-direction:column; align-items:flex-start; gap:2px; min-height:44px; }
 .activity .a1{ display:flex; align-items:baseline; gap:6px; max-width:100%; }
@@ -565,6 +567,58 @@ input[type=range]{ flex:1; accent-color:var(--rc,#ffc400); height:28px; }
 @media (max-height:700px){ .activity .a1 b{ font-size:19px; } }
 @media (max-width:390px){ .activity .a1 b{ font-size:17px !important; } .activity .a1 em{ font-size:15px; } .roombar{ gap:4px; } }
 .activity .a1 b{ color:#fff; }
+/* v2.0 offline mode: say what still works instead of letting buttons fail silently */
+.offbar{ display:none; align-items:center; gap:8px; width:100%; padding:7px 12px; border-radius:14px; cursor:pointer; flex:0 0 auto;
+  background:rgba(0,0,0,.5); border:1px solid rgba(255,196,0,.65); color:#fff; font:500 11.5px var(--font); text-align:left; }
+.offbar.show{ display:flex; }
+.offbar b{ color:#ffc400; white-space:nowrap; font-weight:900; }
+.offbar span{ min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:rgba(255,255,255,.82); }
+.frame > .offbar{ position:relative; z-index:1; }
+.orb.off{ opacity:.4; box-shadow:none; }
+/* === v2.0: Amp Multi zones, portable surround, listeners, installer view, Saturday demo === */
+body{ gap:24px; }
+.frame{ flex:0 1 420px; }
+.rpage > *{ flex-shrink:0; }
+.rp-list .rp-act{ flex:0 0 auto; padding:7px 10px; border-radius:12px; border:none; background:#ffc400; color:#1a1300; font:700 12px var(--font); cursor:pointer; white-space:nowrap; }
+.rp-list li.info span{ white-space:normal; text-align:left; line-height:1.35; }
+.rp-list li.info .led{ visibility:hidden; }
+.inst{ list-style:none; margin:10px 0 0; padding:0; }
+.inst li{ display:grid; grid-template-columns:64px 1fr; gap:2px 10px; padding:9px 0; border-bottom:1px solid rgba(255,255,255,.08); font-size:13px; }
+.inst li b{ grid-row:span 2; font-size:12.5px; }
+.inst li i{ font-style:normal; display:flex; align-items:center; gap:7px; }
+.inst li i::before{ content:''; width:10px; height:10px; border-radius:3px; background:var(--c); flex:0 0 10px; }
+.inst li span{ color:rgba(255,255,255,.6); font-size:12px; }
+.layers{ display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-top:14px; }
+.layers div{ background:#262626; border-radius:14px; padding:9px 10px; font-size:12px; color:rgba(255,255,255,.7); line-height:1.35; }
+.layers b{ display:block; color:#fff; font-size:13px; margin-bottom:2px; }
+.demo{ flex:0 0 320px; width:320px; color:#fff; font-family:var(--font); display:flex; flex-direction:column; gap:10px; padding:16px;
+  background:linear-gradient(160deg,#262626,#101010); border:1px solid rgba(255,255,255,.18); border-radius:26px; box-shadow:0 20px 40px rgba(0,0,0,.6); }
+.demo[hidden]{ display:none; }
+.dm-top{ display:flex; align-items:baseline; gap:10px; }
+.dm-time{ font:900 30px/1 var(--font); font-variant-numeric:tabular-nums; }
+.dm-n{ flex:1; font-size:12px; color:rgba(255,255,255,.55); }
+.dm-x{ border:1px solid rgba(255,255,255,.2); background:#2a2a2a; color:#fff; border-radius:12px; padding:7px 11px; font:700 12px var(--font); cursor:pointer; }
+.demo h3{ margin:0; font-size:17px; }
+.demo p{ margin:0; font-size:13.5px; line-height:1.45; color:rgba(255,255,255,.78); }
+.demo .dm-res{ padding:10px 12px; border-radius:14px; background:rgba(255,196,0,.12); border-left:4px solid #ffc400; color:#fff; }
+.dm-res[hidden]{ display:none; }
+.dm-steps{ display:flex; gap:5px; }
+.dm-steps button{ flex:1; height:10px; border-radius:5px; border:none; padding:0; background:rgba(255,255,255,.18); cursor:pointer; }
+.dm-steps button.done{ background:rgba(255,255,255,.55); }
+.dm-steps button[aria-current="step"]{ background:#ffc400; }
+.dm-row{ display:flex; gap:8px; }
+.dm-row button{ flex:1; padding:12px; border-radius:14px; border:1px solid rgba(255,255,255,.2); background:#2a2a2a; color:#fff; font:700 14px var(--font); cursor:pointer; }
+.dm-row button:disabled{ opacity:.35; cursor:default; }
+.dm-row .go{ flex:2.4; background:#ffc400; color:#1a1300; border:none; font-weight:900; }
+.demochip{ position:fixed; right:12px; bottom:calc(12px + env(safe-area-inset-bottom,0px)); z-index:60; padding:11px 15px; border-radius:999px;
+  border:1px solid rgba(255,255,255,.3); background:#111; color:#fff; font:700 13px var(--font); cursor:pointer; box-shadow:0 6px 16px rgba(0,0,0,.5); }
+.demochip[hidden]{ display:none; }
+@media (max-width:899px){
+  .demo{ position:fixed; left:8px; right:8px; bottom:calc(8px + env(safe-area-inset-bottom,0px)); z-index:60; width:auto; max-width:420px; margin:0 auto; padding:12px 14px; gap:7px; }
+  .dm-time{ font-size:22px; }
+  .demo p{ font-size:12.5px; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; }
+  .demo .dm-res{ -webkit-line-clamp:5; }
+}
 @media (prefers-reduced-motion:reduce){
   *{ transition:none !important; animation:none !important; }
 }
@@ -592,6 +646,8 @@ input[type=range]{ flex:1; accent-color:var(--rc,#ffc400); height:28px; }
     <button class="activity" id="activity" aria-live="polite"><span class="a1"><b id="actRoom">Living Room</b><em aria-hidden="true">›</em></span><span class="a2"><i class="led" id="led"></i><span id="actText">No activity</span></span></button>
     <div class="strip" id="strip" role="tablist" aria-label="Rooms"></div>
   </section>
+
+  <button class="offbar" id="offBar" aria-live="polite"><b>Internet down</b><span>Still working: TV, Bluetooth, Line-In, Library, P1</span></button>
 
   <div class="modes" role="tablist" aria-label="Panel mode">
     <button role="tab" data-mode="music" aria-selected="true">MUSIC</button>
@@ -691,7 +747,11 @@ input[type=range]{ flex:1; accent-color:var(--rc,#ffc400); height:28px; }
       </div>
       <div class="sgroup">
         <h3>Sample house</h3>
-        <div class="presets"><button class="pbtn" id="h4">4 rooms</button><button class="pbtn" id="h6">6 rooms</button></div>
+        <div class="presets"><button class="pbtn" id="h4">4 rooms</button><button class="pbtn" id="h6">6 rooms</button><button class="pbtn" id="hAmp">Amp Multi</button></div>
+      </div>
+      <div class="sgroup">
+        <h3>Amp Multi demo</h3>
+        <div class="presets"><button class="pbtn" id="demoBtn">Saturday demo</button><button class="pbtn" id="instBtn">Installer view</button><button class="pbtn" id="netBtn">Internet: on</button></div>
       </div>
       <div class="row">
         <button id="sCancel">Cancel</button>
@@ -715,6 +775,22 @@ input[type=range]{ flex:1; accent-color:var(--rc,#ffc400); height:28px; }
     </div>
   </div>
 
+  <!-- INSTALLER VIEW (read-only) -->
+  <div class="sheet" id="instSheet" role="dialog" aria-modal="true" aria-labelledby="instTitle">
+    <div class="panel">
+      <h2 id="instTitle">Installer view</h2>
+      <p class="lead" id="instLead"></p>
+      <ul class="inst" id="instList"></ul>
+      <div class="layers">
+        <div><b>Output</b>A physical speaker circuit. The installer owns it.</div>
+        <div><b>Sonos zone</b>Outputs that always act together. The installer owns it.</div>
+        <div><b>Home area</b>The name and colour the family sees. It maps to a zone.</div>
+        <div><b>Group</b>Areas playing together tonight. The family owns it.</div>
+      </div>
+      <div class="row"><button class="primary" id="instClose">Close</button></div>
+    </div>
+  </div>
+
   <!-- LOG -->
   <div class="sheet" id="logSheet" role="dialog" aria-modal="true" aria-labelledby="lTitle">
     <div class="panel">
@@ -731,6 +807,8 @@ input[type=range]{ flex:1; accent-color:var(--rc,#ffc400); height:28px; }
     <ul class="rp-list" id="rpList"></ul>
     <h3 class="rp-h3">Speakers in this room</h3>
     <ul class="rp-list rp-spk" id="rpSpk"></ul>
+    <h3 class="rp-h3" id="rpLh" hidden>Listeners</h3>
+    <ul class="rp-list" id="rpL" hidden></ul>
     <button class="rp-done" id="rpDone">Done</button>
   </section>
 
@@ -740,6 +818,16 @@ input[type=range]{ flex:1; accent-color:var(--rc,#ffc400); height:28px; }
   <div class="undo" id="undoBar" role="status" aria-live="polite"><span id="undoMsg">Back to square one.</span><button id="undoBtn">UNDO</button></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </main>
+
+<aside class="demo" id="demo" aria-label="Saturday demo" hidden>
+  <div class="dm-top"><span class="dm-time" id="dmTime">5:45 pm</span><span class="dm-n" id="dmN"></span><button class="dm-x" id="dmHide">Hide</button></div>
+  <div class="dm-steps" id="dmSteps"></div>
+  <h3 id="dmTitle"></h3>
+  <p id="dmText"></p>
+  <p class="dm-res" id="dmRes" role="status" hidden></p>
+  <div class="dm-row"><button id="dmBack">Back</button><button class="go" id="dmNext">Next</button></div>
+</aside>
+<button class="demochip" id="demoChip" hidden>Saturday demo</button>
 
 <script>
 /* ============ ICONS (drawn, not emoji, so every phone shows the same thing) ============ */
@@ -808,7 +896,8 @@ const SOURCES = {
   tv:        { label:'TV Audio', tracks:['TV sound'] },
   podcasts:  { label:'Podcasts', tracks:['Episode 12: Listening Rooms','Episode 13: The Final Ten Feet'] },
   linein:    { label:'Line-In', tracks:['Turntable'] },
-  phone:     { label:'From Your Phone', tracks:['Streaming from phone'] }
+  phone:     { label:'From Your Phone', tracks:['Audio from your phone'] },
+  rain:      { label:'Rain Sounds', tracks:['Rain on the Roof'] }   /* only reachable from another controller in the demo */
 };
 const SCENES = {
   morning:   { label:'Morning',   light:70,  shades:'open',   src:'radio',     track:1, vol:20 },
@@ -848,9 +937,16 @@ function saveHouse(){
   } catch(e) {}
 }
 
-let rooms, cur, logEntries = [], hush = null;
+let rooms, cur, logEntries = [], hush = null, lastResume = '';
+/* v2.0 house extras: Amp Multi zones, short strip labels, one portable, one listener */
+let zones = [], shorts = [], portable = null, ace = null;
+/* Offline mode: what needs the internet, and what never leaves the house */
+let offline = false;
+const CLOUD = new Set(['fav','playlists','radio','podcasts','rain']);
+const STILL_WORKS = 'TV, Bluetooth, Line-In, Library, P1, volume and grouping';
+const disp = i => (zones[i] && zones[i].covers) ? zones[i].covers.join(' + ') : names[i];
 function freshState(){
-  rooms = roomPal.map((x,i) => ({ vol:30, muted:false, coord:i, playing:false, source:null, track:0, light:0, shades:'open', scene:null, sleepAt:null }));
+  rooms = roomPal.map((x,i) => ({ vol:30, muted:false, coord:i, playing:false, source:null, track:0, light:0, shades:'open', scene:null, sleepAt:null, by:null }));
   cur = 0;
 }
 freshState();
@@ -859,7 +955,7 @@ freshState();
 const coordOf = i => rooms[i].coord;
 const members = i => rooms.map((r,k)=>k).filter(k => rooms[k].coord === coordOf(i));
 const lead = i => rooms[coordOf(i)];
-const listNames = arr => arr.length <= 1 ? (names[arr[0]]||'') : arr.slice(0,-1).map(k=>names[k]).join(', ') + ' and ' + names[arr[arr.length-1]];
+const listNames = arr => arr.length <= 1 ? (arr.length ? disp(arr[0]) : '') : arr.slice(0,-1).map(disp).join(', ') + ' and ' + disp(arr[arr.length-1]);
 
 function removeFromGroup(r){
   const m = members(r);
@@ -937,7 +1033,7 @@ function renderStrip(){
   if (stripEl.children.length !== N()) buildStrip();
   [...stripEl.children].forEach((b,i) => {
     b.style.setProperty('--c', pal(i).c);
-    b.querySelector('.pl').textContent = N() > 4 ? shortName(names[i]) : names[i];
+    b.querySelector('.pl').textContent = shorts[i] || (N() > 4 ? shortName(names[i]) : names[i]);
     const here = i === cur, withMe = !here && members(cur).includes(i);
     b.setAttribute('aria-selected', here ? 'true' : 'false');
     b.classList.toggle('with', withMe);
@@ -957,7 +1053,7 @@ function render(){
   frame.style.setProperty('--r-a', p.a); frame.style.setProperty('--r-b', p.b); frame.style.setProperty('--accent', p.c); frame.style.setProperty('--tile-a', p.ta); frame.style.setProperty('--tile-b', p.tb);
   const m = members(cur), L = lead(cur);
 
-  $('actRoom').textContent = names[cur];
+  $('actRoom').textContent = disp(cur);
   const gq = $('gsq'), prevN = gq.dataset.n;
   $('gsqN').textContent = m.length; gq.dataset.n = m.length;
   gq.classList.toggle('linked', m.length > 1);
@@ -967,6 +1063,7 @@ function render(){
   /* ACTIVITY: what is happening in this room right now; the LED pulses white while anything is going on */
   const R0 = rooms[cur], act = [];
   if (L.playing && L.source) act.push('Playing ' + SOURCES[L.source].label);
+  else if (L.source && offline && CLOUD.has(L.source)) act.push('Stream stopped: internet is down');
   else if (L.source) act.push('Paused');
   if (m.length === N()) act.push('all rooms together');
   else if (others.length) act.push('with ' + listNames(others));
@@ -974,14 +1071,18 @@ function render(){
   if (R0.shades && R0.shades !== 'open') act.push('shades ' + R0.shades);
   if (L.sleepAt) act.push('sleep timer on');
   if (R0.muted) act.push('muted');
+  if (ace && ace.linked && members(cur).includes(ace.room)) act.push(ace.name + ' on headphones');
   const live = act.length > 0;
   const txt = live ? act.join(', ') : 'No activity';
   $('actText').textContent = txt.charAt(0).toUpperCase() + txt.slice(1);
   $('led').classList.toggle('on', live);
-  $('activity').setAttribute('aria-label', `${names[cur]}: ${$('actText').textContent}. Open room activity.`);
+  $('activity').setAttribute('aria-label', `${disp(cur)}: ${$('actText').textContent}. Open room activity.`);
   if ($('rpage').classList.contains('open')) renderRoomPage();
 
   renderStrip();
+  $('offBar').classList.toggle('show', offline);
+  $('orb').classList.toggle('off', offline);
+  $('netBtn').textContent = offline ? 'Internet: down' : 'Internet: on';
 
   const R = rooms[cur];
   allTiles('.tile').forEach(t => {
@@ -993,6 +1094,8 @@ function render(){
     if (id==='shades') t.querySelector('.lvl').textContent = R.shades.toUpperCase();
     if (id==='morning') t.querySelector('.lvl').textContent = alarm.on ? '⏰ ' + alarm.time + ' ' + names[alarm.room].split(' ')[0].toUpperCase() : '';
     if (id==='tv' || id==='cinema') t.classList.toggle('na', !tvOK(cur));
+    if (SOURCES[id] && CLOUD.has(id)) t.classList.toggle('na', offline);
+    if (SCENES[id] && SCENES[id].src && CLOUD.has(SCENES[id].src)) t.classList.toggle('na', offline);
   });
 
   const vol = Math.round(m.reduce((s,k)=>s+rooms[k].vol,0)/m.length);
@@ -1003,7 +1106,7 @@ function render(){
 
   const pb = $('playBtn'); pb.innerHTML = L.playing ? ICON.pause : ICON.play; pb.setAttribute('aria-label', L.playing?'Pause':'Play');
   const audible = rooms.some((r,i) => r.coord === i && r.playing && !members(i).every(k => rooms[k].muted));
-  if (hush && audible) hush = null;                       // someone took over: Priority One steps aside
+  /* v2.0: Priority One stays on until P1 is pressed again; rooms changed meanwhile are reported, not overwritten */
   const p1 = $('p1Btn');
   p1.classList.toggle('hushed', !!hush); $('frame').classList.toggle('hushed', !!hush);
   p1.innerHTML = hush ? '<b>P1</b><small>RESUME</small>' : '<b>P1</b><small>QUIET</small>';
@@ -1022,7 +1125,7 @@ function render(){
     $('npTitle').textContent = `Nothing playing in ${names[cur]}`;
     $('npSub').textContent = 'Pick a source above to start';
   }
-  if (hush){ $('npSub').textContent = 'House silenced. Tap P1 to bring it back.'; }
+  if (hush && !L.playing){ $('npSub').textContent = 'House silenced. Tap P1 to bring it back.'; }
   if ($('gpage').classList.contains('open')) renderGroup();
   if ($('idCard').classList.contains('open')) renderID();
   fitRooms();
@@ -1116,7 +1219,7 @@ let toastTimer, quiet = false;
 function toast(msg){
   if (quiet) return;
   const el = $('toast'); el.textContent = msg; el.classList.add('show');
-  clearTimeout(toastTimer); toastTimer = setTimeout(()=>el.classList.remove('show'), 2200);
+  clearTimeout(toastTimer); toastTimer = setTimeout(()=>el.classList.remove('show'), Math.max(2200, msg.length * 50));
 }
 const buzz = () => { if (navigator.vibrate) navigator.vibrate(6); };
 
@@ -1125,6 +1228,7 @@ function goRoom(i){ cur = i; log(`Room: ${names[i]}`); buzz(); render(); }
 
 function tvOK(i){ return members(i).some(k => hasTV[k]); }
 function pickSource(id){
+  if (offline && CLOUD.has(id)){ toast(`${SOURCES[id].label} needs the internet. Still working: ${STILL_WORKS}.`); return false; }
   if (id === 'tv' && !tvOK(cur)){ toast(`No TV in ${names[cur]}. Tick TV for this room in Settings.`); return false; }
   const L = lead(cur);
   if (L.source === id && L.playing){ toast(`${SOURCES[id].label} is already playing`); return; }
@@ -1136,6 +1240,7 @@ const LIGHT_STEPS = [0,25,50,75,100], SHADE_STEPS = ['open','half','closed'];
 function applyScene(id){
   const sc = SCENES[id];
   if (id === 'cinema' && !tvOK(cur)){ toast(`Cinema needs a TV room. ${names[cur]} has none.`); return false; }
+  if (offline && sc.src && CLOUD.has(sc.src)){ toast(`${sc.label} plays ${SOURCES[sc.src].label}, which needs the internet. Still working: ${STILL_WORKS}.`); return false; }
   if (sc.all) ALL().forEach(k => { if (k !== cur) joinGroup(k, cur); });
   const m = sc.everywhere ? ALL() : members(cur);
   m.forEach(k => Object.assign(rooms[k], { light:sc.light, shades:sc.shades, scene:id }));
@@ -1216,13 +1321,24 @@ function renderRoomPage(){
     ['Sleep',   !!mins, mins ? 'Fades out in ' + mins + ' min' : 'Off'],
     ['TV',      hasTV[cur] && L.source === 'tv', hasTV[cur] ? (L.source === 'tv' ? 'TV sound on' : 'Connected') : 'None']
   ];
-  const n = rows.filter(r => r[1]).length;
-  $('rpName').textContent = names[cur];
+  if (zones[cur]) rows.unshift(['Zone', 'info', zones[cur].label]);
+  const n = rows.filter(r => r[1] === true).length;
+  $('rpName').textContent = disp(cur);
   $('rpSum').textContent = n ? `${n} ${n === 1 ? 'thing' : 'things'} happening in this room` : 'Nothing is happening in this room right now';
-  $('rpList').innerHTML = rows.map(([k,on,v]) => `<li class="${on ? '' : 'idle'}"><i class="led${on ? ' on' : ''}"></i><b>${k}</b><span>${esc(v)}</span></li>`).join('');
-  const d = devices[cur] || [];
-  $('rpSpk').innerHTML = d.length ? d.map(x => `<li>${ICON.speaker}<b>${esc(x)}</b><span>${L.playing && src ? 'Playing' : 'Ready'}</span></li>`).join('')
-                                  : '<li class="idle"><b>No speakers yet</b><span>Run setup in Settings</span></li>';
+  $('rpList').innerHTML = rows.map(([k,on,v]) => `<li class="${on === 'info' ? 'info' : on ? '' : 'idle'}"><i class="led${on === true ? ' on' : ''}"></i><b>${k}</b><span>${esc(v)}</span></li>`).join('');
+  const d = (devices[cur] || []).map(x => `<li>${ICON.speaker}<b>${esc(x)}</b><span>${L.playing && src ? 'Playing' : 'Ready'}</span></li>`);
+  if (portable && portable.at === cur){
+    const home = portable.at === portable.home, to = home ? tvRoom() : portable.home;
+    d.push(`<li>${ICON.speaker}<b>${esc(portable.model)}</b><span>${home ? 'Portable' : 'Rear surround'}</span>` +
+      (to >= 0 ? `<button class="rp-act" data-act="carry">${home ? 'Carry to ' : 'Back to '}${esc(names[to])}</button>` : '') + '</li>');
+  }
+  $('rpSpk').innerHTML = d.length ? d.join('') : '<li class="idle"><b>No speakers yet</b><span>Run setup in Settings</span></li>';
+  $('rpLh').hidden = $('rpL').hidden = !ace;
+  if (ace){
+    const on = ace.linked;
+    $('rpL').innerHTML = `<li class="${on ? '' : 'idle'}"><i class="led${on ? ' on' : ''}"></i><b>${esc(ace.name)}</b><span>${on ? esc(ace.title) + ' on ' + esc(ace.model) : esc(ace.model) + ', not linked'}</span>` +
+      `<button class="rp-act" data-act="${on ? 'unlink' : 'link'}">${on ? 'Push back' : 'Pull to ears'}</button></li>`;
+  }
 }
 function openRoomPage(){
   renderRoomPage();
@@ -1255,23 +1371,46 @@ $('muteBtn').addEventListener('click', () => {
   m.forEach(k => rooms[k].muted = to);
   log(`${to?'Mute':'Unmute'} ${listNames(m)}`); buzz(); render();
 });
-/* PRIORITY ONE: one tap silences the whole house; one tap brings back exactly what was playing */
+/* PRIORITY ONE: one tap silences the whole house; one tap brings back what it can verify.
+   v2.0: headphones are listeners, not rooms, so they keep playing. Rooms another controller changed
+   after the silence are left alone and named, never silently overwritten. */
+function hushResume(){
+  const back = new Set(), left = new Map();
+  const note = k => { if (!back.has(k)) left.set(k, rooms[k].by || 'this panel'); };
+  hush.paused.forEach(p => {
+    const r = rooms[p.i];
+    if (r.coord !== p.i || r.playing || r.source !== p.source || r.by){ p.members.forEach(note); return; }
+    r.playing = true;
+    p.members.forEach(k => { if (rooms[k].coord === p.i && !rooms[k].by) back.add(k); else note(k); });
+  });
+  hush.muted.forEach(k => { if (rooms[k].muted && !rooms[k].by){ rooms[k].muted = false; back.add(k); } else note(k); });
+  hush = null;
+  const b = [...back];
+  let msg = b.length ? `${listNames(b)} ${b.length === 1 ? 'is' : 'are'} back where ${b.length === 1 ? 'it' : 'they'} left off.` : 'Nothing could be restored.';
+  const byWho = {};
+  left.forEach((who,k) => (byWho[who] = byWho[who] || []).push(k));
+  Object.entries(byWho).forEach(([who,ks]) => {
+    msg += ` ${listNames(ks)} ${ks.length === 1 ? 'was' : 'were'} changed by ${who} after the silence, so ${ks.length === 1 ? 'it was' : 'they were'} left as is.`;
+  });
+  return lastResume = msg;
+}
 function priorityOne(){
   if (hush){
-    hush.paused.forEach(i => { if (rooms[i].source) rooms[i].playing = true; });
-    hush.muted.forEach(k => rooms[k].muted = false);
-    hush = null; log('Priority One off: music back where it was'); toast('Music is back, right where it was');
+    const msg = hushResume();
+    log('Priority One off. ' + msg); toast(msg);
     if (navigator.vibrate) navigator.vibrate([10,40,10]); render(); return 'back';
   }
   const coords = rooms.map((r,i)=>i).filter(i => rooms[i].coord === i && rooms[i].playing && !members(i).every(k => rooms[k].muted));
   if (!coords.length){ const b = $('p1Btn'); b.classList.add('hushed'); setTimeout(()=>render(), 700); toast('Nothing is playing. The house is already quiet.'); return 'quiet'; }
+  rooms.forEach(r => r.by = null);
   hush = { paused:[], muted:[] };
   coords.forEach(i => {
     if (rooms[i].source === 'tv'){                          // live TV can't pause: mute it instead
       members(i).forEach(k => { if (!rooms[k].muted){ rooms[k].muted = true; hush.muted.push(k); } });
-    } else { rooms[i].playing = false; hush.paused.push(i); }
+    } else { hush.paused.push({ i, source:rooms[i].source, members:members(i) }); rooms[i].playing = false; }
   });
-  log('Priority One: whole house silenced'); toast('Whole house silenced. Tap P1 again to bring it back.');
+  const ears = ace && ace.linked ? ` ${ace.name}\u2019s headphones kept playing.` : '';
+  log('Priority One: whole house silenced.' + ears); toast('Whole house silenced.' + ears + ' Tap P1 again to bring it back.');
   if (navigator.vibrate) navigator.vibrate(30); render(); return 'hushed';
 }
 $('p1Btn').addEventListener('click', priorityOne);
@@ -1510,6 +1649,7 @@ function stopListening(){ try { rec && rec.stop(); } catch(e) {} listening = fal
 
 $('orb').addEventListener('click', () => {
   buzz();
+  if (offline){ toast('Voice assistants need the internet. Every touch control on this panel still works.'); return; }
   if (!$('voice').classList.contains('open')) return openVoice();
   if (listening) stopListening(); else listen();
 });
@@ -1566,7 +1706,7 @@ function understand(t){
     const r = hush ? 'already' : priorityOne();
     return say(r === 'hushed' ? 'Whole house silenced. Say "bring it back" when you are ready.' : 'The house is already quiet.');
   }
-  if (hush && /bring it back|resume everything|music back|all back on/.test(t)){ priorityOne(); return say('Music is back, right where it was.'); }
+  if (hush && /bring it back|resume everything|music back|all back on/.test(t)){ priorityOne(); return say(lastResume); }
   const an = t.match(/^\s*(?:announce|broadcast|tell everyone(?: that)?|intercom)\s+(.+?)\s*$/);
   if (an){ const R2 = roomsIn(an[1]); announce(an[1].trim(), R2.list.length && !R2.all ? R2.list : ALL()); return say(`Announced in ${icWhere()}.`); }
   if (/what can i say|\bhelp\b/.test(t)){ say('Ask for a scene, a room, music, volume, lights, shades, a sleep timer or a wake-up time. Grouping works too: say two rooms together.'); return defaultChips(); }
@@ -1769,10 +1909,11 @@ function drawSetup(){
   if (su.step === 'welcome'){
     h = `<div class="su-top"><span class="su-step">First-time setup</span>${suProg()}</div>
       <h2 class="su-h" id="suH" tabindex="-1">Let's set up your house</h2>
-      <p class="lead">The panel found <b>${n} speakers</b> on your network. You'll give each one a room and a colour. That colour is how you'll always know where your music is playing.</p>
+      <p class="lead">In this demo the panel finds <b>${n} sample speakers</b>. Nothing here is connected to a real system. You'll give each one a room and a colour. That colour is how you'll always know where your music is playing.</p>
       <div class="su-list">${FOUND.map(f => `<div class="su-row">${ICON.speaker}<div><b>${f.model}</b><span>${f.kind}, not set up yet</span></div></div>`).join('')}</div>
       <button class="su-go" id="suNext">Set up the first speaker</button>
-      <button class="su-alt" id="suSkip">Skip and use the sample house</button>`;
+      <button class="su-alt" id="suSkip">Skip and use the sample house</button>
+      <button class="su-alt" id="suDemo">Or try the Amp Multi Saturday demo</button>`;
   } else if (su.step === 'name'){
     h = `<div class="su-top"><span class="su-step">Speaker ${su.i+1} of ${n}: name the room</span>${suProg()}</div>
       <h2 class="su-h" id="suH" tabindex="-1">${F.portable ? 'Where does this one usually live?' : 'Where is this speaker?'}</h2>
@@ -1820,6 +1961,7 @@ function wireSetup(){
   if (su.step === 'welcome'){
     next.onclick = () => { su.step = 'name'; buzz(); drawSetup(); };
     $('suSkip').onclick = () => { log('Setup skipped'); closeSetup(); };
+    $('suDemo').onclick = () => { log('Setup skipped for the Amp Multi demo'); closeSetup(); startDemo(); };
   }
   if (su.step === 'name'){
     const inp = $('suName'), err = $('suErr');
@@ -1861,6 +2003,7 @@ function wireSetup(){
   if (su.step === 'done'){
     next.onclick = () => {
       const order = su.picks.slice().sort((a,b) => a.colour - b.colour);
+      zones = []; shorts = []; portable = null; ace = null;
       roomPal = order.map(x => x.colour); names = order.map(x => x.name); hasTV = order.map(x => x.tv); devices = order.map(x => [x.model]);
       if (!(alarm.room < N())) alarm.room = 0;
       icTargets = ALL(); saveHouse(); freshState(); cur = order.indexOf(su.picks[0]); buildStrip(); log(`Setup finished: ${N()} rooms`);
@@ -1870,6 +2013,8 @@ function wireSetup(){
 }
 $('sRedo').addEventListener('click', () => { $('settings').classList.remove('open'); openSetup(); });
 function useHouse(pals){
+  offline = false;
+  zones = []; shorts = []; portable = null; ace = null;
   roomPal = pals; names = pals.map(x => PALETTE[x].def); hasTV = pals.map(x => PALETTE[x].tv); devices = pals.map(x => PALETTE[x].dev.slice());
   if (!(alarm.room < N())) alarm.room = 0;
   icTargets = ALL(); freshState(); hush = null; saveHouse(); buildStrip(); fitRooms();
@@ -1878,10 +2023,155 @@ function useHouse(pals){
 $('h4').addEventListener('click', () => useHouse([0,1,2,3]));
 $('h6').addEventListener('click', () => useHouse([0,1,2,3,4,5]));
 
+/* ============ v2.0: AMP MULTI HOUSE ============ */
+function useAmpHouse(silent){
+  roomPal = [1,5,3,4,0];
+  names  = ['Kitchen','Great Room','Patio','Primary','Theater'];
+  shorts = ['Kitchen','Great Rm','Patio','Primary','Theater'];
+  hasTV  = [false,false,false,false,true];
+  devices = [['Amp Multi, zone A'],['Amp Multi, zone B'],['Amp Multi, zone C'],['Amp Multi, zone D'],['Beam Ultra','Sub 4']];
+  zones = [
+    { label:'Amp Multi zone A. Kitchen and Dining are wired as one zone: one source, one volume. Splitting them is an installer change.', covers:['Kitchen','Dining'] },
+    { label:'Amp Multi zone B' }, { label:'Amp Multi zone C' }, { label:'Amp Multi zone D' }, null
+  ];
+  portable = { model:'Sonos Play', home:2, at:2 };
+  ace = { name:'Maya', model:'Sonos Ace Ultra', linked:false, room:null, title:'' };
+  if (!(alarm.room < N())) alarm.room = 0;
+  offline = false;
+  icTargets = ALL(); freshState(); hush = null; lastResume = ''; buildStrip(); fitRooms();
+  $('settings').classList.remove('open'); log('Sample house: Amp Multi, 5 rooms (not saved)');
+  if (!silent){ toast('Amp Multi sample house. Kitchen and Dining share one zone.'); buzz(); }
+  render();
+}
+const tvRoom = () => hasTV.indexOf(true);
+/* Sonos Positioning (simulated): a portable carried next to the soundbar becomes a rear surround */
+function carryPortable(){
+  if (!portable) return;
+  const to = portable.at === portable.home ? tvRoom() : portable.home;
+  if (to < 0) return;
+  portable.at = to;
+  const role = to === portable.home ? 'speaker' : 'rear surround';
+  log(`Sonos Positioning (simulated): ${portable.model} moved to the ${disp(to)}, now a ${role}`);
+  toast(`${portable.model} is in the ${disp(to)} now, working as a ${role}.`);
+  render();
+}
+/* Headphone linking (simulated): a listener pulls a room's music to their ears */
+function linkAce(){
+  const L = lead(cur);
+  if (!(L.playing && L.source)){ toast(`Start music in the ${disp(cur)} first. Headphones pull what a room is playing.`); return; }
+  Object.assign(ace, { linked:true, room:cur, title:SOURCES[L.source].tracks[L.track % SOURCES[L.source].tracks.length] });
+  log(`${ace.model}: ${ace.name} pulled ${ace.title} from ${listNames(members(cur))} to her headphones`);
+  toast(`${ace.name} is listening to ${ace.title} on her headphones.`); render();
+}
+function unlinkAce(){ ace.linked = false; log(`${ace.model}: ${ace.name} pushed the music back to the rooms`); render(); }
+/* Another controller (Sonos app, Josh.ai, Sonos 27voice) acts: the panel redraws and remembers who */
+function otherController(who, i, fn, what){ fn(); rooms[i].by = who; log(`${who}: ${what}`); render(); }
+$('rpage').addEventListener('click', e => {
+  const b = e.target.closest('[data-act]'); if (!b) return;
+  ({ carry:carryPortable, link:linkAce, unlink:unlinkAce })[b.dataset.act]?.(); buzz();
+});
+
+/* ============ v2.0: OFFLINE MODE ============ */
+/* Honest limit: this assumes the panel keeps a local control path to the speakers.
+   The public Control API runs through a cloud gateway, so the pilot must prove this. */
+function goOffline(){
+  if (offline) return;
+  offline = true;
+  const hit = rooms.map((r,i)=>i).filter(i => rooms[i].coord === i && rooms[i].playing && CLOUD.has(rooms[i].source));
+  hit.forEach(i => rooms[i].playing = false);
+  if (ace && ace.linked){ ace.linked = false; log(`${ace.model}: ${ace.name}\u2019s music stopped too. It was a stream from the internet.`); }
+  log(`Internet down. ${hit.length ? 'Streams stopped in ' + listNames(hit.flatMap(i => members(i))) + '. ' : ''}Still working: ${STILL_WORKS}.`);
+  toast(`Internet down. Still working: ${STILL_WORKS}.`);
+  $('settings').classList.remove('open'); closeVoice(); render();
+}
+function goOnline(){
+  if (!offline) return;
+  offline = false; log('Internet back. Streaming sources and voice are available again.');
+  toast('Internet is back. Press play to restart a stream.'); render();
+}
+$('netBtn').addEventListener('click', () => { offline ? goOnline() : goOffline(); buzz(); });
+$('offBar').addEventListener('click', () => toast(`Internet is down. Still working: ${STILL_WORKS}. Waiting for the internet: Favorites, Playlists, Radio, Podcasts and voice.`));
+
+/* ============ v2.0: INSTALLER VIEW (read-only) ============ */
+const OUTPUTS = [['1–2','Kitchen ceiling, left and right',0,'A'],['3','Dining ceiling, mono',0,'A'],['4–5','Great Room in-wall, left and right',1,'B'],['6–7','Patio landscape, left and right',2,'C'],['8','Primary ceiling, mono',3,'D']];
+function openInstaller(){
+  $('settings').classList.remove('open');
+  const amp = zones.some(z => z);
+  $('instLead').textContent = amp ? 'Read-only. Wiring, zone assignment, ProTune and gain are set in the Sonos app. The panel shows them for handover and service. Sample values.'
+                                  : 'This house has no Amp Multi. Load the Amp Multi sample house in Settings to see its outputs.';
+  $('instList').innerHTML = amp ? OUTPUTS.map(([o,desc,r,z]) => `<li><b>Out ${o}</b><i style="--c:${pal(r).c}">Zone ${z}, ${esc(disp(r))}</i><span>${desc}</span></li>`).join('') : '';
+  $('instSheet').classList.add('open'); log('Installer view opened');
+}
+$('instBtn').addEventListener('click', openInstaller);
+$('instClose').addEventListener('click', () => $('instSheet').classList.remove('open'));
+$('hAmp').addEventListener('click', () => useAmpHouse());
+
+/* ============ v2.0: SATURDAY DEMO ============ */
+const K = 0, GR = 1, PA = 2, TH = 4;
+const DEMO = [
+  { time:'5:45 pm', title:'Quiet house', text:'One Amp Multi drives four zones. Kitchen and Dining are wired as one. A Beam Ultra and Sub 4 run the Theater, a Sonos Play lives on the Patio, and Maya has Sonos Ace Ultra. Every device here is simulated.' },
+  { time:'6:00 pm', title:'Dinner prep', text:'Dinner scene in the Kitchen. Dining plays too, because the installer made them one zone. The panel says Kitchen + Dining and never offers a Dining slider it cannot deliver.',
+    run:() => { cur = K; applyScene('dinner'); } },
+  { time:'7:00 pm', title:'Guests arrive', text:'The Patio joins as a temporary group with its own volume, and the Sonos Play out there plays along. The installer\u2019s zones stay untouched.',
+    run:() => { joinGroup(PA, K); rooms[PA].vol = 42; log(`Add ${disp(PA)} to ${disp(K)}`); render(); } },
+  { time:'8:30 pm', title:'Movie night', text:'Someone carries the Sonos Play into the Theater. Sonos Positioning makes it a rear surround, and the panel moves it to the Theater\u2019s speaker list, so the Patio change is no mystery. Tap the room name to see it.',
+    run:() => { cur = TH; pickSource('tv'); carryPortable(); } },
+  { time:'9:45 pm', title:'Maya\u2019s ears', text:'Maya pulls the dinner music into her Ace Ultra. She is a listener, not a room, and she shows up on the room page under Listeners.',
+    run:() => { cur = K; linkAce(); } },
+  { time:'10:30 pm', title:'Priority One', text:'One press silences every room. The TV mutes, because live TV cannot pause. Maya\u2019s headphones keep playing: silence covers rooms, not ears. The pilot has to test that rule with real families.',
+    run:() => { cur = K; priorityOne(); } },
+  { time:'10:32 pm', title:'Another controller acts', text:'Someone asks Josh.ai for rain sounds on the Patio. The panel is not the only controller, so it redraws from the event and remembers who changed what.',
+    run:() => { cur = PA; otherController('Josh.ai', PA, () => { removeFromGroup(PA); Object.assign(rooms[PA], { source:'rain', track:0, playing:true }); }, `rain sounds in the ${disp(PA)}`); } },
+  { time:'10:33 pm', title:'Honest resume', text:'P1 again brings back only what it can verify. The Patio changed after the silence, so the panel leaves Josh.ai\u2019s rain sounds alone and says so.',
+    run:() => { cur = K; priorityOne(); demoResult = lastResume; } },
+  { time:'10:40 pm', title:'The internet drops', text:'The router loses its connection. Streams stop and cloud voice goes quiet, but the TV keeps playing, because HDMI never leaves the house. The panel says what still works instead of letting buttons fail silently. This assumes a local control path, which the pilot must prove.',
+    run:() => { cur = K; goOffline(); demoResult = `Still working: ${STILL_WORKS}. Waiting for the internet: Favorites, Playlists, Radio, Podcasts and voice.`; } },
+  { time:'10:42 pm', title:'Bluetooth saves the evening', text:'The Sonos Play goes back out to the Patio. A phone pairs with it over Bluetooth, and Kitchen + Dining joins that music. Sonos says Bluetooth speakers that stay on Wi-Fi can share their audio with a group. Whether you can make that group with the internet down is the first thing the pilot must test.',
+    run:() => {
+      carryPortable(); cur = PA;
+      Object.assign(rooms[PA], { source:'phone', track:0, playing:true });
+      joinGroup(K, PA); rooms[K].vol = 26;
+      log(`Bluetooth: phone into the ${portable.model}, shared to ${listNames(members(PA))}`);
+      demoResult = `No internet, and music still plays in ${listNames(members(PA))}: phone to ${portable.model} over Bluetooth, then across the home network.`;
+      render();
+    } }
+];
+let demoStep = 0, demoResult = '';
+function demoRun(n){
+  quiet = true;
+  try { logEntries.length = 0; useAmpHouse(true); cur = K; demoResult = ''; for (let i = 1; i <= n; i++) DEMO[i].run(); }
+  finally { quiet = false; }
+  $('toast').classList.remove('show');
+  demoStep = n; log(`Saturday demo: jumped to ${DEMO[n].time}, ${DEMO[n].title}`);
+  closeGroup(true); closeRoomPage(); toggleID(false); render(); renderDemo();
+}
+function demoNext(){
+  if (demoStep === DEMO.length - 1) return demoRun(0);
+  closeGroup(true); closeRoomPage();
+  demoStep++; DEMO[demoStep].run(); render(); renderDemo(); buzz();
+}
+function renderDemo(){
+  const d = DEMO[demoStep], last = demoStep === DEMO.length - 1;
+  $('dmTime').textContent = d.time; $('dmN').textContent = `Saturday, step ${demoStep + 1} of ${DEMO.length}`;
+  $('dmTitle').textContent = d.title; $('dmText').textContent = d.text;
+  $('dmRes').hidden = !demoResult; $('dmRes').textContent = demoResult;
+  $('dmBack').disabled = demoStep === 0;
+  $('dmNext').textContent = last ? 'Start over' : 'Next: ' + DEMO[demoStep + 1].title;
+  $('dmSteps').innerHTML = DEMO.map((x,i) => `<button data-n="${i}" class="${i < demoStep ? 'done' : ''}" ${i === demoStep ? 'aria-current="step"' : ''} aria-label="${x.time}, ${x.title}"></button>`).join('');
+}
+function startDemo(){ $('settings').classList.remove('open'); $('demo').hidden = false; $('demoChip').hidden = true; demoRun(0); }
+$('dmNext').addEventListener('click', demoNext);
+$('dmBack').addEventListener('click', () => demoRun(Math.max(0, demoStep - 1)));
+$('dmSteps').addEventListener('click', e => { const b = e.target.closest('button'); if (b) demoRun(+b.dataset.n); });
+$('dmHide').addEventListener('click', () => { $('demo').hidden = true; $('demoChip').hidden = false; });
+$('demoChip').addEventListener('click', () => { $('demo').hidden = false; $('demoChip').hidden = true; renderDemo(); });
+$('demoBtn').addEventListener('click', startDemo);
+
 log('Panel ready'); render();
 let setupDone = false;
 try { setupDone = localStorage.getItem('sonosPanelSetup') === 'done'; } catch(e) {}
-if (!setupDone) openSetup();
+if (/[?&#]demo\b/.test(location.search + location.hash)) startDemo();
+else if (!setupDone) openSetup();
 </script>
 </body>
 </html>
