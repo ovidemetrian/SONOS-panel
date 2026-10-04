@@ -1,6 +1,7 @@
 <!doctype html>
 <!--
-  SONOS Panel concept, v2.0 (calm colour-bubble room bar from v1.9b, Amp Multi zones, portable surround, listeners, honest Priority One resume, installer view, Saturday demo)
+  SONOS Panel concept, v2.0.1 fixes: Back to Square One returns to the first (red) room on the Music page and also ends the demo; on phones the demo card is a slim strip that no longer hides tiles; leaving the Saturday demo gives you your own house back with the internet on; rail no longer covers Next on short screens; holds survive the iPhone long-press menu.
+  v2.0 (calm colour-bubble room bar from v1.9b, Amp Multi zones, portable surround, listeners, honest Priority One resume, installer view, Saturday demo)
   Built on v1.9 (labelled 44 px room strip, no-scroll grouping, room count instead of fixed four)
   © 2026 Ovidiu Mircea Demetrian / Media Content Delivery, LLC. All rights reserved.
   Interface design, layout, colour system and interaction concept by Ovi Demetrian.
@@ -14,7 +15,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
 <meta name="theme-color" content="#121212">
-<title>SONOS Panel — v2.0 concept</title>
+<title>SONOS Panel — v2.0.1 concept</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -622,6 +623,32 @@ body{ gap:24px; }
 @media (prefers-reduced-motion:reduce){
   *{ transition:none !important; animation:none !important; }
 }
+
+/* v2.0.1: holds must not be stolen by the phone's long-press menu or scroll */
+.tile.square,.tile.group,.talk{ touch-action:none; -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; }
+/* v2.0.1: short screens: the rail shrinks instead of spilling onto the transport */
+.rail{ overflow:hidden; }
+.rbtn.round{ flex:0 1 58px; min-height:40px; }
+@media (max-height:640px){
+  .rail{ gap:5px; } .rbtn{ min-height:32px; }
+  .rbtn.round{ flex:0 1 44px; min-height:32px; border-radius:22px; }
+  .rbtn svg{ width:24px; height:24px; } .volread{ font-size:13px; }
+}
+/* v2.0.1: on phones the demo card is a slim strip at the bottom, so it no longer hides the tiles or transport */
+@media (max-width:899px){
+  /* collapsed card: one slim strip  ‹ Back | time + title (tap for the story) | Next › | Exit */
+  .demo:not(.more):not([hidden]){ display:grid; grid-template-columns:auto 1fr auto auto; align-items:center; column-gap:8px; row-gap:0; padding:8px 10px; }
+  .demo:not(.more) .dm-top, .demo:not(.more) .dm-row{ display:contents; }
+  .demo:not(.more) .dm-n, .demo:not(.more) .dm-steps, .demo:not(.more) p{ display:none; }
+  .demo:not(.more) #dmBack{ grid-column:1; grid-row:1 / span 2; padding:10px 12px; flex:none; }
+  .demo:not(.more) .dm-time{ grid-column:2; grid-row:1; font-size:13px; color:rgba(255,255,255,.6); cursor:pointer; }
+  .demo:not(.more) h3{ grid-column:2; grid-row:2; font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer; }
+  .demo:not(.more) h3::after{ content:'  · story'; font-weight:500; color:#ffc400; font-size:12px; }
+  .demo:not(.more) #dmNext{ grid-column:3; grid-row:1 / span 2; padding:10px 12px; flex:none; max-width:120px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:13px; }
+  .demo:not(.more) #dmHide{ grid-column:4; grid-row:1 / span 2; }
+  .demo.more h3{ cursor:pointer; }
+  .demo.more h3::after{ content:'  · hide story'; font-weight:500; color:#ffc400; font-size:12px; }
+}
 </style>
 </head>
 <body>
@@ -820,7 +847,7 @@ body{ gap:24px; }
 </main>
 
 <aside class="demo" id="demo" aria-label="Saturday demo" hidden>
-  <div class="dm-top"><span class="dm-time" id="dmTime">5:45 pm</span><span class="dm-n" id="dmN"></span><button class="dm-x" id="dmHide">Hide</button></div>
+  <div class="dm-top"><span class="dm-time" id="dmTime">5:45 pm</span><span class="dm-n" id="dmN"></span><button class="dm-x" id="dmHide">Exit demo</button></div>
   <div class="dm-steps" id="dmSteps"></div>
   <h3 id="dmTitle"></h3>
   <p id="dmText"></p>
@@ -1284,7 +1311,7 @@ allTiles('.tile.group').forEach(g => {
     raf = requestAnimationFrame(tick);
   };
   const end = () => { cancelAnimationFrame(raf); g.classList.remove('holding'); g.style.setProperty('--p', 0); };
-  g.addEventListener('pointerdown', e => { start = performance.now(); g.classList.add('holding'); raf = requestAnimationFrame(tick); });
+  g.addEventListener('pointerdown', e => { try{ g.setPointerCapture(e.pointerId); }catch(_){} start = performance.now(); g.classList.add('holding'); raf = requestAnimationFrame(tick); });
   ['pointerup','pointerleave','pointercancel'].forEach(ev => g.addEventListener(ev, end));
   g.addEventListener('contextmenu', e => e.preventDefault());
   g.addEventListener('keydown', e => { if (e.key==='Enter' || e.key===' '){ e.preventDefault(); openGroup(); } });
@@ -1464,13 +1491,18 @@ function backToSquareOne(){
   const keep = rooms.map(r => ({ light:r.light, shades:r.shades }));   // never plunge anyone into the dark
   allTiles('.tile.square').forEach(sq => { sq.classList.add('straight'); setTimeout(()=>sq.classList.remove('straight'), 900); });
   springSound(); if (navigator.vibrate) navigator.vibrate([10,30,40]);
+  /* v2.0.1: square one means square one: leave the demo, internet on, your own house, first (red) room, music page */
+  const inDemo = !$('demo').hidden || !$('demoChip').hidden || offline || zones.length || portable || ace;
+  if (inDemo){ undoSnap = null; $('demo').hidden = true; $('demoChip').hidden = true; fitDemo(); ownHouse(); }
   freshState(); hush = null; setMode('music', true);
-  rooms.forEach((r,i) => Object.assign(r, keep[i]));
-  cur = undoSnap.cur;
-  closeGroup(true); toggleID(false); document.querySelectorAll('.sheet.open').forEach(s => s.classList.remove('open'));
-  log('Back to square one: rooms ungrouped, music stopped, volumes reset. Lights and shades left as they were.');
+  if (!inDemo) rooms.forEach((r,i) => Object.assign(r, keep[i]));
+  cur = Math.max(0, roomPal.indexOf(0));
+  closeGroup(true); closeRoomPage(); toggleID(false); try { closeVoice(); } catch(e) {}
+  document.querySelectorAll('.sheet.open').forEach(s => s.classList.remove('open'));
+  log(`Back to square one: ${names[cur]}, rooms ungrouped, music stopped, volumes reset. Lights and shades left as they were.`);
   $('toast').classList.remove('show');
   const bar = $('undoBar'); $('undoMsg').textContent = 'Back to square one. Every room is on its own.';
+  $('undoBtn').hidden = !undoSnap;
   bar.classList.add('show'); clearTimeout(undoTimer); undoTimer = setTimeout(() => { bar.classList.remove('show'); undoSnap = null; }, 10000);
   render();
 }
@@ -1491,7 +1523,7 @@ allTiles('.tile.square').forEach(sq => {
     raf = requestAnimationFrame(tick);
   };
   const end = () => { cancelAnimationFrame(raf); sq.classList.remove('arming'); sq.style.setProperty('--p', 0); };
-  sq.addEventListener('pointerdown', () => { audio(); start = performance.now(); sq.classList.add('arming'); raf = requestAnimationFrame(tick); });
+  sq.addEventListener('pointerdown', e => { try{ sq.setPointerCapture(e.pointerId); }catch(_){} audio(); start = performance.now(); sq.classList.add('arming'); raf = requestAnimationFrame(tick); });
   ['pointerup','pointerleave','pointercancel'].forEach(ev => sq.addEventListener(ev, end));
   sq.addEventListener('contextmenu', e => e.preventDefault());
   sq.setAttribute('aria-label', 'Back to square one. Hold to reset every room. Undo appears afterwards.');
@@ -2157,13 +2189,39 @@ function renderDemo(){
   $('dmRes').hidden = !demoResult; $('dmRes').textContent = demoResult;
   $('dmBack').disabled = demoStep === 0;
   $('dmNext').textContent = last ? 'Start over' : 'Next: ' + DEMO[demoStep + 1].title;
+  requestAnimationFrame(fitDemo);
   $('dmSteps').innerHTML = DEMO.map((x,i) => `<button data-n="${i}" class="${i < demoStep ? 'done' : ''}" ${i === demoStep ? 'aria-current="step"' : ''} aria-label="${x.time}, ${x.title}"></button>`).join('');
 }
+function fitDemo(){
+  const d = $('demo'), on = !d.hidden && matchMedia('(max-width:899px)').matches;
+  document.body.classList.toggle('demo-on', on);
+  if (!on) document.body.style.setProperty('--dmh', '0px');
+  else if (!d.classList.contains('more')) document.body.style.setProperty('--dmh', d.offsetHeight + 'px');
+  fitRooms();
+}
+addEventListener('resize', fitDemo);
+$('demo').addEventListener('click', e => { if (e.target.closest('h3, .dm-time, p')){ $('demo').classList.toggle('more'); fitDemo(); } });
 function startDemo(){ $('settings').classList.remove('open'); $('demo').hidden = false; $('demoChip').hidden = true; demoRun(0); }
 $('dmNext').addEventListener('click', demoNext);
 $('dmBack').addEventListener('click', () => demoRun(Math.max(0, demoStep - 1)));
 $('dmSteps').addEventListener('click', e => { const b = e.target.closest('button'); if (b) demoRun(+b.dataset.n); });
-$('dmHide').addEventListener('click', () => { $('demo').hidden = true; $('demoChip').hidden = false; });
+/* v2.0.1: leaving the demo hands back your own house, internet on, nothing silenced */
+function ownHouse(){
+  let pals = [0,1,2,3];
+  try { const h = JSON.parse(localStorage.getItem('sonosPanelHouse')||'null'); if (Array.isArray(h) && h.length >= 2 && h.length <= PALETTE.length && h.every(x => PALETTE[x])) pals = h; } catch(e) {}
+  offline = false; zones = []; shorts = []; portable = null; ace = null; lastResume = '';
+  roomPal = pals; names = pals.map(x => PALETTE[x].def); hasTV = pals.map(x => PALETTE[x].tv); devices = pals.map(x => PALETTE[x].dev.slice());
+  try { const v = JSON.parse(localStorage.getItem('sonosPanelNames')||'null'); if (Array.isArray(v) && v.length === N()) names = v; } catch(e) {}
+  try { const v = JSON.parse(localStorage.getItem('sonosPanelTV')||'null'); if (Array.isArray(v) && v.length === N()) hasTV = v; } catch(e) {}
+  try { const v = JSON.parse(localStorage.getItem('sonosPanelDevices')||'null'); if (Array.isArray(v) && v.length === N()) devices = v; } catch(e) {}
+  if (!(alarm.room < N())) alarm.room = 0;
+  icTargets = ALL(); freshState(); hush = null; buildStrip(); fitRooms();
+}
+$('dmHide').addEventListener('click', () => {
+  $('demo').hidden = true; $('demoChip').hidden = false; fitDemo();
+  ownHouse(); closeGroup(true); closeRoomPage(); toggleID(false); setMode('music', true);
+  log('Left the Saturday demo: your house is back, internet on'); toast('Demo closed. Your house is back.'); render();
+});
 $('demoChip').addEventListener('click', () => { $('demo').hidden = false; $('demoChip').hidden = true; renderDemo(); });
 $('demoBtn').addEventListener('click', startDemo);
 
