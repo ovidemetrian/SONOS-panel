@@ -1,6 +1,32 @@
 <!doctype html>
 <!--
-  SONOS Panel concept, v2.0.1 fixes: Back to Square One returns to the first (red) room on the Music page and also ends the demo; on phones the demo card is a slim strip that no longer hides tiles; leaving the Saturday demo gives you your own house back with the internet on; rail no longer covers Next on short screens; holds survive the iPhone long-press menu.
+  SONOS Panel concept, v2.4.2 (first-time setup finds six sample speakers, so a set-up house matches the six-room default)
+  v2.4.1 (a fresh copy opens with all six rooms: Living Room, Kitchen, Bedroom, Patio, Office, Den)
+  v2.4 (HOME acts, not just shows: MUTE beside every playing room, HUSH ALL under the house status; WHAT'S PLAYING NOW is the first, long button, its words and rim flowing through the room colours)
+  v2.3.7 (Home's button reads NOW PLAYING)
+  v2.3.6 (Home's way out is simply NEXT ›, and it opens PLAYING NOW)
+  v2.3.5 (Home has a way out: "Continue in <room> ›" at the bottom takes you back to the room you were in; Back/Escape do the same)
+  v2.3.4 (P1 is now HUSH · ALL ROOMS, same button, same job; a completed hold on Back to Square One can no longer leave a "swallow the next tap" flag behind on Android)
+  v2.3.3 (room bubbles in one line, row sits higher; the "Kitchen · Playing / Mute" strip is gone: PLAYING NOW is where you see the rest of the house)
+  v2.3.2 (the pressed-in tab gets a 1 px white frame)
+  v2.3.1 (HOME: room cards and empty places a touch lighter; twelve places, nine on screen, three more a short scroll away)
+  v2.3 (HOME: wordmark top-left with the byline right under it, house status top-right; nine room places, the rooms you have plus empty places waiting for the next ones)
+  v2.2.3 (transport buttons ringed 1 px in the room colour, like volume and mute)
+  v2.2.2 (transport: grey 3D buttons, big white symbols; tabs: always black with white lettering, the chosen one shows only by being pressed in)
+  v2.2.1 (PLAYING NOW wears the Home look: black glass cards, colour bubble, playing rooms lit in their colour with moving bars)
+  v2.2 (HOME: the app opens on a black, reflective list of every room, nothing else. Rooms that play glow in their colour. Tap a room to start in it; tap the SONOS wordmark to come back)
+  v2.1.2 (LINE-IN tile is now simply SOURCE)
+  v2.1.1 (LINE-IN renamed SOURCE IN)
+  v2.1 (the app opens on PLAYING NOW: the whole house first. Tap a room to go straight to its controls. Back to Square One returns there too)
+  v2.0.9 (phones: panel centred top to bottom, equal gaps on every phone, in and out of full screen; volume up, volume down and mute ringed 1 px in the room colour)
+  v2.0.8 (phones: 15 px of black above and below the framed panel, plus the notch and home-bar space where a phone has them)
+  v2.0.7 (true full screen: the first tap hides the browser address bar and the phone's bars where the browser allows it, plus a full-screen button in the footer; a 3 px frame with rounded corners around the panel)
+  v2.0.6 (phones: nothing but the panel, top to bottom; the page behind it and the browser bars take the room colour, no grey strips, no bounce)
+  v2.0.5 (full screen: edge to edge on phones, notch and home bar respected; on larger screens the panel fills the window height at a phone's proportions)
+  v2.0.4 (fix: a long hold on BACK TO SQUARE ONE or GROUP no longer ends in a "wrong press" buzz; tabs MUSIC · PLAYING NOW · SCENES, centred, squarer, embossed)
+  v2.0.3 (three tabs: MUSIC, PLAYING, SCENES. PLAYING lists every room in the house with everything happening in it)
+  v2.0.2 (every room shows its own playback status on its bubble; selection is marked separately; rooms playing outside your group get a visible "Kitchen · Playing" row with Mute)
+  v2.0.1 (fixes: rail no longer overlaps transport on short screens; holds survive iPhone long-press)
   v2.0 (calm colour-bubble room bar from v1.9b, Amp Multi zones, portable surround, listeners, honest Priority One resume, installer view, Saturday demo)
   Built on v1.9 (labelled 44 px room strip, no-scroll grouping, room count instead of fixed four)
   © 2026 Ovidiu Mircea Demetrian / Media Content Delivery, LLC. All rights reserved.
@@ -14,8 +40,13 @@
 <meta name="copyright" content="© 2026 Ovi Demetrian / Media Content Delivery, LLC. All rights reserved.">
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="SONOS Panel"/>
+<meta name="theme-color" id="themeColor" content="#2d0909"/>
 <meta name="theme-color" content="#121212">
-<title>SONOS Panel — v2.0.1 concept</title>
+<title>SONOS Panel — v2.4.2 concept</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -568,14 +599,6 @@ input[type=range]{ flex:1; accent-color:var(--rc,#ffc400); height:28px; }
 @media (max-height:700px){ .activity .a1 b{ font-size:19px; } }
 @media (max-width:390px){ .activity .a1 b{ font-size:17px !important; } .activity .a1 em{ font-size:15px; } .roombar{ gap:4px; } }
 .activity .a1 b{ color:#fff; }
-/* v2.0 offline mode: say what still works instead of letting buttons fail silently */
-.offbar{ display:none; align-items:center; gap:8px; width:100%; padding:7px 12px; border-radius:14px; cursor:pointer; flex:0 0 auto;
-  background:rgba(0,0,0,.5); border:1px solid rgba(255,196,0,.65); color:#fff; font:500 11.5px var(--font); text-align:left; }
-.offbar.show{ display:flex; }
-.offbar b{ color:#ffc400; white-space:nowrap; font-weight:900; }
-.offbar span{ min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; color:rgba(255,255,255,.82); }
-.frame > .offbar{ position:relative; z-index:1; }
-.orb.off{ opacity:.4; box-shadow:none; }
 /* === v2.0: Amp Multi zones, portable surround, listeners, installer view, Saturday demo === */
 body{ gap:24px; }
 .frame{ flex:0 1 420px; }
@@ -620,34 +643,396 @@ body{ gap:24px; }
   .demo p{ font-size:12.5px; display:-webkit-box; -webkit-line-clamp:4; -webkit-box-orient:vertical; overflow:hidden; }
   .demo .dm-res{ -webkit-line-clamp:5; }
 }
+
+/* === v2.0.2: two signals, never merged.
+   Selected room = white ring + lift on its bubble (where your controls go).
+   Playback      = a badge on EVERY room's bubble (where the sound is coming from): moving bars when playing, red when muted.
+   Rooms playing outside your group also get a row under the room bar, with Mute right there. === */
+.frame > .elsewhere{ position:relative; z-index:1; }
+.pill{ overflow:visible; }
+.pill .pb{ position:absolute; top:0; right:0; width:17px; height:17px; border-radius:50%; display:none; align-items:flex-end; justify-content:center; gap:1.5px;
+  padding:0 0 4px; box-sizing:border-box; background:#111; border:1.5px solid #fff; box-shadow:0 1px 3px rgba(0,0,0,.6); pointer-events:none; }
+.pill .pb i{ width:2px; border-radius:1px; background:#fff; transform-origin:bottom; animation:pbar .9s ease-in-out infinite alternate; }
+.pill .pb i:nth-child(1){ height:5px; } .pill .pb i:nth-child(2){ height:8px; animation-delay:.3s; } .pill .pb i:nth-child(3){ height:6px; animation-delay:.6s; }
+@keyframes pbar{ from{ transform:scaleY(.45);} to{ transform:scaleY(1);} }
+.pill.busy .pb{ display:flex; }
+.pill.busy.quiet .pb{ background:#c62828; align-items:center; padding:0; }
+.pill.busy.quiet .pb i{ display:none; }
+.pill.busy.quiet .pb::before, .pill.busy.quiet .pb::after{ content:''; position:absolute; width:9px; height:2px; border-radius:1px; background:#fff; transform:rotate(45deg); }
+.pill.busy.quiet .pb::after{ transform:rotate(-45deg); }
+
+.elsewhere{ flex:0 0 auto; display:flex; gap:6px; overflow-x:auto; scrollbar-width:none; margin-top:-4px; }
+.elsewhere[hidden]{ display:none; }
+.elsewhere::-webkit-scrollbar{ display:none; }
+.ew{ flex:1 0 auto; min-width:0; display:flex; align-items:center; gap:4px; padding:0 4px 0 0; border-radius:14px;
+  background:rgba(0,0,0,.42); border:1px solid color-mix(in srgb, var(--c) 70%, transparent); }
+.ew-go{ flex:1 1 auto; min-width:0; min-height:44px; display:flex; align-items:center; gap:8px; padding:0 6px 0 10px; border:none; background:none;
+  color:#fff; font-family:var(--font); text-align:left; cursor:pointer; }
+.ew-dot{ flex:0 0 12px; width:12px; height:12px; border-radius:50%; background:var(--c); box-shadow:0 0 0 2px rgba(255,255,255,.25); }
+.ew-t{ min-width:0; display:flex; flex-direction:column; }
+.ew-t b{ font-size:13.5px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.ew-t span{ font-size:11px; color:rgba(255,255,255,.65); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.ew-mute{ flex:0 0 auto; min-width:64px; height:36px; border-radius:12px; border:none; padding:0 12px; cursor:pointer;
+  background:#fff; color:#111; font:800 13px var(--font); }
+.ew-mute[aria-pressed="true"]{ background:#c62828; color:#fff; }
+.ew-mute:active, .ew-go:active{ transform:translateY(1px); }
+.ew-mute:focus-visible, .ew-go:focus-visible, .pill:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+@media (max-height:700px){ .ew-go{ min-height:40px; } .ew-mute{ height:32px; } }
+
+/* === v2.0.3: PLAYING tab. One card per room, fixed house order (same order as the bubbles).
+   Card = room colour bar, name, status, every activity in that room. Tap a card to select that room; Mute acts on that room's group. === */
+.modes button{ letter-spacing:.08em; }
+.house{ min-height:0; overflow-y:auto; overscroll-behavior:contain; display:flex; flex-direction:column; gap:8px; scrollbar-width:none; }
+.house[hidden]{ display:none; }
+.house::-webkit-scrollbar{ display:none; }
+.hs-sum{ margin:0; font-size:12px; color:rgba(255,255,255,.7); }
+.hs-list{ list-style:none; margin:0; padding:0 0 4px; display:flex; flex-direction:column; gap:8px; }
+.hs-room{ position:relative; display:flex; align-items:flex-start; gap:6px; padding:10px 8px 10px 16px; border-radius:16px;
+  background:rgba(0,0,0,.4); border:1.5px solid rgba(255,255,255,.1); overflow:hidden; }
+.hs-room::before{ content:''; position:absolute; left:0; top:0; bottom:0; width:7px; background:var(--c); }
+.hs-room.sel{ border-color:#fff; background:color-mix(in srgb, var(--c) 22%, rgba(0,0,0,.5)); }
+.hs-room.idle{ opacity:.72; }
+.hs-go{ flex:1 1 auto; min-width:0; min-height:44px; display:flex; flex-direction:column; align-items:flex-start; gap:5px; padding:0; border:none; background:none;
+  color:#fff; font-family:var(--font); text-align:left; cursor:pointer; }
+.hs-top{ display:flex; align-items:center; gap:6px; max-width:100%; }
+.hs-top b{ font-size:15px; font-weight:900; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.hs-st{ flex:0 0 auto; font-size:10.5px; font-weight:800; padding:2px 7px; border-radius:8px; background:rgba(255,255,255,.14); color:#fff; }
+.hs-st.play{ background:#fff; color:#111; } .hs-st.mute{ background:#c62828; } .hs-st.pause{ background:rgba(255,255,255,.28); }
+.hs-sel{ flex:0 0 auto; font-size:10.5px; color:rgba(255,255,255,.75); }
+.hs-acts{ display:flex; flex-wrap:wrap; gap:4px; }
+.hs-acts span{ font-size:11.5px; line-height:1.25; padding:3px 7px; border-radius:8px; background:rgba(255,255,255,.08); color:rgba(255,255,255,.88); max-width:100%; overflow-wrap:anywhere; }
+.hs-acts span.trk{ flex-basis:100%; background:none; padding:0; font-size:12.5px; color:#fff; }
+.hs-none{ font-size:12px; color:rgba(255,255,255,.55); }
+.hs-mute{ flex:0 0 auto; align-self:center; min-width:60px; height:40px; border-radius:12px; border:none; padding:0 10px; cursor:pointer; background:#fff; color:#111; font:800 12.5px var(--font); }
+.hs-mute[aria-pressed="true"]{ background:#c62828; color:#fff; }
+.hs-go:focus-visible, .hs-mute:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+.frame.mode-playing .elsewhere{ display:none; }
+.hs-st, .hs-sel{ font-style:normal; }
+.hs-room.sel.idle{ opacity:1; }
+.hs-room{ padding:8px 8px 8px 15px; } .hs-go{ gap:4px; } .hs-list{ gap:6px; padding-bottom:18px; }
+.house{ gap:6px; -webkit-mask-image:linear-gradient(180deg,#000 calc(100% - 18px),transparent); mask-image:linear-gradient(180deg,#000 calc(100% - 18px),transparent); }
+@media (max-height:700px){ .hs-acts span{ font-size:11px; padding:2px 6px; } .hs-acts span.trk{ font-size:12px; } .hs-top b{ font-size:14px; } .hs-mute{ height:36px; } }
+
+/* === v2.0.4: tabs. PLAYING NOW sits wider in the middle; MUSIC and SCENES are equal and smaller on either side.
+   Squarer corners, raised 3D buttons, embossed lettering. === */
+.modes{ display:grid !important; grid-template-columns:1fr 1.42fr 1fr; gap:6px; padding:5px; border-radius:12px; }
+.modes button{ flex:none; min-width:0; min-height:44px; padding:0 4px; border-radius:8px; white-space:nowrap;
+  font:900 14px var(--font); letter-spacing:.07em; color:#e9e9e9;
+  background:linear-gradient(180deg, #4a4a4a 0%, #2c2c2c 55%, #1e1e1e 100%);
+  border:1px solid rgba(0,0,0,.7);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.22), inset 0 -2px 0 rgba(0,0,0,.45), 0 3px 0 #0b0b0b, 0 5px 8px rgba(0,0,0,.45);
+  text-shadow:0 -1px 0 rgba(0,0,0,.9), 0 1px 0 rgba(255,255,255,.22); }
+.modes button[data-mode="music"], .modes button[data-mode="scenes"]{ font-size:13px; }
+.modes button[aria-selected="true"]{ color:#151515;
+  background:linear-gradient(180deg, color-mix(in srgb,var(--accent) 55%,#fff) 0%, var(--accent) 50%, color-mix(in srgb,var(--accent) 72%,#000) 100%);
+  border-color:rgba(0,0,0,.55);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.65), inset 0 -2px 0 rgba(0,0,0,.25), 0 3px 0 color-mix(in srgb,var(--accent) 45%,#000), 0 5px 9px rgba(0,0,0,.5);
+  text-shadow:0 1px 0 rgba(255,255,255,.7), 0 -1px 0 rgba(0,0,0,.35); }
+.modes button:active{ transform:translateY(2px); box-shadow:inset 0 1px 0 rgba(255,255,255,.2), 0 1px 0 #0b0b0b, 0 2px 4px rgba(0,0,0,.4); }
+.modes button:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+@media (max-width:390px){ .modes button{ font-size:12.5px; letter-spacing:.05em; } .modes button[data-mode="music"], .modes button[data-mode="scenes"]{ font-size:12px; } }
+@media (max-height:700px){ .modes button{ min-height:40px; } }
+
+/* === v2.0.5: full screen === */
+/* Larger screens: no 780 px ceiling. The panel takes the full window height (10 px breathing room) and keeps a phone's proportions. */
+.frame{ flex:0 0 auto; height:calc(100vh - 20px); height:calc(100dvh - 20px);
+  width:min(100vw - 20px, (100vh - 20px) * .56); width:min(100vw - 20px, (100dvh - 20px) * .56); max-width:none; }
+/* Phones: edge to edge. The panel's colour runs under the notch and the home bar; the controls stay clear of both. */
+@media (max-width:520px){
+  :root{ padding-top:0; padding-bottom:0; }
+  body{ gap:0; }
+  .frame{ width:100vw; height:100vh; height:100dvh; margin:0; border:none; border-radius:0; box-shadow:none;
+    padding-top:calc(10px + env(safe-area-inset-top,0px)); padding-bottom:calc(8px + env(safe-area-inset-bottom,0px));
+    padding-left:max(14px, env(safe-area-inset-left,0px)); padding-right:max(14px, env(safe-area-inset-right,0px)); }
+  .frame.hushed{ box-shadow:inset 0 0 0 3px #ff5252 !important; }
+}
+/* Landscape phones and tiny windows: still fill, never squeeze below the layout's minimum */
+@media (max-height:520px){ .frame{ height:100vh; height:100dvh; } body{ overflow:auto; } }
+
+/* === v2.0.6: phones, nothing above or below the panel. Whatever the browser shows behind its bars, or on a pull, is the room colour. === */
+@media (max-width:520px){
+  html, body{ background:var(--r-b) !important; overscroll-behavior:none; }
+  body{ background:linear-gradient(160deg,var(--r-a),var(--r-b)) var(--r-b) !important; }
+  html{ height:100%; } body{ height:100%; min-height:100dvh; }
+  .frame{ background:linear-gradient(160deg,var(--r-a),var(--r-b)); }
+}
+
+/* === v2.0.7: a 3 px frame with rounded corners around the panel on phones; full-screen button === */
+.fbtns{ display:flex; gap:8px; align-items:center; }
+.fsbtn{ display:grid; place-items:center; padding:0; }
+.fsbtn[hidden]{ display:none; }
+.fsbtn[aria-pressed="true"] svg path{ d:path("M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"); }
+@media (max-width:520px){
+  html, body{ background:#000 !important; }
+  .frame{ border:3px solid color-mix(in srgb, var(--accent) 60%, #fff 15%) !important; border-radius:26px !important;
+    padding-left:max(13px, env(safe-area-inset-left,0px)); padding-right:max(13px, env(safe-area-inset-right,0px)); }
+}
+:fullscreen .frame, :-webkit-full-screen .frame{ height:100vh; height:100dvh; }
+
+/* === v2.0.8: phones. 15 px above and below the frame, on every phone length; the notch / home bar space is added on top of that, not eaten from it. === */
+@media (max-width:520px){
+  .frame{ --gap-t:calc(15px + env(safe-area-inset-top,0px)); --gap-b:calc(15px + env(safe-area-inset-bottom,0px));
+    height:calc(100vh - var(--gap-t) - var(--gap-b)) !important; height:calc(100dvh - var(--gap-t) - var(--gap-b)) !important;
+    margin:var(--gap-t) 0 var(--gap-b) !important; padding-top:10px !important; padding-bottom:8px !important; }
+  body{ align-items:flex-start; }
+}
+
+/* === v2.0.9: phones. The panel is pinned to the real screen with EQUAL gaps: 15 px plus the larger of the notch / home-bar space,
+   used on both ends, so a camera cut-out at the top can't push it off centre. No height maths: the browser sizes it. === */
+@media (max-width:520px){
+  .frame{ --g:calc(15px + max(env(safe-area-inset-top,0px), env(safe-area-inset-bottom,0px)));
+    position:fixed !important; top:var(--g) !important; bottom:var(--g) !important; left:0 !important; right:0 !important;
+    height:auto !important; width:auto !important; margin:0 !important; }
+}
+/* volume up, volume down and mute belong to the selected room: 1 px ring in that room's colour */
+#volUp, #volDown, #muteBtn{ border:1px solid var(--accent) !important; }
+/* v2.2.3: the transport belongs to the selected room too */
+.tbtn{ border:1px solid var(--accent) !important; }
+/* v2.1.1: SOURCE IN stays on one line, like every other tile, so its icon keeps its size */
+.tile[data-id="linein"] span{ white-space:nowrap; }
+@media (max-width:390px){ .tile[data-id="linein"] span{ letter-spacing:.04em; } }
+
+/* === v2.2 HOME. Black glass, one reflection, colour only where a room lives. === */
+.home{ position:absolute; inset:0; z-index:36; display:flex; flex-direction:column; gap:14px; padding:22px 18px 16px; overflow:hidden;
+  border-radius:inherit; color:#fff; font-family:var(--font);
+  background:radial-gradient(120% 70% at 50% -10%, #2a2a2a 0%, #0c0c0c 45%, #000 75%);
+  opacity:0; visibility:hidden; transition:opacity .35s cubic-bezier(.2,0,0,1), visibility 0s .35s; }
+.home.open{ opacity:1; visibility:visible; transition:opacity .35s cubic-bezier(.2,0,0,1); }
+.frame.home-open{ border-color:rgba(255,255,255,.28) !important; }
+.hm-sheen{ position:absolute; inset:0; pointer-events:none; z-index:0;
+  background:linear-gradient(115deg, rgba(255,255,255,.07) 0%, rgba(255,255,255,.02) 28%, transparent 29%, transparent 100%); }
+.home > *:not(.hm-sheen){ position:relative; z-index:1; }
+.hm-top{ text-align:center; padding-top:6px; }
+.hm-mark{ display:inline-block; font:900 38px/1 var(--font); letter-spacing:.32em; padding-left:.32em; color:#fff;
+  background:linear-gradient(180deg,#fff 0%,#d9d9d9 55%,#9a9a9a 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+  -webkit-box-reflect:below -2px linear-gradient(transparent 45%, rgba(255,255,255,.22)); }
+.hm-by{ margin-top:14px; font-size:9.5px; letter-spacing:.32em; color:rgba(255,255,255,.4); }
+.hm-head{ display:flex; align-items:center; justify-content:center; gap:10px; min-height:30px; }
+.hm-head h1{ margin:0; font:700 19px var(--font); letter-spacing:.01em; color:rgba(255,255,255,.92); }
+.hm-dots{ display:flex; gap:5px; }
+.hm-dots i{ width:10px; height:10px; border-radius:50%; background:var(--c); box-shadow:0 0 8px var(--c); }
+.hm-list{ list-style:none; margin:0; padding:2px 2px 6px; flex:1 1 auto; min-height:0; display:flex; flex-direction:column; gap:10px; overflow-y:auto; scrollbar-width:none; }
+.hm-list::-webkit-scrollbar{ display:none; }
+.hm-list li{ flex:1 1 0; min-height:62px; max-height:92px; display:flex; }
+.hm-room{ flex:1; display:flex; align-items:center; gap:14px; padding:0 16px 0 14px; border-radius:20px; cursor:pointer; text-align:left;
+  color:#fff; font-family:var(--font); border:1px solid rgba(255,255,255,.09);
+  background:linear-gradient(180deg, rgba(255,255,255,.075) 0%, rgba(255,255,255,.02) 48%, rgba(0,0,0,0) 52%, rgba(255,255,255,.025) 100%), #0b0b0b;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12), 0 6px 14px rgba(0,0,0,.6); transition:transform .12s, box-shadow .3s, border-color .3s; }
+.hm-room:active{ transform:scale(.98); }
+.hm-room:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+.hm-bub{ flex:0 0 34px; width:34px; height:34px; border-radius:50%; border:2px solid color-mix(in srgb,var(--c) 60%,#fff);
+  background:radial-gradient(circle at 38% 30%, color-mix(in srgb,var(--c) 80%,#fff), var(--c) 45%, color-mix(in srgb,var(--c) 55%,#000));
+  box-shadow:inset 0 -3px 6px rgba(0,0,0,.3), 0 2px 5px rgba(0,0,0,.6); }
+.hm-txt{ flex:1; min-width:0; display:flex; flex-direction:column; gap:3px; }
+.hm-txt b{ font-size:19px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.hm-txt span{ font-size:12.5px; color:rgba(255,255,255,.5); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.hm-eq{ flex:0 0 auto; display:none; align-items:flex-end; gap:3px; height:20px; }
+.hm-eq i{ width:3px; border-radius:2px; background:var(--c); transform-origin:bottom; animation:pbar .9s ease-in-out infinite alternate; }
+.hm-eq i:nth-child(1){ height:10px; } .hm-eq i:nth-child(2){ height:18px; animation-delay:.3s; } .hm-eq i:nth-child(3){ height:13px; animation-delay:.6s; } .hm-eq i:nth-child(4){ height:16px; animation-delay:.15s; }
+.hm-room.on{ border-color:color-mix(in srgb,var(--c) 70%,transparent);
+  background:linear-gradient(180deg, rgba(255,255,255,.09) 0%, rgba(255,255,255,.02) 48%, rgba(0,0,0,0) 52%, rgba(255,255,255,.03) 100%),
+    linear-gradient(90deg, color-mix(in srgb,var(--c) 30%,#000) 0%, #0b0b0b 75%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 0 22px color-mix(in srgb,var(--c) 35%,transparent), 0 6px 14px rgba(0,0,0,.6); }
+.hm-room.on .hm-txt span{ color:rgba(255,255,255,.82); }
+.hm-room.on .hm-eq{ display:flex; }
+.hm-room.muted .hm-eq{ display:none; }
+.hm-mute{ display:none; font:800 11px var(--font); padding:3px 8px; border-radius:8px; background:#c62828; color:#fff; }
+.hm-room.muted .hm-mute{ display:inline-block; }
+.hm-hint{ margin:0; text-align:center; font-size:11.5px; letter-spacing:.08em; color:rgba(255,255,255,.35); }
+/* the panel's wordmark is the way home */
+.brand{ cursor:pointer; }
+@media (max-height:700px){ .hm-mark{ font-size:32px; } .hm-by{ margin-top:10px; } .hm-head h1{ font-size:17px; } .home{ gap:10px; padding-top:16px; } .hm-txt b{ font-size:17px; } }
+/* v2.2 polish: reflection clears the byline; solid neutral rim on Home; the list sits in the middle of the space */
+.hm-mark{ -webkit-box-reflect:below 0px linear-gradient(transparent 58%, rgba(255,255,255,.2)); }
+.hm-by{ margin-top:30px; }
+@media (max-height:700px){ .hm-by{ margin-top:24px; } }
+.frame.home-open{ border-color:#3c3c3c !important; }
+.hm-list li{ max-height:100px; }
+.hm-list li:first-child{ margin-top:auto; } .hm-list li:last-child{ margin-bottom:auto; }
+
+/* === v2.2.1: PLAYING NOW in the Home family. Black glass cards; colour only from the room itself. === */
+.hs-room{ padding:9px 10px 9px 12px; border-radius:18px; border:1px solid rgba(255,255,255,.09);
+  background:linear-gradient(180deg, rgba(255,255,255,.075) 0%, rgba(255,255,255,.02) 48%, rgba(0,0,0,0) 52%, rgba(255,255,255,.025) 100%), #0b0b0b;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12), 0 5px 12px rgba(0,0,0,.55); }
+.hs-room::before{ display:none; }
+.hs-room.idle{ opacity:1; } .hs-room.idle .hs-top b{ color:rgba(255,255,255,.75); }
+.hs-bub{ flex:0 0 18px; width:18px; height:18px; border-radius:50%; border:1.5px solid color-mix(in srgb,var(--c) 60%,#fff);
+  background:radial-gradient(circle at 38% 30%, color-mix(in srgb,var(--c) 80%,#fff), var(--c) 45%, color-mix(in srgb,var(--c) 55%,#000));
+  box-shadow:inset 0 -2px 4px rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.6); }
+.hs-top{ width:100%; }
+.hs-eq{ display:none; margin-left:auto; height:14px; gap:2px; }
+.hs-eq i{ width:2.5px; } .hs-eq i:nth-child(1){ height:7px; } .hs-eq i:nth-child(2){ height:13px; } .hs-eq i:nth-child(3){ height:9px; } .hs-eq i:nth-child(4){ height:11px; }
+.hs-room.on{ border-color:color-mix(in srgb,var(--c) 70%,transparent);
+  background:linear-gradient(180deg, rgba(255,255,255,.09) 0%, rgba(255,255,255,.02) 48%, rgba(0,0,0,0) 52%, rgba(255,255,255,.03) 100%),
+    linear-gradient(90deg, color-mix(in srgb,var(--c) 30%,#000) 0%, #0b0b0b 80%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 0 18px color-mix(in srgb,var(--c) 32%,transparent), 0 5px 12px rgba(0,0,0,.55); }
+.hs-room.on .hs-eq{ display:flex; }
+.hs-room.sel{ border-color:#fff; }
+.hs-room.sel:not(.on){ background:linear-gradient(180deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.03) 48%, rgba(0,0,0,0) 52%, rgba(255,255,255,.03) 100%), #121212; }
+.hs-st{ background:rgba(255,255,255,.1); color:rgba(255,255,255,.8); }
+.hs-st.play{ background:var(--c); color:#111; } .hs-st.mute{ background:#c62828; color:#fff; } .hs-st.pause{ background:rgba(255,255,255,.2); color:#fff; }
+.hs-acts span{ background:rgba(255,255,255,.07); color:rgba(255,255,255,.78); }
+.hs-acts span.trk{ color:#fff; }
+.hs-sum{ color:rgba(255,255,255,.85); font-weight:700; }
+.hs-room.sel .hs-top b{ color:#fff; }
+.hs-top b{ flex:0 1 auto; min-width:0; }
+@media (max-width:390px){ .hs-eq{ display:none !important; } }
+
+/* === v2.2.2 TRANSPORT: mid grey, 3D, white symbols almost to the rim === */
+.tbtn{ background:radial-gradient(circle at 38% 28%, #a9a9a9 0%, #8a8a8a 45%, #626262 100%) !important;
+  box-shadow:0 6px 12px rgba(0,0,0,.55), inset 0 2px 2px rgba(255,255,255,.45), inset 0 -3px 5px rgba(0,0,0,.3) !important;
+  overflow:visible; }
+.tbtn svg{ width:68px !important; height:68px !important; margin:-5px; filter:drop-shadow(0 1px 1.5px rgba(0,0,0,.55)); pointer-events:none; }
+.tbtn svg path, .tbtn svg rect{ fill:#fff; stroke:#fff; }
+@media (max-height:700px){ .tbtn svg{ width:59px !important; height:59px !important; margin:-5px; } }
+
+/* === v2.2.2 TABS: always black, lettering always white and embossed. The chosen tab doesn't change colour: it is pressed in. === */
+.modes button, .modes button[aria-selected="true"]{ color:#fff !important;
+  text-shadow:0 -1px 0 rgba(0,0,0,.9), 0 1px 0 rgba(255,255,255,.25) !important; }
+.modes button[aria-selected="true"]{
+  background:linear-gradient(180deg, #0a0a0a 0%, #181818 60%, #242424 100%) !important;
+  border-color:rgba(0,0,0,.85) !important;
+  box-shadow:inset 0 3px 6px rgba(0,0,0,.9), inset 0 -1px 0 rgba(255,255,255,.12), 0 1px 0 rgba(255,255,255,.08) !important;
+  transform:translateY(3px); }
+
+/* === v2.3 HOME layout: brand top-left, status top-right, nine places === */
+.home{ gap:12px; padding:18px 16px 12px; }
+.hm-top{ display:flex; align-items:flex-start; justify-content:space-between; gap:10px; text-align:left; padding-top:2px; }
+.hm-brand{ min-width:0; }
+.hm-mark{ font-size:30px !important; letter-spacing:.2em !important; padding-left:0 !important; -webkit-box-reflect:none !important; display:block; }
+.hm-by{ margin-top:4px !important; font-size:8.5px; letter-spacing:.22em; }
+.hm-head{ flex-direction:column; align-items:flex-end; justify-content:flex-start; gap:5px; min-height:0; text-align:right; padding-top:3px; }
+.hm-head h1{ font-size:14px; font-weight:800; line-height:1.2; color:rgba(255,255,255,.9); }
+.hm-dots i{ width:8px; height:8px; }
+.hm-list{ gap:7px; padding:2px 1px 4px; }
+.hm-list li{ flex:1 1 0; min-height:46px; max-height:86px; }
+.hm-list li:first-child, .hm-list li:last-child{ margin:0 !important; }
+.hm-room{ gap:12px; padding:0 14px 0 12px; border-radius:16px; }
+.hm-bub{ flex:0 0 26px; width:26px; height:26px; }
+.hm-txt{ gap:1px; } .hm-txt b{ font-size:16px; } .hm-txt span{ font-size:11.5px; }
+.hm-eq{ height:16px; } .hm-eq i:nth-child(1){ height:8px; } .hm-eq i:nth-child(2){ height:15px; } .hm-eq i:nth-child(3){ height:10px; } .hm-eq i:nth-child(4){ height:13px; }
+/* an empty place: quiet, dashed, not a button */
+.hm-empty{ cursor:default; background:transparent !important; box-shadow:none !important; border:1px dashed rgba(255,255,255,.14) !important; }
+.hm-empty .hm-bub{ background:transparent; border:1.5px dashed rgba(255,255,255,.22); box-shadow:none; }
+.hm-empty .hm-txt b{ color:rgba(255,255,255,.22); font-weight:700; }
+.hm-empty .hm-txt span{ color:rgba(255,255,255,.18); }
+.hm-hint{ font-size:10.5px; }
+@media (max-height:700px){ .hm-mark{ font-size:26px !important; } .hm-list{ gap:5px; } .hm-list li{ min-height:44px; } .hm-txt b{ font-size:15px; } .hm-txt span{ font-size:11px; } .home{ padding-top:14px; gap:9px; } }
+
+/* === v2.3.1 HOME: a touch more light; fixed-height places so the extra ones scroll === */
+.hm-list li{ flex:0 0 var(--row, 60px) !important; height:var(--row, 60px); min-height:44px; max-height:none !important; }
+.hm-list{ scroll-snap-type:y proximity;
+  -webkit-mask-image:linear-gradient(180deg,#000 calc(100% - 22px),transparent); mask-image:linear-gradient(180deg,#000 calc(100% - 22px),transparent); }
+.hm-list li{ scroll-snap-align:start; }
+.hm-room{ border-color:rgba(255,255,255,.16);
+  background:linear-gradient(180deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.04) 48%, rgba(255,255,255,.015) 52%, rgba(255,255,255,.05) 100%), #1a1a1a; }
+.hm-txt span{ color:rgba(255,255,255,.62); }
+.hm-room.on{ background:linear-gradient(180deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.04) 48%, rgba(255,255,255,.015) 52%, rgba(255,255,255,.05) 100%),
+    linear-gradient(90deg, color-mix(in srgb,var(--c) 34%,#111) 0%, #1a1a1a 80%); }
+.hm-empty{ border:1px dashed rgba(255,255,255,.32) !important; background:rgba(255,255,255,.025) !important; }
+.hm-empty .hm-bub{ border-color:rgba(255,255,255,.42); }
+.hm-empty .hm-txt b{ color:rgba(255,255,255,.45); }
+.hm-empty .hm-txt span{ color:rgba(255,255,255,.36); }
+/* v2.3.2: the chosen tab is pressed in AND framed in 1 px white, so it reads at a glance */
+.modes button[aria-selected="true"]{ border:1px solid #fff !important; }
+
+/* === v2.3.3: one line of room bubbles, never two; the room bar sits tighter under the header === */
+.elsewhere{ display:none !important; }
+.strip[data-n="5"]{ grid-template-columns:repeat(5,40px) !important; }
+.strip[data-n="6"]{ grid-template-columns:repeat(6,40px) !important; }
+.strip[data-n="5"] .pill, .strip[data-n="6"] .pill{ width:40px !important; min-width:40px !important; }
+.strip[data-n="5"] .pill .bub, .strip[data-n="6"] .pill .bub{ width:26px; height:26px; }
+.strip[data-n="5"] .pill .pb, .strip[data-n="6"] .pill .pb{ width:15px; height:15px; top:1px; right:-1px; }
+.roombar{ margin-top:-6px; }
+@media (max-width:390px){
+  .strip[data-n="5"]{ grid-template-columns:repeat(5,36px) !important; }
+  .strip[data-n="6"]{ grid-template-columns:repeat(6,36px) !important; }
+  .strip[data-n="5"] .pill, .strip[data-n="6"] .pill{ width:36px !important; min-width:36px !important; }
+  .strip[data-n="5"] .pill .bub, .strip[data-n="6"] .pill .bub{ width:24px; height:24px; }
+}
+@media (max-width:370px){
+  .strip[data-n="6"]{ grid-template-columns:repeat(6,34px) !important; }
+  .strip[data-n="6"] .pill{ width:34px !important; min-width:34px !important; }
+  .strip[data-n="6"] .pill .bub{ width:23px; height:23px; }
+  .roombar{ gap:4px !important; }
+}
+
+/* v2.3.4: HUSH · ALL ROOMS (was P1 · QUIET) */
+.rbtn.p1 b{ font-size:15.5px !important; letter-spacing:.04em; }
+.rbtn.p1 b.rs{ font-size:11px !important; letter-spacing:.03em; }
+.rbtn.p1 small{ font-size:6.8px !important; letter-spacing:.08em; white-space:nowrap; }
+
+/* v2.3.5: Continue button, the way out of Home */
+.hm-go{ align-self:center; display:flex; align-items:center; gap:10px; min-height:46px; padding:0 18px 0 14px; border-radius:23px; cursor:pointer;
+  color:#fff; font:600 14px var(--font); border:1px solid color-mix(in srgb, var(--c) 75%, transparent);
+  background:linear-gradient(180deg, rgba(255,255,255,.14) 0%, rgba(255,255,255,.04) 50%, rgba(255,255,255,.02) 51%, rgba(255,255,255,.06) 100%), #1c1c1c;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.18), 0 0 14px color-mix(in srgb, var(--c) 25%, transparent), 0 4px 10px rgba(0,0,0,.6); }
+.hm-go b{ font-weight:900; }
+.hm-go em{ font-style:normal; font-size:20px; line-height:1; color:rgba(255,255,255,.7); }
+.hm-gdot{ width:12px; height:12px; border-radius:50%; background:var(--c); box-shadow:0 0 6px var(--c); }
+.hm-go:active{ transform:scale(.97); }
+.hm-go:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+/* no room colour peeking at Home's corners */
+.frame.home-open{ background:#000 !important; }
+@media (max-height:700px){ .hm-go{ min-height:44px; font-size:13px; } }
+
+/* v2.3.6: NEXT, neutral (it isn't a room, so it carries no room colour) */
+.hm-go{ --c:#ffffff; gap:8px; padding:0 22px 0 26px; font:900 14px var(--font); letter-spacing:.16em;
+  border-color:rgba(255,255,255,.4); box-shadow:inset 0 1px 0 rgba(255,255,255,.18), 0 4px 10px rgba(0,0,0,.6);
+  text-shadow:0 -1px 0 rgba(0,0,0,.9), 0 1px 0 rgba(255,255,255,.2); }
+.hm-go em{ letter-spacing:0; }
+
+/* === v2.4 HOME: act where you look === */
+/* WHAT'S PLAYING NOW: first, long, black glass; words and hairline rim flow through the room colours */
+.hm-wpn{ align-self:stretch !important; flex:0 0 auto; justify-content:center; min-height:50px; padding:0 14px !important; border-radius:16px !important;
+  border:1.5px solid transparent !important; letter-spacing:.14em !important; font:900 14.5px var(--font) !important; text-shadow:none !important;
+  background:linear-gradient(180deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.03) 50%, rgba(255,255,255,.01) 51%, rgba(255,255,255,.04) 100%) padding-box,
+    linear-gradient(#0d0d0d,#0d0d0d) padding-box, var(--rb, linear-gradient(90deg,#ff5a5a,#ffc400,#6f98ff,#48e58c,#ff5a5a)) border-box !important;
+  background-size:100% 100%, 100% 100%, 200% 100% !important; animation:rbFlow 6s linear infinite;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12), 0 6px 14px rgba(0,0,0,.6) !important; }
+.hm-rb{ background:var(--rb, linear-gradient(90deg,#ff5a5a,#ffc400,#6f98ff,#48e58c,#ff5a5a)); background-size:200% 100%;
+  -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;
+  animation:rbText 6s linear infinite; filter:drop-shadow(0 1px 0 rgba(0,0,0,.9)) brightness(1.15); white-space:nowrap; }
+@keyframes rbFlow{ from{ background-position:0 0, 0 0, 0% 0; } to{ background-position:0 0, 0 0, -200% 0; } }
+@keyframes rbText{ from{ background-position:0% 0; } to{ background-position:-200% 0; } }
+@media (max-width:370px){ .hm-wpn{ font-size:13px !important; letter-spacing:.1em !important; } }
+
+/* HUSH ALL under the house status */
+.hm-hush{ margin-top:4px; min-height:34px; padding:0 14px; border-radius:17px; cursor:pointer; white-space:nowrap;
+  font:900 11.5px var(--font); letter-spacing:.1em; color:#fff; border:1px solid #ff8a8a;
+  background:radial-gradient(circle at 40% 25%, #ff6b6b, #c62828 70%); box-shadow:inset 0 1px 0 rgba(255,255,255,.35), 0 3px 8px rgba(0,0,0,.6); }
+.hm-hush.rs{ color:#8e1b1b; border-color:#fff; background:radial-gradient(circle at 40% 25%, #fff, #ffd6d6 75%); }
+.hm-hush.dim{ opacity:.45; }
+.hm-hush:active{ transform:scale(.96); }
+.hm-hush:focus-visible, .hm-mbtn:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+
+/* MUTE beside every playing room; sits on the card's right, outside the open-room button */
+.hm-list li{ position:relative; }
+.hm-list li.has-mute .hm-room{ padding-right:96px; }
+.hm-mbtn{ position:absolute; right:10px; top:50%; transform:translateY(-50%); min-width:76px; height:38px; padding:0 12px; border-radius:12px; cursor:pointer;
+  font:900 12.5px var(--font); letter-spacing:.06em; color:#111; background:#fff; border:1px solid var(--c);
+  box-shadow:0 2px 6px rgba(0,0,0,.6), 0 0 10px color-mix(in srgb, var(--c) 40%, transparent); }
+.hm-mbtn[aria-pressed="true"]{ background:#c62828; color:#fff; border-color:#ff8a8a; }
+.hm-mbtn:active{ transform:translateY(-50%) scale(.96); }
+.hm-list li.has-mute .hm-eq{ margin-right:2px; }
+.hm-room.muted .hm-mute{ display:none; }
+@media (max-width:370px){ .hm-list li.has-mute .hm-room{ padding-right:86px; } .hm-mbtn{ min-width:68px; height:34px; right:8px; font-size:11.5px; } .hm-list li.has-mute .hm-eq{ display:none; } }
+@media (prefers-reduced-motion:reduce){ .hm-wpn, .hm-rb{ animation:none !important; } }
 @media (prefers-reduced-motion:reduce){
   *{ transition:none !important; animation:none !important; }
 }
 
 /* v2.0.1: holds must not be stolen by the phone's long-press menu or scroll */
 .tile.square,.tile.group,.talk{ touch-action:none; -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; }
-/* v2.0.1: short screens: the rail shrinks instead of spilling onto the transport */
+/* v2.0.1: short screens (small iPhones, Safari bars showing): the rail shrinks instead of spilling onto the transport */
 .rail{ overflow:hidden; }
 .rbtn.round{ flex:0 1 58px; min-height:40px; }
 @media (max-height:640px){
-  .rail{ gap:5px; } .rbtn{ min-height:32px; }
+  .rail{ gap:5px; }
+  .rbtn{ min-height:32px; }
   .rbtn.round{ flex:0 1 44px; min-height:32px; border-radius:22px; }
-  .rbtn svg{ width:24px; height:24px; } .volread{ font-size:13px; }
-}
-/* v2.0.1: on phones the demo card is a slim strip at the bottom, so it no longer hides the tiles or transport */
-@media (max-width:899px){
-  /* collapsed card: one slim strip  ‹ Back | time + title (tap for the story) | Next › | Exit */
-  .demo:not(.more):not([hidden]){ display:grid; grid-template-columns:auto 1fr auto auto; align-items:center; column-gap:8px; row-gap:0; padding:8px 10px; }
-  .demo:not(.more) .dm-top, .demo:not(.more) .dm-row{ display:contents; }
-  .demo:not(.more) .dm-n, .demo:not(.more) .dm-steps, .demo:not(.more) p{ display:none; }
-  .demo:not(.more) #dmBack{ grid-column:1; grid-row:1 / span 2; padding:10px 12px; flex:none; }
-  .demo:not(.more) .dm-time{ grid-column:2; grid-row:1; font-size:13px; color:rgba(255,255,255,.6); cursor:pointer; }
-  .demo:not(.more) h3{ grid-column:2; grid-row:2; font-size:14px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; cursor:pointer; }
-  .demo:not(.more) h3::after{ content:'  · story'; font-weight:500; color:#ffc400; font-size:12px; }
-  .demo:not(.more) #dmNext{ grid-column:3; grid-row:1 / span 2; padding:10px 12px; flex:none; max-width:120px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; font-size:13px; }
-  .demo:not(.more) #dmHide{ grid-column:4; grid-row:1 / span 2; }
-  .demo.more h3{ cursor:pointer; }
-  .demo.more h3::after{ content:'  · hide story'; font-weight:500; color:#ffc400; font-size:12px; }
+  .rbtn svg{ width:24px; height:24px; }
+  .volread{ font-size:13px; }
 }
 </style>
 </head>
@@ -674,10 +1059,11 @@ body{ gap:24px; }
     <div class="strip" id="strip" role="tablist" aria-label="Rooms"></div>
   </section>
 
-  <button class="offbar" id="offBar" aria-live="polite"><b>Internet down</b><span>Still working: TV, Bluetooth, Line-In, Library, P1</span></button>
+  <section class="elsewhere" id="elsewhere" aria-label="Playing in other rooms" aria-live="polite" hidden></section>
 
   <div class="modes" role="tablist" aria-label="Panel mode">
     <button role="tab" data-mode="music" aria-selected="true">MUSIC</button>
+    <button role="tab" data-mode="playing" aria-selected="false">PLAYING NOW</button>
     <button role="tab" data-mode="scenes" aria-selected="false">SCENES</button>
   </div>
 
@@ -685,9 +1071,13 @@ body{ gap:24px; }
     <div class="gridwrap">
       <div class="grid" id="grid" role="tabpanel" aria-label="Music sources"></div>
       <div class="grid" id="gridS" role="tabpanel" aria-label="Scenes" hidden></div>
+      <div class="house" id="house" role="tabpanel" aria-label="Every room and what is happening in it" hidden>
+        <p class="hs-sum" id="hsSum"></p>
+        <ul class="hs-list" id="hsList"></ul>
+      </div>
     </div>
     <div class="rail">
-      <button class="rbtn round p1" id="p1Btn" aria-label="Priority One: silence the whole house" aria-pressed="false"><b>P1</b><small>QUIET</small></button>
+      <button class="rbtn round p1" id="p1Btn" aria-label="Hush: silence every room" aria-pressed="false"><b>HUSH</b><small>ALL ROOMS</small></button>
       <button class="rbtn" id="volUp" aria-label="Volume up"></button>
       <div class="volread" id="volRead" aria-live="polite">30<small>VOL</small></div>
       <button class="rbtn" id="volDown" aria-label="Volume down"></button>
@@ -742,9 +1132,28 @@ body{ gap:24px; }
   </section>
 
   <div class="foot">
-    <button class="logbtn" id="logBtn" aria-label="Open command log">📋</button>
+    <span class="fbtns"><button class="logbtn" id="logBtn" aria-label="Open command log">📋</button><button class="logbtn fsbtn" id="fsBtn" aria-label="Full screen" aria-pressed="false" hidden><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></span>
     <span class="credit">© 2026 OVI DEMETRIAN · ALL RIGHTS RESERVED</span>
   </div>
+
+  <!-- HOME: every room, nothing else -->
+  <section class="home" id="home" aria-label="Home. Every room in the house" aria-hidden="true">
+    <div class="hm-sheen" aria-hidden="true"></div>
+    <header class="hm-top">
+      <div class="hm-brand">
+        <div class="hm-mark">SONOS</div>
+        <div class="hm-by">MADE BY OVI DEMETRIAN</div>
+      </div>
+      <div class="hm-head">
+        <h1 id="hmHead">The house is quiet</h1>
+        <div class="hm-dots" id="hmDots" aria-hidden="true"></div>
+        <button class="hm-hush" id="hmHush" aria-pressed="false">HUSH ALL</button>
+      </div>
+    </header>
+    <button class="hm-go hm-wpn" id="hmGo" aria-label="What's playing now: see every room"><span class="hm-rb">WHAT’S PLAYING NOW</span></button>
+    <ul class="hm-list" id="hmList"></ul>
+
+  </section>
 
   <!-- GROUPING PAGE -->
   <section class="gpage" id="gpage" aria-hidden="true" aria-labelledby="gTitle">
@@ -778,7 +1187,7 @@ body{ gap:24px; }
       </div>
       <div class="sgroup">
         <h3>Amp Multi demo</h3>
-        <div class="presets"><button class="pbtn" id="demoBtn">Saturday demo</button><button class="pbtn" id="instBtn">Installer view</button><button class="pbtn" id="netBtn">Internet: on</button></div>
+        <div class="presets"><button class="pbtn" id="demoBtn">Saturday demo</button><button class="pbtn" id="instBtn">Installer view</button></div>
       </div>
       <div class="row">
         <button id="sCancel">Cancel</button>
@@ -847,7 +1256,7 @@ body{ gap:24px; }
 </main>
 
 <aside class="demo" id="demo" aria-label="Saturday demo" hidden>
-  <div class="dm-top"><span class="dm-time" id="dmTime">5:45 pm</span><span class="dm-n" id="dmN"></span><button class="dm-x" id="dmHide">Exit demo</button></div>
+  <div class="dm-top"><span class="dm-time" id="dmTime">5:45 pm</span><span class="dm-n" id="dmN"></span><button class="dm-x" id="dmHide">Hide</button></div>
   <div class="dm-steps" id="dmSteps"></div>
   <h3 id="dmTitle"></h3>
   <p id="dmText"></p>
@@ -910,7 +1319,7 @@ const PALETTE = [
   { a:'#07504e', b:'#011a19', ta:'#1f9e96', tb:'#0c5550', c:'#3fe0d0', def:'Den',         tv:true,  dev:['Ray'] }
 ];
 /* THE HOUSE: which palette colours are rooms, in order. Everything else counts rooms from here, never a fixed four. */
-let roomPal = [0,1,2,3];
+let roomPal = [0,1,2,3,4,5];   /* v2.4.1: default house is all six rooms */
 try { const h = JSON.parse(localStorage.getItem('sonosPanelHouse')||'null'); if (Array.isArray(h) && h.length >= 2 && h.length <= PALETTE.length && h.every(x => PALETTE[x])) roomPal = h; } catch(e) {}
 const N = () => roomPal.length;
 const ALL = () => roomPal.map((_,k) => k);
@@ -922,8 +1331,8 @@ const SOURCES = {
   library:   { label:'Music Library', tracks:['Vinyl Rips, Vol. 3','1995 Studio Masters','Home Recordings'] },
   tv:        { label:'TV Audio', tracks:['TV sound'] },
   podcasts:  { label:'Podcasts', tracks:['Episode 12: Listening Rooms','Episode 13: The Final Ten Feet'] },
-  linein:    { label:'Line-In', tracks:['Turntable'] },
-  phone:     { label:'From Your Phone', tracks:['Audio from your phone'] },
+  linein:    { label:'Source', tracks:['Turntable'] },
+  phone:     { label:'From Your Phone', tracks:['Streaming from phone'] },
   rain:      { label:'Rain Sounds', tracks:['Rain on the Roof'] }   /* only reachable from another controller in the demo */
 };
 const SCENES = {
@@ -943,7 +1352,7 @@ const SCENE_TILES = [
 const TILES = [
   ['fav','FAVORITES'],['playlists','PLAYLISTS'],['radio','RADIO'],
   ['library','LIBRARY'],['rooms','ROOMS'],['tv','TV'],
-  ['podcasts','PODCASTS'],['linein','LINE-IN'],['phone','PHONE'],
+  ['podcasts','PODCASTS'],['linein','SOURCE'],['phone','PHONE'],
   ['settings','SETTINGS'],['square','BACK TO SQUARE ONE'],['group','GROUP']
 ];
 
@@ -967,10 +1376,6 @@ function saveHouse(){
 let rooms, cur, logEntries = [], hush = null, lastResume = '';
 /* v2.0 house extras: Amp Multi zones, short strip labels, one portable, one listener */
 let zones = [], shorts = [], portable = null, ace = null;
-/* Offline mode: what needs the internet, and what never leaves the house */
-let offline = false;
-const CLOUD = new Set(['fav','playlists','radio','podcasts','rain']);
-const STILL_WORKS = 'TV, Bluetooth, Line-In, Library, P1, volume and grouping';
 const disp = i => (zones[i] && zones[i].covers) ? zones[i].covers.join(' + ') : names[i];
 function freshState(){
   rooms = roomPal.map((x,i) => ({ vol:30, muted:false, coord:i, playing:false, source:null, track:0, light:0, shades:'open', scene:null, sleepAt:null, by:null }));
@@ -1023,6 +1428,9 @@ let mode = 'music';
 function setMode(m, silent){
   mode = m;
   grids[0].hidden = m !== 'music'; grids[1].hidden = m !== 'scenes';
+  document.getElementById('house').hidden = m !== 'playing';
+  document.getElementById('frame').classList.toggle('mode-playing', m === 'playing');
+  if (m === 'playing') renderHouse();
   document.querySelectorAll('.modes button').forEach(b => b.setAttribute('aria-selected', b.dataset.mode === m));
   if (!silent){ log(`Mode: ${m}`); buzz(); }
   fitRooms();
@@ -1051,7 +1459,7 @@ function buildStrip(){
   ALL().forEach(i => {
     const b = document.createElement('button');
     b.className = 'pill'; b.setAttribute('role','tab');
-    b.innerHTML = '<span class="pl"></span><i class="bub"></i>';
+    b.innerHTML = '<span class="pl"></span><i class="bub"></i><span class="pb" aria-hidden="true"><i></i><i></i><i></i></span>';
     b.addEventListener('click', () => { if (i === cur) openRoomPage(); else goRoom(i); });
     stripEl.appendChild(b);
   });
@@ -1064,8 +1472,11 @@ function renderStrip(){
     const here = i === cur, withMe = !here && members(cur).includes(i);
     b.setAttribute('aria-selected', here ? 'true' : 'false');
     b.classList.toggle('with', withMe);
-    b.classList.toggle('busy', !!(lead(i).playing && lead(i).source));
-    b.setAttribute('aria-label', names[i] + (here ? ', you are here. Open room activity.' : withMe ? ', playing with this room' : ''));
+    const busy = !!(lead(i).playing && lead(i).source), quiet = busy && rooms[i].muted;
+    b.classList.toggle('busy', busy);
+    b.classList.toggle('quiet', quiet);
+    const status = busy ? (quiet ? ', playing, muted' : ', playing') : '';
+    b.setAttribute('aria-label', names[i] + status + (here ? ', selected. Open room activity.' : withMe ? ', grouped with this room' : ''));
   });
 }
 
@@ -1077,10 +1488,14 @@ document.getElementById('volDown').innerHTML = ICON.volDown;
 const $ = id => document.getElementById(id);
 function render(){
   const p = pal(cur), frame = $('frame');
+  /* v2.0.6: the page behind the panel and the browser bars wear the room colour too */
+  document.documentElement.style.setProperty('--r-a', p.a); document.documentElement.style.setProperty('--r-b', p.b);
+  const tc = document.getElementById('themeColor'); if (tc) tc.setAttribute('content', '#000000');
   frame.style.setProperty('--r-a', p.a); frame.style.setProperty('--r-b', p.b); frame.style.setProperty('--accent', p.c); frame.style.setProperty('--tile-a', p.ta); frame.style.setProperty('--tile-b', p.tb);
   const m = members(cur), L = lead(cur);
 
   $('actRoom').textContent = disp(cur);
+  fitRoomName();
   const gq = $('gsq'), prevN = gq.dataset.n;
   $('gsqN').textContent = m.length; gq.dataset.n = m.length;
   gq.classList.toggle('linked', m.length > 1);
@@ -1090,7 +1505,6 @@ function render(){
   /* ACTIVITY: what is happening in this room right now; the LED pulses white while anything is going on */
   const R0 = rooms[cur], act = [];
   if (L.playing && L.source) act.push('Playing ' + SOURCES[L.source].label);
-  else if (L.source && offline && CLOUD.has(L.source)) act.push('Stream stopped: internet is down');
   else if (L.source) act.push('Paused');
   if (m.length === N()) act.push('all rooms together');
   else if (others.length) act.push('with ' + listNames(others));
@@ -1107,9 +1521,9 @@ function render(){
   if ($('rpage').classList.contains('open')) renderRoomPage();
 
   renderStrip();
-  $('offBar').classList.toggle('show', offline);
-  $('orb').classList.toggle('off', offline);
-  $('netBtn').textContent = offline ? 'Internet: down' : 'Internet: on';
+  /* v2.3.3: the "playing elsewhere" strip is retired; the bubbles' badges and PLAYING NOW carry that job */
+  if (mode === 'playing') renderHouse();
+  if ($('home').classList.contains('open')) renderHome();
 
   const R = rooms[cur];
   allTiles('.tile').forEach(t => {
@@ -1121,8 +1535,6 @@ function render(){
     if (id==='shades') t.querySelector('.lvl').textContent = R.shades.toUpperCase();
     if (id==='morning') t.querySelector('.lvl').textContent = alarm.on ? '⏰ ' + alarm.time + ' ' + names[alarm.room].split(' ')[0].toUpperCase() : '';
     if (id==='tv' || id==='cinema') t.classList.toggle('na', !tvOK(cur));
-    if (SOURCES[id] && CLOUD.has(id)) t.classList.toggle('na', offline);
-    if (SCENES[id] && SCENES[id].src && CLOUD.has(SCENES[id].src)) t.classList.toggle('na', offline);
   });
 
   const vol = Math.round(m.reduce((s,k)=>s+rooms[k].vol,0)/m.length);
@@ -1136,9 +1548,9 @@ function render(){
   /* v2.0: Priority One stays on until P1 is pressed again; rooms changed meanwhile are reported, not overwritten */
   const p1 = $('p1Btn');
   p1.classList.toggle('hushed', !!hush); $('frame').classList.toggle('hushed', !!hush);
-  p1.innerHTML = hush ? '<b>P1</b><small>RESUME</small>' : '<b>P1</b><small>QUIET</small>';
+  p1.innerHTML = hush ? '<b class="rs">RESUME</b><small>ALL ROOMS</small>' : '<b>HUSH</b><small>ALL ROOMS</small>';
   p1.setAttribute('aria-pressed', !!hush);
-  p1.setAttribute('aria-label', hush ? 'Priority One is on. Tap to bring the music back.' : 'Priority One: silence the whole house');
+  p1.setAttribute('aria-label', hush ? 'Every room is hushed. Tap to bring the music back.' : 'Hush: silence every room');
 
   const art = $('art');
   if (L.source){
@@ -1152,11 +1564,167 @@ function render(){
     $('npTitle').textContent = `Nothing playing in ${names[cur]}`;
     $('npSub').textContent = 'Pick a source above to start';
   }
-  if (hush && !L.playing){ $('npSub').textContent = 'House silenced. Tap P1 to bring it back.'; }
+  if (hush && !L.playing){ $('npSub').textContent = 'Every room hushed. Tap RESUME to bring it back.'; }
   if ($('gpage').classList.contains('open')) renderGroup();
   if ($('idCard').classList.contains('open')) renderID();
   fitRooms();
 }
+
+
+
+/* v2.0.3: PLAYING tab, every room in the house with everything happening in it */
+function roomActs(i){
+  const R = rooms[i], L = lead(i), m = members(i), others = m.filter(k => k !== i), src = L.source ? SOURCES[L.source] : null, a = [];
+  if (src) a.push(['trk', (L.playing ? '' : 'Paused: ') + src.tracks[L.track % src.tracks.length] + ' · ' + src.label]);
+  if (src) a.push(['', R.muted ? 'Muted' : 'Volume ' + R.vol]);
+  if (m.length === N() && N() > 1) a.push(['', 'All rooms together']);
+  else if (others.length) a.push(['', 'With ' + listNames(others)]);
+  if (R.scene && SCENES[R.scene]) a.push(['', SCENES[R.scene].label + ' scene']);
+  if (R.light) a.push(['', 'Lights ' + R.light + '%']);
+  if (R.shades && R.shades !== 'open') a.push(['', 'Shades ' + R.shades]);
+  if (L.sleepAt && L.playing) a.push(['', 'Sleep in ' + Math.max(1, Math.ceil((L.sleepAt - Date.now())/60000)) + ' min']);
+  if (hasTV[i] && L.source === 'tv') a.push(['', 'TV sound']);
+  if (ace && ace.linked && m.includes(ace.room)) a.push(['', ace.name + ' on headphones']);
+  if (zones[i]) a.push(['', zones[i].label]);
+  if (R.by) a.push(['', 'Changed by ' + R.by]);
+  return a;
+}
+function renderHouse(){
+  const all = ALL();
+  const playingN = all.filter(i => lead(i).playing && lead(i).source && !rooms[i].muted).length;
+  $('hsSum').textContent = playingN ? `Music in ${playingN} of ${all.length} rooms` : `No music in any room`;
+  $('hsList').innerHTML = all.map(i => {
+    const R = rooms[i], L = lead(i), src = !!L.source, acts = roomActs(i);
+    const st = !src ? ['', 'Idle'] : !L.playing ? ['pause', 'Paused'] : R.muted ? ['mute', 'Muted'] : ['play', 'Playing'];
+    const name = esc(disp(i)), canMute = src && L.playing;
+    return `<li class="hs-room${i === cur ? ' sel' : ''}${acts.length ? '' : ' idle'}${st[0] === 'play' ? ' on' : ''}" style="--c:${pal(i).c}">
+      <button class="hs-go" data-room="${i}" aria-label="${name}, ${st[1]}${acts.length ? '. ' + esc(acts.map(x => x[1]).join(', ')) : ', nothing happening'}${i === cur ? '. Selected' : '. Tap to control this room'}">
+        <span class="hs-top"><i class="hs-bub"></i><b>${name}</b><i class="hs-st ${st[0]}">${st[1]}</i>${i === cur ? '<i class="hs-sel">Selected</i>' : ''}<span class="hm-eq hs-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></span>
+        ${acts.length ? `<span class="hs-acts">${acts.map(([c,t]) => `<span class="${c}">${esc(t)}</span>`).join('')}</span>` : '<span class="hs-none">Nothing happening</span>'}
+      </button>
+      ${canMute ? `<button class="hs-mute" data-mute="${i}" aria-pressed="${R.muted}" aria-label="${R.muted ? 'Unmute' : 'Mute'} ${name}">${R.muted ? 'Unmute' : 'Mute'}</button>` : ''}
+    </li>`;
+  }).join('');
+}
+document.getElementById('house').addEventListener('click', e => {
+  const mu = e.target.closest('[data-mute]'), go = e.target.closest('[data-room]');
+  if (mu){ const i = +mu.dataset.mute, to = !rooms[i].muted; rooms[i].muted = to; log(`${to ? 'Mute' : 'Unmute'} ${names[i]} (Playing list)`); buzz(); render(); }
+  else if (go){ const i = +go.dataset.room; if (i !== cur){ cur = i; log(`Room: ${names[i]}`); } setMode('music'); render(); }
+});
+
+/* v2.0.2: rooms playing OUTSIDE the selected room's group. One entry per group: name, status, Mute. */
+function renderElsewhere(){
+  const el = $('elsewhere'), mine = members(cur);
+  const groups = rooms.map((r,i)=>i).filter(i => rooms[i].coord === i && rooms[i].playing && rooms[i].source && !mine.includes(i));
+  el.hidden = !groups.length;
+  el.innerHTML = groups.map(i => {
+    const m = members(i), allMuted = m.every(k => rooms[k].muted);
+    const name = esc(listNames(m)), src = esc(SOURCES[rooms[i].source].label);
+    return `<div class="ew" style="--c:${pal(i).c}">
+      <button class="ew-go" data-go="${i}" aria-label="${name}: ${allMuted?'muted':'playing'} ${src}. Go to this room."><i class="ew-dot"></i><span class="ew-t"><b>${name} · ${allMuted?'Muted':'Playing'}</b><span>${src}</span></span></button>
+      <button class="ew-mute" data-mute="${i}" aria-pressed="${allMuted}" aria-label="${allMuted?'Unmute':'Mute'} ${name}">${allMuted?'Unmute':'Mute'}</button>
+    </div>`;
+  }).join('');
+}
+document.getElementById('elsewhere').addEventListener('click', e => {
+  const go = e.target.closest('[data-go]'), mu = e.target.closest('[data-mute]');
+  if (mu){
+    const m = members(+mu.dataset.mute), to = !m.every(k => rooms[k].muted);
+    m.forEach(k => rooms[k].muted = to);
+    log(`${to?'Mute':'Unmute'} ${listNames(m)} (from ${names[cur]})`); buzz(); render();
+  } else if (go){ goRoom(+go.dataset.go); }
+});
+
+
+/* v2.0.7: FULL SCREEN. Browsers only allow it after a tap, so the first tap on a phone asks for it once;
+   the footer button toggles it any time. Where the browser can't (iPhone Safari), the button stays hidden. */
+(function(){
+  const root = document.documentElement, btn = document.getElementById('fsBtn');
+  const can = !!(document.fullscreenEnabled || document.webkitFullscreenEnabled);
+  const isFull = () => !!(document.fullscreenElement || document.webkitFullscreenElement);
+  const enter = () => { try { const r = root.requestFullscreen ? root.requestFullscreen({ navigationUI:'hide' }) : root.webkitRequestFullscreen && root.webkitRequestFullscreen(); if (r && r.catch) r.catch(()=>{}); } catch(e){} };
+  const leave = () => { try { const r = document.exitFullscreen ? document.exitFullscreen() : document.webkitExitFullscreen && document.webkitExitFullscreen(); if (r && r.catch) r.catch(()=>{}); } catch(e){} };
+  if (!can) return;
+  btn.hidden = false;
+  const sync = () => { const f = isFull(); btn.setAttribute('aria-pressed', f); btn.setAttribute('aria-label', f ? 'Exit full screen' : 'Full screen'); setTimeout(fitRooms, 250); };
+  document.addEventListener('fullscreenchange', sync); document.addEventListener('webkitfullscreenchange', sync);
+  btn.addEventListener('click', e => { e.stopPropagation(); isFull() ? leave() : enter(); buzz(); });
+  let asked = false;
+  document.addEventListener('click', () => {
+    if (asked || isFull()) return; asked = true;
+    if (matchMedia('(max-width:520px), (pointer:coarse)').matches) enter();
+  }, true);
+})();
+
+
+/* v2.3.3: a long room name steps its size down (to 14 px at most) so it never hides under the bubble row */
+function fitRoomName(){
+  const b = $('actRoom'), row = b.parentElement; b.style.removeProperty('font-size');
+  let f = parseFloat(getComputedStyle(b).fontSize);
+  while (row.scrollWidth > row.clientWidth + 0.5 && f > 14){ f -= 0.5; b.style.setProperty('font-size', f + 'px', 'important'); }
+}
+window.addEventListener('resize', () => fitRoomName());
+/* v2.2 HOME */
+const HOME_SLOTS = 12, HOME_VISIBLE = 9.35;   /* nine places plus a peek of the tenth, so the list says 'there is more below' */   /* v2.3: nine places; rooms you have, then empty places for rooms to come */
+function renderHome(){
+  const all = ALL(), on = all.filter(i => lead(i).playing && lead(i).source && !rooms[i].muted);
+  { const cs = all.map(i => pal(i).c); $('hmGo').style.setProperty('--rb', `linear-gradient(90deg, ${[...cs, ...cs, cs[0]].join(', ')})`); }
+  const hb = $('hmHush'), quiet = !hush && !all.some(i => lead(i).playing && lead(i).source);
+  hb.textContent = hush ? 'RESUME ALL' : 'HUSH ALL';
+  hb.classList.toggle('rs', !!hush); hb.classList.toggle('dim', quiet);
+  hb.setAttribute('aria-pressed', !!hush);
+  hb.setAttribute('aria-label', hush ? 'Every room is hushed. Bring the music back.' : 'Hush: silence every room');
+  $('hmHead').textContent = hush ? 'Every room hushed' : on.length ? `Music in ${on.length} ${on.length === 1 ? 'room' : 'rooms'}` : 'The house is quiet';
+  $('hmDots').innerHTML = on.map(i => `<i style="--c:${pal(i).c}"></i>`).join('');
+  $('hmList').innerHTML = all.map(i => {
+    const L = lead(i), R = rooms[i], src = L.source ? SOURCES[L.source] : null, playing = !!(src && L.playing);
+    const others = members(i).filter(k => k !== i);
+    let line = src ? (L.playing ? src.tracks[L.track % src.tracks.length] + ' · ' + src.label : 'Paused · ' + src.label) : 'Quiet';
+    if (others.length) line += ' · with ' + listNames(others);
+    const name = esc(disp(i));
+    return `<li class="${playing ? 'has-mute' : ''}" style="--c:${pal(i).c}"><button class="hm-room${playing ? ' on' : ''}${playing && R.muted ? ' muted' : ''}" data-home="${i}" style="--c:${pal(i).c}"
+      aria-label="${name}. ${playing ? (R.muted ? 'Playing, muted' : 'Playing') : src ? 'Paused' : 'Quiet'}. ${esc(line)}. Open this room.">
+      <i class="hm-bub"></i>
+      <span class="hm-txt"><b>${name}</b><span>${esc(line)}</span></span>
+      <span class="hm-mute">Muted</span>
+      <span class="hm-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+    </button>${playing ? `<button class="hm-mbtn" data-hmute="${i}" aria-pressed="${R.muted}" aria-label="${R.muted ? 'Unmute' : 'Mute'} ${name}">${R.muted ? 'UNMUTE' : 'MUTE'}</button>` : ''}</li>`;
+  }).join('') + Array.from({ length: Math.max(0, HOME_SLOTS - all.length) }, () =>
+    `<li><div class="hm-room hm-empty" aria-hidden="true"><i class="hm-bub"></i><span class="hm-txt"><b>Room</b><span>Ready for the next room</span></span></div></li>`).join('');
+}
+/* v2.3.1: each place is sized so nine fill the screen; the rest wait below a short scroll */
+function sizeHome(){
+  const L = $('hmList'); if (!L || !$('home').classList.contains('open')) return;
+  const gap = parseFloat(getComputedStyle(L).rowGap) || 7;
+  const h = Math.max(44, Math.floor((L.clientHeight - gap * Math.floor(HOME_VISIBLE) - 6) / HOME_VISIBLE));
+  L.style.setProperty('--row', h + 'px');
+}
+window.addEventListener('resize', sizeHome);
+function openHome(silent){
+  renderHome();
+  const h = $('home'); h.classList.add('open'); h.setAttribute('aria-hidden','false'); $('frame').classList.add('home-open');
+  sizeHome(); $('hmList').scrollTop = 0;
+  if (!silent){ log('Home'); buzz(); }
+}
+function closeHome(){
+  const h = $('home'); h.classList.remove('open'); h.setAttribute('aria-hidden','true'); $('frame').classList.remove('home-open');
+  setTimeout(fitRooms, 50);
+}
+/* v2.3.5: the way out of Home without choosing: back to the room you were in */
+function continueFromHome(){ setMode('playing', true); closeHome(); log("What's playing now"); buzz(); render(); }
+$('hmGo').addEventListener('click', continueFromHome);
+$('hmHush').addEventListener('click', () => { priorityOne(); render(); renderHome(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('home').classList.contains('open')) continueFromHome(); });
+$('hmList').addEventListener('click', e => {
+  const m = e.target.closest('[data-hmute]');
+  if (m){ const i = +m.dataset.hmute, to = !rooms[i].muted; rooms[i].muted = to; log(`${to ? 'Mute' : 'Unmute'} ${names[i]} (Home)`); buzz(); render(); return; }
+  const b = e.target.closest('[data-home]'); if (!b) return;
+  cur = +b.dataset.home; setMode('music', true); closeHome(); log(`Room: ${names[cur]}`); buzz(); render();
+});
+{ const br = document.querySelector('.brand');
+  br.setAttribute('role','button'); br.setAttribute('tabindex','0'); br.setAttribute('aria-label','Home: every room');
+  br.addEventListener('click', () => openHome());
+  br.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openHome(); } }); }
 
 /* ============ ROOM ID CARD ============ */
 function renderID(){
@@ -1255,7 +1823,6 @@ function goRoom(i){ cur = i; log(`Room: ${names[i]}`); buzz(); render(); }
 
 function tvOK(i){ return members(i).some(k => hasTV[k]); }
 function pickSource(id){
-  if (offline && CLOUD.has(id)){ toast(`${SOURCES[id].label} needs the internet. Still working: ${STILL_WORKS}.`); return false; }
   if (id === 'tv' && !tvOK(cur)){ toast(`No TV in ${names[cur]}. Tick TV for this room in Settings.`); return false; }
   const L = lead(cur);
   if (L.source === id && L.playing){ toast(`${SOURCES[id].label} is already playing`); return; }
@@ -1267,7 +1834,6 @@ const LIGHT_STEPS = [0,25,50,75,100], SHADE_STEPS = ['open','half','closed'];
 function applyScene(id){
   const sc = SCENES[id];
   if (id === 'cinema' && !tvOK(cur)){ toast(`Cinema needs a TV room. ${names[cur]} has none.`); return false; }
-  if (offline && sc.src && CLOUD.has(sc.src)){ toast(`${sc.label} plays ${SOURCES[sc.src].label}, which needs the internet. Still working: ${STILL_WORKS}.`); return false; }
   if (sc.all) ALL().forEach(k => { if (k !== cur) joinGroup(k, cur); });
   const m = sc.everywhere ? ALL() : members(cur);
   m.forEach(k => Object.assign(rooms[k], { light:sc.light, shades:sc.shades, scene:id }));
@@ -1296,8 +1862,8 @@ grids.forEach(g => g.addEventListener('click', e => {
   }
   if (id === 'rooms') return goRoom((cur+1)%N());
   if (id === 'settings') return openSettings();
-  if (id === 'square'){ if (!t.dataset.held) wrongPress(t); return; }
-  if (id === 'group' && !t.dataset.held) toast('Hold GROUP to choose which rooms play together');
+  if (id === 'square'){ if (squareHeld){ squareHeld = false; } else wrongPress(t); return; }
+  if (id === 'group'){ if (t.dataset.held) delete t.dataset.held; else toast('Hold GROUP to choose which rooms play together'); }
 }));
 
 /* hold GROUP to open grouping page */
@@ -1307,11 +1873,11 @@ allTiles('.tile.group').forEach(g => {
   const tick = () => {
     const pct = Math.min(100, (performance.now()-start)/HOLD*100);
     g.style.setProperty('--p', pct);
-    if (pct >= 100){ end(); g.dataset.held = '1'; buzz(); openGroup(); setTimeout(()=>delete g.dataset.held, 400); return; }
+    if (pct >= 100){ end(); g.dataset.held = '1'; buzz(); openGroup(); return; }
     raf = requestAnimationFrame(tick);
   };
   const end = () => { cancelAnimationFrame(raf); g.classList.remove('holding'); g.style.setProperty('--p', 0); };
-  g.addEventListener('pointerdown', e => { try{ g.setPointerCapture(e.pointerId); }catch(_){} start = performance.now(); g.classList.add('holding'); raf = requestAnimationFrame(tick); });
+  g.addEventListener('pointerdown', e => { delete g.dataset.held; try{ g.setPointerCapture(e.pointerId); }catch(_){} start = performance.now(); g.classList.add('holding'); raf = requestAnimationFrame(tick); });
   ['pointerup','pointerleave','pointercancel'].forEach(ev => g.addEventListener(ev, end));
   g.addEventListener('contextmenu', e => e.preventDefault());
   g.addEventListener('keydown', e => { if (e.key==='Enter' || e.key===' '){ e.preventDefault(); openGroup(); } });
@@ -1424,7 +1990,7 @@ function hushResume(){
 function priorityOne(){
   if (hush){
     const msg = hushResume();
-    log('Priority One off. ' + msg); toast(msg);
+    log('Hush off. ' + msg); toast(msg);
     if (navigator.vibrate) navigator.vibrate([10,40,10]); render(); return 'back';
   }
   const coords = rooms.map((r,i)=>i).filter(i => rooms[i].coord === i && rooms[i].playing && !members(i).every(k => rooms[k].muted));
@@ -1437,7 +2003,7 @@ function priorityOne(){
     } else { hush.paused.push({ i, source:rooms[i].source, members:members(i) }); rooms[i].playing = false; }
   });
   const ears = ace && ace.linked ? ` ${ace.name}\u2019s headphones kept playing.` : '';
-  log('Priority One: whole house silenced.' + ears); toast('Whole house silenced.' + ears + ' Tap P1 again to bring it back.');
+  log('Hush: every room silenced.' + ears); toast('Every room hushed.' + ears + ' Tap RESUME to bring it back.');
   if (navigator.vibrate) navigator.vibrate(30); render(); return 'hushed';
 }
 $('p1Btn').addEventListener('click', priorityOne);
@@ -1486,30 +2052,36 @@ function wrongPress(t){
   toast('Hold to go back to square one');
 }
 let undoSnap = null, undoTimer = null;
+var squareHeld = false;   /* v2.0.4: set by a completed hold; the release click consumes it, whichever copy of the tile it lands on */
+/* v2.2: after the reset Home opens under the finger, so the release click is swallowed before anything else sees it */
+/* v2.3.4: Android often sends NO click after a long press, which left the flag set and ate the next tap anywhere (Hush included).
+   Now the release itself closes the flag and opens a short 450 ms window; only a click inside that window is swallowed. */
+let swallowUntil = 0;
+const releaseHold = () => { if (squareHeld){ squareHeld = false; swallowUntil = performance.now() + 450; } };
+document.addEventListener('pointerup', releaseHold, true);
+document.addEventListener('pointercancel', releaseHold, true);
+document.addEventListener('click', e => {
+  if (squareHeld || performance.now() < swallowUntil){ squareHeld = false; swallowUntil = 0; e.stopPropagation(); e.preventDefault(); }
+}, true);
 function backToSquareOne(){
   undoSnap = { rooms: JSON.parse(JSON.stringify(rooms)), cur, mode, hush };
   const keep = rooms.map(r => ({ light:r.light, shades:r.shades }));   // never plunge anyone into the dark
   allTiles('.tile.square').forEach(sq => { sq.classList.add('straight'); setTimeout(()=>sq.classList.remove('straight'), 900); });
   springSound(); if (navigator.vibrate) navigator.vibrate([10,30,40]);
-  /* v2.0.1: square one means square one: leave the demo, internet on, your own house, first (red) room, music page */
-  const inDemo = !$('demo').hidden || !$('demoChip').hidden || offline || zones.length || portable || ace;
-  if (inDemo){ undoSnap = null; $('demo').hidden = true; $('demoChip').hidden = true; fitDemo(); ownHouse(); }
   freshState(); hush = null; setMode('music', true);
-  if (!inDemo) rooms.forEach((r,i) => Object.assign(r, keep[i]));
-  cur = Math.max(0, roomPal.indexOf(0));
-  closeGroup(true); closeRoomPage(); toggleID(false); try { closeVoice(); } catch(e) {}
-  document.querySelectorAll('.sheet.open').forEach(s => s.classList.remove('open'));
-  log(`Back to square one: ${names[cur]}, rooms ungrouped, music stopped, volumes reset. Lights and shades left as they were.`);
+  rooms.forEach((r,i) => Object.assign(r, keep[i]));
+  cur = undoSnap.cur;
+  closeGroup(true); toggleID(false); document.querySelectorAll('.sheet.open').forEach(s => s.classList.remove('open'));
+  log('Back to square one: rooms ungrouped, music stopped, volumes reset. Lights and shades left as they were.');
   $('toast').classList.remove('show');
   const bar = $('undoBar'); $('undoMsg').textContent = 'Back to square one. Every room is on its own.';
-  $('undoBtn').hidden = !undoSnap;
   bar.classList.add('show'); clearTimeout(undoTimer); undoTimer = setTimeout(() => { bar.classList.remove('show'); undoSnap = null; }, 10000);
-  render();
+  render(); openHome(true);
 }
 $('undoBtn').addEventListener('click', () => {
   if (!undoSnap) return;
   rooms = undoSnap.rooms; cur = undoSnap.cur; hush = undoSnap.hush; setMode(undoSnap.mode, true);
-  undoSnap = null; clearTimeout(undoTimer); $('undoBar').classList.remove('show');
+  undoSnap = null; clearTimeout(undoTimer); $('undoBar').classList.remove('show'); closeHome();
   log('Undo: house restored to how it was'); toast('Undone. Everything is back how it was.'); buzz(); render();
 });
 /* hold the square: it straightens as the hold fills, then springs */
@@ -1519,11 +2091,11 @@ allTiles('.tile.square').forEach(sq => {
   const tick = () => {
     const pct = Math.min(100, (performance.now()-start)/HOLD*100);
     sq.style.setProperty('--p', pct);
-    if (pct >= 100){ end(); sq.dataset.held = '1'; backToSquareOne(); setTimeout(()=>delete sq.dataset.held, 400); return; }
+    if (pct >= 100){ end(); squareHeld = true; backToSquareOne(); return; }
     raf = requestAnimationFrame(tick);
   };
   const end = () => { cancelAnimationFrame(raf); sq.classList.remove('arming'); sq.style.setProperty('--p', 0); };
-  sq.addEventListener('pointerdown', e => { try{ sq.setPointerCapture(e.pointerId); }catch(_){} audio(); start = performance.now(); sq.classList.add('arming'); raf = requestAnimationFrame(tick); });
+  sq.addEventListener('pointerdown', e => { squareHeld = false; try{ sq.setPointerCapture(e.pointerId); }catch(_){} audio(); start = performance.now(); sq.classList.add('arming'); raf = requestAnimationFrame(tick); });
   ['pointerup','pointerleave','pointercancel'].forEach(ev => sq.addEventListener(ev, end));
   sq.addEventListener('contextmenu', e => e.preventDefault());
   sq.setAttribute('aria-label', 'Back to square one. Hold to reset every room. Undo appears afterwards.');
@@ -1681,7 +2253,6 @@ function stopListening(){ try { rec && rec.stop(); } catch(e) {} listening = fal
 
 $('orb').addEventListener('click', () => {
   buzz();
-  if (offline){ toast('Voice assistants need the internet. Every touch control on this panel still works.'); return; }
   if (!$('voice').classList.contains('open')) return openVoice();
   if (listening) stopListening(); else listen();
 });
@@ -1736,7 +2307,7 @@ function understand(t){
 
   if (/\b(silence|hush|doorbell|priority one|quiet everywhere|everybody quiet|phone is ringing|phone call)\b/.test(t)){
     const r = hush ? 'already' : priorityOne();
-    return say(r === 'hushed' ? 'Whole house silenced. Say "bring it back" when you are ready.' : 'The house is already quiet.');
+    return say(r === 'hushed' ? 'Every room hushed. Say "bring it back" when you are ready.' : 'The house is already quiet.');
   }
   if (hush && /bring it back|resume everything|music back|all back on/.test(t)){ priorityOne(); return say(lastResume); }
   const an = t.match(/^\s*(?:announce|broadcast|tell everyone(?: that)?|intercom)\s+(.+?)\s*$/);
@@ -1825,7 +2396,7 @@ function understand(t){
     ['playlists',0,/m[öo]bius/],['playlists',1,/desert drive/],['playlists',2,/pam.?pam/],
     ['fav',-1,/favou?rites?/],['playlists',-1,/playlists?/],['radio',-1,/\bradio\b|station/],
     ['library',-1,/library|my music|vinyl|collection/],['tv',-1,/\btv\b|television/],['podcasts',-1,/podcast/],
-    ['linein',-1,/line.?in|turntable|record player/],['phone',-1,/my phone|\bphone\b/]
+    ['linein',-1,/line.?in|\bsource\b|turntable|record player/],['phone',-1,/my phone|\bphone\b/]
   ];
   const sw = srcWord.find(([,,re]) => re.test(t));
   if (sw){
@@ -1893,7 +2464,9 @@ const FOUND = [
   { model:'Arc Ultra', kind:'Soundbar', tv:true },
   { model:'Era 100',   kind:'Speaker',  tv:false },
   { model:'Beam',      kind:'Soundbar', tv:true },
-  { model:'Move 2',    kind:'Portable, Wi-Fi and Bluetooth', tv:false, portable:true }
+  { model:'Move 2',    kind:'Portable, Wi-Fi and Bluetooth', tv:false, portable:true },
+  { model:'Era 300',   kind:'Speaker',  tv:false },
+  { model:'Ray',       kind:'Soundbar', tv:true }
 ];
 const NAME_IDEAS = ['Living Room','Kitchen','Bedroom','Patio','Office','Dining Room','Den','Guest Room'];
 const OUTDOOR_IDEAS = ['Pool','Patio','Backyard','Garage','Poolside','Garden','Balcony','Living Room'];
@@ -2045,7 +2618,6 @@ function wireSetup(){
 }
 $('sRedo').addEventListener('click', () => { $('settings').classList.remove('open'); openSetup(); });
 function useHouse(pals){
-  offline = false;
   zones = []; shorts = []; portable = null; ace = null;
   roomPal = pals; names = pals.map(x => PALETTE[x].def); hasTV = pals.map(x => PALETTE[x].tv); devices = pals.map(x => PALETTE[x].dev.slice());
   if (!(alarm.room < N())) alarm.room = 0;
@@ -2069,7 +2641,6 @@ function useAmpHouse(silent){
   portable = { model:'Sonos Play', home:2, at:2 };
   ace = { name:'Maya', model:'Sonos Ace Ultra', linked:false, room:null, title:'' };
   if (!(alarm.room < N())) alarm.room = 0;
-  offline = false;
   icTargets = ALL(); freshState(); hush = null; lastResume = ''; buildStrip(); fitRooms();
   $('settings').classList.remove('open'); log('Sample house: Amp Multi, 5 rooms (not saved)');
   if (!silent){ toast('Amp Multi sample house. Kitchen and Dining share one zone.'); buzz(); }
@@ -2103,27 +2674,6 @@ $('rpage').addEventListener('click', e => {
   ({ carry:carryPortable, link:linkAce, unlink:unlinkAce })[b.dataset.act]?.(); buzz();
 });
 
-/* ============ v2.0: OFFLINE MODE ============ */
-/* Honest limit: this assumes the panel keeps a local control path to the speakers.
-   The public Control API runs through a cloud gateway, so the pilot must prove this. */
-function goOffline(){
-  if (offline) return;
-  offline = true;
-  const hit = rooms.map((r,i)=>i).filter(i => rooms[i].coord === i && rooms[i].playing && CLOUD.has(rooms[i].source));
-  hit.forEach(i => rooms[i].playing = false);
-  if (ace && ace.linked){ ace.linked = false; log(`${ace.model}: ${ace.name}\u2019s music stopped too. It was a stream from the internet.`); }
-  log(`Internet down. ${hit.length ? 'Streams stopped in ' + listNames(hit.flatMap(i => members(i))) + '. ' : ''}Still working: ${STILL_WORKS}.`);
-  toast(`Internet down. Still working: ${STILL_WORKS}.`);
-  $('settings').classList.remove('open'); closeVoice(); render();
-}
-function goOnline(){
-  if (!offline) return;
-  offline = false; log('Internet back. Streaming sources and voice are available again.');
-  toast('Internet is back. Press play to restart a stream.'); render();
-}
-$('netBtn').addEventListener('click', () => { offline ? goOnline() : goOffline(); buzz(); });
-$('offBar').addEventListener('click', () => toast(`Internet is down. Still working: ${STILL_WORKS}. Waiting for the internet: Favorites, Playlists, Radio, Podcasts and voice.`));
-
 /* ============ v2.0: INSTALLER VIEW (read-only) ============ */
 const OUTPUTS = [['1–2','Kitchen ceiling, left and right',0,'A'],['3','Dining ceiling, mono',0,'A'],['4–5','Great Room in-wall, left and right',1,'B'],['6–7','Patio landscape, left and right',2,'C'],['8','Primary ceiling, mono',3,'D']];
 function openInstaller(){
@@ -2148,25 +2698,14 @@ const DEMO = [
     run:() => { joinGroup(PA, K); rooms[PA].vol = 42; log(`Add ${disp(PA)} to ${disp(K)}`); render(); } },
   { time:'8:30 pm', title:'Movie night', text:'Someone carries the Sonos Play into the Theater. Sonos Positioning makes it a rear surround, and the panel moves it to the Theater\u2019s speaker list, so the Patio change is no mystery. Tap the room name to see it.',
     run:() => { cur = TH; pickSource('tv'); carryPortable(); } },
-  { time:'9:45 pm', title:'Maya\u2019s ears', text:'With headphone linking (Early Access on Sonos Ace Ultra), Maya pulls the dinner music into her headphones. She is a listener, not a room, and she shows up on the room page under Listeners.',
+  { time:'9:45 pm', title:'Maya\u2019s ears', text:'Maya pulls the dinner music into her Ace Ultra. She is a listener, not a room, and she shows up on the room page under Listeners.',
     run:() => { cur = K; linkAce(); } },
-  { time:'10:30 pm', title:'Priority One', text:'One press silences every room. The TV mutes, because live TV cannot pause. Maya\u2019s headphones keep playing: silence covers rooms, not ears. The pilot has to test that rule with real families.',
+  { time:'10:30 pm', title:'Hush', text:'One press of HUSH silences every room. The TV mutes, because live TV cannot pause. Maya\u2019s headphones keep playing: silence covers rooms, not ears. The pilot has to test that rule with real families.',
     run:() => { cur = K; priorityOne(); } },
   { time:'10:32 pm', title:'Another controller acts', text:'Someone asks Josh.ai for rain sounds on the Patio. The panel is not the only controller, so it redraws from the event and remembers who changed what.',
     run:() => { cur = PA; otherController('Josh.ai', PA, () => { removeFromGroup(PA); Object.assign(rooms[PA], { source:'rain', track:0, playing:true }); }, `rain sounds in the ${disp(PA)}`); } },
-  { time:'10:33 pm', title:'Honest resume', text:'P1 again brings back only what it can verify. The Patio changed after the silence, so the panel leaves Josh.ai\u2019s rain sounds alone and says so.',
-    run:() => { cur = K; priorityOne(); demoResult = lastResume; } },
-  { time:'10:40 pm', title:'The internet drops', text:'The router loses its connection. Streams stop and cloud voice goes quiet, but the TV keeps playing, because HDMI never leaves the house. The panel says what still works instead of letting buttons fail silently. This assumes a local control path, which the pilot must prove.',
-    run:() => { cur = K; goOffline(); demoResult = `Still working: ${STILL_WORKS}. Waiting for the internet: Favorites, Playlists, Radio, Podcasts and voice.`; } },
-  { time:'10:42 pm', title:'Bluetooth saves the evening', text:'The Sonos Play goes back out to the Patio. A phone pairs with it over Bluetooth, and Kitchen + Dining joins that music. Sonos says Bluetooth speakers that stay on Wi-Fi can share their audio with a group. Whether you can make that group with the internet down is the first thing the pilot must test.',
-    run:() => {
-      carryPortable(); cur = PA;
-      Object.assign(rooms[PA], { source:'phone', track:0, playing:true });
-      joinGroup(K, PA); rooms[K].vol = 26;
-      log(`Bluetooth: phone into the ${portable.model}, shared to ${listNames(members(PA))}`);
-      demoResult = `No internet, and music still plays in ${listNames(members(PA))}: phone to ${portable.model} over Bluetooth, then across the home network.`;
-      render();
-    } }
+  { time:'10:33 pm', title:'Honest resume', text:'RESUME brings back only what it can verify. The Patio changed after the silence, so the panel leaves Josh.ai\u2019s rain sounds alone and says so.',
+    run:() => { cur = K; priorityOne(); demoResult = lastResume; } }
 ];
 let demoStep = 0, demoResult = '';
 function demoRun(n){
@@ -2189,39 +2728,13 @@ function renderDemo(){
   $('dmRes').hidden = !demoResult; $('dmRes').textContent = demoResult;
   $('dmBack').disabled = demoStep === 0;
   $('dmNext').textContent = last ? 'Start over' : 'Next: ' + DEMO[demoStep + 1].title;
-  requestAnimationFrame(fitDemo);
   $('dmSteps').innerHTML = DEMO.map((x,i) => `<button data-n="${i}" class="${i < demoStep ? 'done' : ''}" ${i === demoStep ? 'aria-current="step"' : ''} aria-label="${x.time}, ${x.title}"></button>`).join('');
 }
-function fitDemo(){
-  const d = $('demo'), on = !d.hidden && matchMedia('(max-width:899px)').matches;
-  document.body.classList.toggle('demo-on', on);
-  if (!on) document.body.style.setProperty('--dmh', '0px');
-  else if (!d.classList.contains('more')) document.body.style.setProperty('--dmh', d.offsetHeight + 'px');
-  fitRooms();
-}
-addEventListener('resize', fitDemo);
-$('demo').addEventListener('click', e => { if (e.target.closest('h3, .dm-time, p')){ $('demo').classList.toggle('more'); fitDemo(); } });
 function startDemo(){ $('settings').classList.remove('open'); $('demo').hidden = false; $('demoChip').hidden = true; demoRun(0); }
 $('dmNext').addEventListener('click', demoNext);
 $('dmBack').addEventListener('click', () => demoRun(Math.max(0, demoStep - 1)));
 $('dmSteps').addEventListener('click', e => { const b = e.target.closest('button'); if (b) demoRun(+b.dataset.n); });
-/* v2.0.1: leaving the demo hands back your own house, internet on, nothing silenced */
-function ownHouse(){
-  let pals = [0,1,2,3];
-  try { const h = JSON.parse(localStorage.getItem('sonosPanelHouse')||'null'); if (Array.isArray(h) && h.length >= 2 && h.length <= PALETTE.length && h.every(x => PALETTE[x])) pals = h; } catch(e) {}
-  offline = false; zones = []; shorts = []; portable = null; ace = null; lastResume = '';
-  roomPal = pals; names = pals.map(x => PALETTE[x].def); hasTV = pals.map(x => PALETTE[x].tv); devices = pals.map(x => PALETTE[x].dev.slice());
-  try { const v = JSON.parse(localStorage.getItem('sonosPanelNames')||'null'); if (Array.isArray(v) && v.length === N()) names = v; } catch(e) {}
-  try { const v = JSON.parse(localStorage.getItem('sonosPanelTV')||'null'); if (Array.isArray(v) && v.length === N()) hasTV = v; } catch(e) {}
-  try { const v = JSON.parse(localStorage.getItem('sonosPanelDevices')||'null'); if (Array.isArray(v) && v.length === N()) devices = v; } catch(e) {}
-  if (!(alarm.room < N())) alarm.room = 0;
-  icTargets = ALL(); freshState(); hush = null; buildStrip(); fitRooms();
-}
-$('dmHide').addEventListener('click', () => {
-  $('demo').hidden = true; $('demoChip').hidden = false; fitDemo();
-  ownHouse(); closeGroup(true); closeRoomPage(); toggleID(false); setMode('music', true);
-  log('Left the Saturday demo: your house is back, internet on'); toast('Demo closed. Your house is back.'); render();
-});
+$('dmHide').addEventListener('click', () => { $('demo').hidden = true; $('demoChip').hidden = false; });
 $('demoChip').addEventListener('click', () => { $('demo').hidden = false; $('demoChip').hidden = true; renderDemo(); });
 $('demoBtn').addEventListener('click', startDemo);
 
@@ -2230,6 +2743,8 @@ let setupDone = false;
 try { setupDone = localStorage.getItem('sonosPanelSetup') === 'done'; } catch(e) {}
 if (/[?&#]demo\b/.test(location.search + location.hash)) startDemo();
 else if (!setupDone) openSetup();
+/* v2.2: the app opens on HOME */
+setMode('music', true); render(); openHome(true);
 </script>
 </body>
 </html>
