@@ -1,6 +1,37 @@
 <!doctype html>
 <!--
-  SONOS Panel concept, v2.4.2 (first-time setup finds six sample speakers, so a set-up house matches the six-room default)
+  SONOS Panel concept, v2.14.2 (every room dot wears a soft candy shine; volume steps are twice as fine, 2 per tap on the rail and on GROUP VOLUME; Office's purple is darker)
+  v2.14.1 (UNMUTE in a very dark red; Living Room's dots a dark cherry-candy red with a glossy shine; HUSH in the same dark candy red)
+  v2.14 (a splash screen: a big white SONOS on total black glides up into the corner sign as the black fades to Home; the app always opens on Home, with the house remembered)
+  v2.13.2 (Den is bright aqua)
+  v2.13.1 (MUTE in a very dark green; Patio a deeper green and Den a lighter, bluer sky so the two rooms can never be mistaken)
+  v2.13 (SONOS ROOMS switches to the next room again; every rainbow, the L, the PLAYING NOW tab, WHAT'S PLAYING NOW and GROUP VOLUME, flows at one calm 20-second speed showing each room colour once; logic audited end to end by a randomised test of every control)
+  v2.12.2 (the rainbow rims on WHAT'S PLAYING NOW and the PLAYING NOW tab really flow now; BACK TO SQUARE ONE asks and confirms in a centred box over a dimmed panel, with UNDO, instead of a bar that covered the bottom tiles; WHAT'S PLAYING NOW letters are bigger)
+  v2.12.1 (the glowing dots and their group rings are no longer cut by a straight edge inside the room cards; long text still ends in an ellipsis)
+  v2.12 (the panel remembers: rooms, groups, what plays, volumes, mutes, HUSH, lights, sleep timers, the tab you were on and the command log all survive a reload, an app switch or closing the browser; BACK TO SQUARE ONE is the clean start)
+  v2.11.2 (the white centre is back to meaning grouped, everywhere, the moment a room joins; the ring colour says which group; playing shows as the dot breathing a soft glow in its own colour)
+  v2.11.1 (Home's HUSH always looks ready, full colour, even when the house is quiet; a tap then says the house is already quiet)
+  v2.11 (grouping shows everywhere: grouped rooms wear a ring in the colour of the room their group plays from, on the top row, down PLAYING NOW and on Home; the white centre still means playing. Home's dots grow to 34 px. The group page gains GROUP VOLUME: big minus and plus that move every room in the group together, framed in the group's own colours)
+  v2.10.1 (MUTE is one 3D button everywhere, green while playing and red while muted, white capitals; on Home a bigger HUSH sits right on top of WHAT'S PLAYING NOW with the house status centred to its left)
+  v2.10 (one meaning for the white centre dot everywhere: music is playing in that room, on the top dots, down PLAYING NOW and on Home; the corner badges go. The L and the PLAYING NOW tab wear a clear 1 px white frame when the house is quiet and a bright, glowing, flowing rainbow when music plays)
+  v2.9.9 (the L wears one continuous 1 px rainbow outline in the room colours, flowing slowly while music plays and still when it does not; the PLAYING NOW tab wears the same rim)
+  v2.9.8 (white centre dots on the PLAYING NOW dots, matching the top row; the L's raised corner exactly as thick as the bar; IN GROUP's number always white and embossed; INFO written with the circled i as its I)
+  v2.9.7 (the transport sits closer together, one evenly spaced group centred under the room list)
+  v2.9.6 (the now-playing bar is an L: it rises up beside the transport, under the volume rail, and that raised corner holds a GROUP button, part of what is playing)
+  v2.9.5 (the three tabs lose their tray and sit a little higher; the transport is one tighter group lined up under the room list; the now-playing bar grows into the space; Home wears the same round HUSH as the panel, bigger, with the house status centred under it)
+  v2.9.4 (the colour dots down PLAYING NOW are nearly as big as the room dots at the top, centred beside both lines)
+  v2.9.3 (the INFO button, a little bigger and carrying the i-in-a-circle symbol, sits in front of the room name)
+  v2.9.2 (ID moves into the header between IN GROUP and VOICE; the now-playing bar runs the full width and only shows, it is not a button, so the small Group text goes; the room name fits itself to the space left of the header labels)
+  v2.9.1 (the room name sits close under the SONOS sign; the line under it is larger; the colour dots are larger; the white centre dot marks every room in your group, the selected room included)
+  v2.9 (the SONOS sign with its house symbol is one fixed element in the top-left corner of every screen; it never moves. On the panel it opens Home; on Home and on every other page it takes you back to the panel. Source and Radio lose their separate BACK button; Home's byline moves to its foot)
+  v2.8 (a calmer surface: PLAYING NOW is long room buttons again, one per row, the same family as Home; SONOS sits a little higher with the house symbol on its right; the byline leaves the panel header; the bottom strip (command log, full screen, copyright) moves into Settings > HOUSE, and the height it frees goes to the long buttons and the tiles)
+  v2.7 (one page, nothing moves: no screen scrolls and no page slides; every screen fits on the smallest phone with every button in place. PLAYING NOW lays 5 or 6 rooms out as a 2-by-3 grid, Source and Radio are fixed tile grids, Settings has three tabs, the log turns pages with OLDER / NEWER, voice keeps only the latest lines that fit. Pages fade in where they are instead of sliding up)
+  v2.6.2 (the seven rules: every tap target at least 44 px; with 5 or 6 rooms the colour bubbles get their own full-width row; tapping your own bubble no longer opens a hidden page, INFO does that; PLAYING NOW cards are one fixed height; no empty places that do nothing; LIGHTS and SHADES appear only when the house has lighting, otherwise those two places are SLEEP and ALARM; no placeholder lines on the ID card)
+  v2.6.1 (grouping fix: the panel can no longer slide up and hide the header and IN GROUP number; the grouping page shows the count and says plainly what the group will play; a room that leaves its own music to join is named, never silently stopped. Nothing hidden: GROUP opens with a tap; BACK TO SQUARE ONE asks with RESET / CANCEL on screen; the room name carries a visible INFO button; a HOME button sits beside the wordmark; the SONOS ROOMS tile opens every room)
+  v2.6 (bigger lettering on WHAT'S PLAYING NOW and the three tabs; a floating CLOSE on Home that goes to PLAYING NOW; SONOS RADIO HD opens its own very dark grey screen of square station tiles)
+  v2.5.1 (RADIO is now SONOS RADIO HD: a black tile with a 1 px ring in the room's colour)
+  v2.5 (SOURCE opens its own black screen: streaming services and the inputs in the house; tap one and it plays in the room you're in)
+  v2.4.2 (first-time setup finds six sample speakers, so a set-up house matches the six-room default)
   v2.4.1 (a fresh copy opens with all six rooms: Living Room, Kitchen, Bedroom, Patio, Office, Den)
   v2.4 (HOME acts, not just shows: MUTE beside every playing room, HUSH ALL under the house status; WHAT'S PLAYING NOW is the first, long button, its words and rim flowing through the room colours)
   v2.3.7 (Home's button reads NOW PLAYING)
@@ -46,7 +77,7 @@
 <meta name="apple-mobile-web-app-title" content="SONOS Panel"/>
 <meta name="theme-color" id="themeColor" content="#2d0909"/>
 <meta name="theme-color" content="#121212">
-<title>SONOS Panel — v2.4.2 concept</title>
+<title>SONOS Panel — v2.14.2 concept</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -271,6 +302,7 @@ body{
 .frame.flash{ animation:flash .9s ease-in-out 2; }
 @keyframes flash{ 50%{ box-shadow:0 0 0 6px var(--accent), 0 0 60px var(--accent); } }
 
+.foot[hidden]{ display:none !important; }
 .foot{ display:flex; justify-content:space-between; align-items:center; flex:0 0 auto; }
 .logbtn{ width:38px; height:38px; border-radius:50%; border:1px solid rgba(255,255,255,.18); background:#1d1d1d; color:#fff; cursor:pointer; font-size:17px; }
 .credit{ font-size:9.5px; color:rgba(255,255,255,.4); letter-spacing:.06em; }
@@ -992,7 +1024,7 @@ body{ gap:24px; }
   box-shadow:inset 0 1px 0 rgba(255,255,255,.12), 0 6px 14px rgba(0,0,0,.6) !important; }
 .hm-rb{ background:var(--rb, linear-gradient(90deg,#ff5a5a,#ffc400,#6f98ff,#48e58c,#ff5a5a)); background-size:200% 100%;
   -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; color:transparent;
-  animation:rbText 6s linear infinite; filter:drop-shadow(0 1px 0 rgba(0,0,0,.9)) brightness(1.15); white-space:nowrap; }
+  animation:rbText 20s linear infinite; filter:drop-shadow(0 1px 0 rgba(0,0,0,.9)) brightness(1.15); white-space:nowrap; }
 @keyframes rbFlow{ from{ background-position:0 0, 0 0, 0% 0; } to{ background-position:0 0, 0 0, -200% 0; } }
 @keyframes rbText{ from{ background-position:0% 0; } to{ background-position:-200% 0; } }
 @media (max-width:370px){ .hm-wpn{ font-size:13px !important; letter-spacing:.1em !important; } }
@@ -1018,6 +1050,114 @@ body{ gap:24px; }
 .hm-room.muted .hm-mute{ display:none; }
 @media (max-width:370px){ .hm-list li.has-mute .hm-room{ padding-right:86px; } .hm-mbtn{ min-width:68px; height:34px; right:8px; font-size:11.5px; } .hm-list li.has-mute .hm-eq{ display:none; } }
 @media (prefers-reduced-motion:reduce){ .hm-wpn, .hm-rb{ animation:none !important; } }
+
+/* === v2.5 SOURCE screen: black glass, one card per service; the room you're playing to is the only colour === */
+.srcp{ position:absolute; inset:0; z-index:37; display:flex; flex-direction:column; gap:10px; padding:16px 16px 0; overflow:hidden; border-radius:inherit;
+  color:#fff; font-family:var(--font); background:radial-gradient(120% 70% at 50% -10%, #2a2a2a 0%, #0c0c0c 45%, #000 75%);
+  opacity:0; visibility:hidden; transform:translateY(14px); transition:opacity .28s cubic-bezier(.2,0,0,1), transform .28s cubic-bezier(.2,0,0,1), visibility 0s .28s; }
+.srcp.open{ opacity:1; visibility:visible; transform:none; transition:opacity .28s cubic-bezier(.2,0,0,1), transform .28s cubic-bezier(.2,0,0,1); }
+.srcp > *:not(.hm-sheen){ position:relative; z-index:1; }
+.frame.src-open{ border-color:#3c3c3c !important; background:#000 !important; }
+.sp-top{ display:flex; align-items:center; justify-content:space-between; gap:10px; }
+.sp-back{ min-height:44px; padding:0 16px 0 12px; border-radius:14px; cursor:pointer; color:#fff; font:900 13px var(--font); letter-spacing:.12em;
+  border:1px solid rgba(255,255,255,.3); background:linear-gradient(180deg, rgba(255,255,255,.12), rgba(255,255,255,.03) 50%, rgba(255,255,255,.01) 51%, rgba(255,255,255,.05)), #161616;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.15), 0 3px 8px rgba(0,0,0,.6); text-shadow:0 -1px 0 rgba(0,0,0,.9), 0 1px 0 rgba(255,255,255,.2); }
+.sp-back span{ font-size:20px; letter-spacing:0; vertical-align:-1px; margin-right:2px; }
+.sp-back:active{ transform:scale(.97); }
+.sp-to{ display:flex; flex-direction:column; align-items:flex-end; gap:3px; min-width:0; }
+.sp-to > span{ font-size:10px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+.sp-to b{ display:flex; align-items:center; gap:7px; font-size:16px; font-weight:800; min-width:0; }
+.sp-to em{ font-style:normal; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sp-dot{ flex:0 0 12px; width:12px; height:12px; border-radius:50%; background:var(--rc); box-shadow:0 0 8px var(--rc); }
+.sp-h{ margin:2px 0 0; font:900 26px/1 var(--font); letter-spacing:.24em;
+  background:linear-gradient(180deg,#fff 0%,#d9d9d9 55%,#9a9a9a 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.sp-scroll{ flex:1 1 auto; min-height:0; overflow-y:auto; overscroll-behavior:contain; scrollbar-width:none; padding:2px 1px 22px;
+  -webkit-mask-image:linear-gradient(180deg,#000 calc(100% - 26px),transparent); mask-image:linear-gradient(180deg,#000 calc(100% - 26px),transparent); }
+.sp-scroll::-webkit-scrollbar{ display:none; }
+.sp-sec{ margin:10px 2px 8px; font:800 11px var(--font); letter-spacing:.22em; text-transform:uppercase; color:rgba(255,255,255,.55); }
+.sp-sec:first-child{ margin-top:2px; }
+.sp-grid{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:1fr 1fr; gap:8px; }
+.sp-card{ width:100%; min-height:58px; display:flex; align-items:center; gap:10px; padding:8px 10px; border-radius:16px; cursor:pointer; text-align:left;
+  color:#fff; font-family:var(--font); border:1px solid rgba(255,255,255,.16);
+  background:linear-gradient(180deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.04) 48%, rgba(255,255,255,.015) 52%, rgba(255,255,255,.05) 100%), #1a1a1a;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12), 0 4px 10px rgba(0,0,0,.55); }
+.sp-card:active{ transform:scale(.97); }
+.sp-card:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+.sp-mono{ flex:0 0 34px; width:34px; height:34px; border-radius:50%; display:grid; place-items:center; font:900 12px var(--font); letter-spacing:.02em;
+  color:#fff; background:radial-gradient(circle at 38% 30%, #5a5a5a, #2a2a2a 70%); border:1px solid rgba(255,255,255,.25); box-shadow:inset 0 -2px 4px rgba(0,0,0,.4); }
+.sp-mono svg{ width:20px; height:20px; }
+.sp-txt{ flex:1; min-width:0; display:flex; flex-direction:column; gap:1px; }
+.sp-txt b{ font-size:14px; font-weight:800; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sp-txt span{ font-size:10.5px; color:rgba(255,255,255,.55); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.sp-card.on{ border-color:var(--rc);
+  background:linear-gradient(180deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.04) 48%, rgba(255,255,255,.015) 52%, rgba(255,255,255,.05) 100%),
+    linear-gradient(90deg, color-mix(in srgb,var(--rc) 34%,#111) 0%, #1a1a1a 85%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 0 16px color-mix(in srgb,var(--rc) 35%,transparent), 0 4px 10px rgba(0,0,0,.55); }
+.sp-card.on .sp-mono{ border-color:var(--rc); }
+.sp-card.on .sp-txt span{ color:#fff; }
+.sp-card.off{ opacity:.45; }
+.sp-empty{ cursor:default; background:rgba(255,255,255,.025) !important; box-shadow:none !important; border:1px dashed rgba(255,255,255,.32) !important; }
+.sp-empty .sp-mono{ background:transparent; border:1.5px dashed rgba(255,255,255,.42); box-shadow:none; color:rgba(255,255,255,.5); font-size:18px; }
+.sp-empty .sp-txt b{ color:rgba(255,255,255,.5); } .sp-empty .sp-txt span{ color:rgba(255,255,255,.36); }
+@media (max-width:370px){ .sp-txt b{ font-size:13px; } .sp-mono{ flex-basis:30px; width:30px; height:30px; font-size:11px; } .sp-card{ gap:8px; padding:8px; } .sp-h{ font-size:22px; } }
+@media (prefers-reduced-motion:reduce){ .srcp{ transition:none !important; } }
+
+/* v2.5.1 SONOS RADIO HD: black glass, 1 px ring in the room's colour, two-line wordmark */
+.tile[data-id="radio"]{ border:1px solid var(--accent) !important; color:#fff;
+  background:linear-gradient(180deg, rgba(255,255,255,.13) 0%, rgba(255,255,255,.04) 48%, rgba(255,255,255,.01) 52%, rgba(255,255,255,.05) 100%), #0b0b0b !important; }
+.tile[data-id="radio"] span{ display:block; line-height:1.05; white-space:nowrap; }
+.tile[data-id="radio"] .rh1{ font-weight:900; letter-spacing:.18em; padding-left:.18em; }
+.tile[data-id="radio"] .rh2{ font-size:.82em; font-weight:800; letter-spacing:.12em; padding-left:.12em; color:rgba(255,255,255,.82); margin-top:2px; }
+@media (max-height:700px){
+  .tile[data-id="radio"] svg{ flex:0 0 auto !important; width:20px !important; height:20px !important; min-height:20px; }
+  .tile[data-id="radio"] .rh1{ font-size:10.5px; } .tile[data-id="radio"] .rh2{ font-size:8.5px; margin-top:1px; }
+  .tile[data-id="radio"]{ gap:2px !important; }
+}
+.tile[data-id="radio"].active{ box-shadow:0 0 0 2px var(--accent), 0 0 22px color-mix(in srgb,var(--accent) 45%,transparent) !important; }
+
+/* === v2.6: bigger lettering === */
+.hm-wpn{ font-size:17px !important; letter-spacing:.13em !important; min-height:54px; }
+.modes button{ font-size:15.5px !important; letter-spacing:.06em !important; }
+.modes button[data-mode="music"], .modes button[data-mode="scenes"]{ font-size:15px !important; }
+@media (max-width:390px){ .modes button{ font-size:14px !important; letter-spacing:.03em !important; } .modes button[data-mode="music"], .modes button[data-mode="scenes"]{ font-size:13.5px !important; } .hm-wpn{ font-size:15.5px !important; letter-spacing:.1em !important; } }
+
+/* === v2.6 Home: floating CLOSE, a little above the bottom === */
+.home > .hm-close{ position:absolute !important; left:50%; bottom:58px; transform:translateX(-50%); z-index:3 !important; min-width:150px; min-height:48px; padding:0 30px;
+  border-radius:24px; cursor:pointer; color:#fff; font:900 15px var(--font); letter-spacing:.2em; padding-left:calc(30px + .2em);
+  border:1px solid rgba(255,255,255,.45);
+  background:linear-gradient(180deg, rgba(255,255,255,.2) 0%, rgba(255,255,255,.06) 50%, rgba(255,255,255,.02) 51%, rgba(255,255,255,.08) 100%), #222;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 10px 24px rgba(0,0,0,.85), 0 0 0 6px rgba(0,0,0,.35);
+  text-shadow:0 -1px 0 rgba(0,0,0,.9), 0 1px 0 rgba(255,255,255,.2); }
+.hm-close:active{ transform:translateX(-50%) scale(.96); }
+.hm-close:focus-visible{ outline:2px solid #fff; outline-offset:3px; }
+.hm-list{ padding-bottom:120px !important; }
+@media (max-height:700px){ .hm-close{ bottom:40px; min-height:44px; font-size:14px; } .hm-list{ padding-bottom:100px !important; } }
+
+/* === v2.6 SONOS RADIO HD screen: very dark grey, square stations === */
+.rdp{ background:linear-gradient(180deg, #1c1c1c 0%, #121212 40%, #0e0e0e 100%) !important; }
+.rd-h{ margin:0; display:flex; flex-direction:column; gap:4px; line-height:1; }
+.rd-h span{ font:900 26px var(--font); letter-spacing:.3em;
+  background:linear-gradient(180deg,#fff 0%,#d9d9d9 55%,#9a9a9a 100%); -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent; }
+.rd-h small{ font:800 12px var(--font); letter-spacing:.32em; color:rgba(255,255,255,.6); }
+.rd-grid{ list-style:none; margin:0; padding:0; display:grid; grid-template-columns:repeat(3,1fr); gap:10px; }
+.rd-st{ position:relative; width:100%; aspect-ratio:1/1; border-radius:14px; cursor:pointer; padding:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:6px;
+  color:#fff; font-family:var(--font); border:1px solid rgba(255,255,255,.16); overflow:hidden;
+  background:linear-gradient(180deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.03) 48%, rgba(255,255,255,.01) 52%, rgba(255,255,255,.04) 100%), #262626;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12), 0 4px 10px rgba(0,0,0,.55); }
+.rd-st:active{ transform:scale(.96); }
+.rd-st:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+.rd-st svg{ width:40%; height:40%; opacity:.9; }
+.rd-st b{ font-size:10.5px; font-weight:800; letter-spacing:.04em; text-align:center; padding:0 6px; line-height:1.15; }
+.rd-st.on{ border:1px solid var(--rc); box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 0 16px color-mix(in srgb,var(--rc) 45%,transparent), 0 4px 10px rgba(0,0,0,.55);
+  background:linear-gradient(180deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.03) 48%, rgba(255,255,255,.01) 52%, rgba(255,255,255,.04) 100%),
+    linear-gradient(160deg, color-mix(in srgb,var(--rc) 35%,#1a1a1a), #1e1e1e 75%); }
+.rd-st .rd-eq{ position:absolute; top:8px; right:8px; display:none; align-items:flex-end; gap:2px; height:12px; }
+.rd-st .rd-eq i{ width:2.5px; border-radius:1px; background:var(--rc); transform-origin:bottom; animation:pbar .9s ease-in-out infinite alternate; }
+.rd-st .rd-eq i:nth-child(1){ height:6px; } .rd-st .rd-eq i:nth-child(2){ height:11px; animation-delay:.3s; } .rd-st .rd-eq i:nth-child(3){ height:8px; animation-delay:.6s; }
+.rd-st.on .rd-eq{ display:flex; }
+.rd-empty{ cursor:default; background:rgba(255,255,255,.03) !important; box-shadow:none !important; border:1px dashed rgba(255,255,255,.26) !important; }
+.rd-empty svg{ opacity:.35; } .rd-empty b{ color:rgba(255,255,255,.38); font-weight:700; }
+.frame.rd-open{ border-color:#3c3c3c !important; background:#000 !important; }
 @media (prefers-reduced-motion:reduce){
   *{ transition:none !important; animation:none !important; }
 }
@@ -1034,28 +1174,599 @@ body{ gap:24px; }
   .rbtn svg{ width:24px; height:24px; }
   .volread{ font-size:13px; }
 }
+
+/* === v2.6.1: the panel never slides. overflow:hidden can still be scrolled by focus; clip cannot === */
+.frame{ overflow:clip !important; }
+/* === v2.6.1: nothing hidden === */
+.title{ display:flex; align-items:center; gap:8px; }
+.hmi{ flex:0 0 auto; width:30px; height:30px; border-radius:9px; display:grid; place-items:center;
+  border:1px solid rgba(255,255,255,.45); background:linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.03) 50%, rgba(0,0,0,.15)), #1a1a1a;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2), 0 2px 6px rgba(0,0,0,.5); }
+.hmi svg{ width:20px; height:20px; }
+@media (max-width:390px){ .hmi{ width:26px; height:26px; border-radius:8px; } .hmi svg{ width:17px; height:17px; } .title{ gap:6px; } }
+.activity .a1 em{ flex:0 0 auto; align-self:center; font:800 10.5px/1 var(--font) !important; letter-spacing:.1em; padding:5px 8px; border-radius:8px;
+  border:1px solid rgba(255,255,255,.5); background:rgba(0,0,0,.35); color:#fff !important; white-space:nowrap; }
+.undo .sqno{ background:#2a2a2a; color:#fff; border:1px solid rgba(255,255,255,.35); }
+#sqYes{ background:#ff5a5a; color:#1a0000; }
+.tile.group .hint, .tile.group .ring{ display:none; }
+
+/* === v2.6.2: the 44 px floor, on every target, every screen height === */
+.logbtn{ width:44px !important; height:44px !important; font-size:18px !important; }
+.foot{ height:auto !important; }
+.hm-hush{ min-height:44px; padding:0 16px; }
+.hm-mbtn{ height:44px !important; }
+.hs-mute{ height:44px !important; min-width:64px; }
+.rbtn, .rbtn.round{ min-height:44px !important; }
+@media (max-height:640px){ .rbtn, .rbtn.round{ min-height:44px !important; } .rbtn.round{ flex:0 1 48px; } }
+.modes button{ min-height:44px !important; }
+.icb, .gsq{ min-width:44px !important; min-height:44px !important; }
+.undo button, .idact button, .idq button, .pbtn, .row button, .vhead button, .vrow2 button, .chip, .su-chime, .su-alt, .sredo, .rp-act, .dm-x, .dm-row button, .sp-back{ min-height:44px; }
+.vrow2 input, .field input:not([type=checkbox]), .field select, .su-in{ min-height:44px; }
+.field label{ min-height:44px; }
+.dm-steps button{ height:44px; background:none !important; position:relative; }
+.dm-steps button::before{ content:''; position:absolute; left:0; right:0; top:17px; height:10px; border-radius:5px; background:rgba(255,255,255,.18); }
+.dm-steps button.done::before{ background:rgba(255,255,255,.55); }
+.dm-steps button[aria-current="step"]::before{ background:#ffc400; }
+
+/* 5 or 6 rooms: the bubbles get their own full-width row, every bubble a full 44 px target with space between */
+.roombar.wide{ flex-wrap:wrap !important; row-gap:2px !important; }
+.roombar.wide > .activity{ flex:1 1 100% !important; }
+.roombar.wide > .strip{ flex:1 1 100% !important; display:grid !important; grid-template-columns:repeat(var(--n),minmax(44px,1fr)) !important; gap:6px !important; }
+.roombar.wide .pill{ width:auto !important; min-width:44px !important; height:44px !important; }
+.roombar.wide .pill .bub{ width:30px !important; height:30px !important; }
+.roombar.wide .pill .pb{ width:17px !important; height:17px !important; top:0 !important; right:calc(50% - 24px) !important; }
+.roombar.wide .activity, .activity{ min-height:44px !important; }
+.brand{ min-height:44px; }
+/* short phones: tighter spacing, never smaller targets */
+@media (max-height:700px){ .frame{ gap:6px !important; } .grid{ gap:8px; } .main{ gap:10px; } }
+@media (max-height:700px){ .rail{ gap:5px !important; } .modes{ padding:3px !important; }
+  .np{ padding:4px 10px !important; min-height:44px; } .art{ width:36px !important; height:36px !important; flex:0 0 36px !important; } }
+@media (max-height:640px){ .frame{ padding-top:6px !important; padding-bottom:5px !important; } .volread{ font-size:13px; line-height:1; } .volread small{ font-size:8px; } .rail{ gap:4px !important; } }
+/* ================= v2.7: ONE PAGE, NOTHING MOVES ================= */
+/* pages fade in where they are; nothing slides up, down or sideways */
+.gpage, .rpage{ transform:none !important; opacity:0; visibility:hidden; transition:opacity .22s ease, visibility 0s .22s !important; }
+.gpage.open, .rpage.open{ opacity:1; visibility:visible; transition:opacity .22s ease !important; }
+.srcp, .srcp.open{ transform:none !important; }
+@keyframes idin{ from{ opacity:0; } to{ opacity:1; } }
+.toast, .toast.show{ transform:translate(-50%,0) !important; }
+/* nothing scrolls */
+.house, .hm-list, .sp-scroll, .rpage, .gpage, .setup, .panel, .vlog, .hs-list{ overflow:hidden !important; scroll-snap-type:none !important; -webkit-mask-image:none !important; mask-image:none !important; }
+.hm-list li{ scroll-snap-align:none; }
+
+/* PLAYING NOW: rooms fill the space, row by row; 5 or 6 rooms sit two by three */
+.house{ display:flex; flex-direction:column; gap:6px; }
+.hs-sum{ flex:0 0 auto; }
+.hs-list{ flex:1 1 auto; min-height:0; display:grid !important; grid-template-columns:1fr; grid-template-rows:repeat(var(--hr,6),minmax(44px,1fr)); gap:6px !important; padding:0 !important; }
+.hs-room{ height:auto !important; min-height:44px; padding:4px 6px 4px 10px !important; }
+.hs-mute{ display:flex; align-items:center; justify-content:center; }
+.hs-mi{ display:none; }
+.hs-list.two{ grid-template-columns:1fr 1fr; }
+.hs-list.two .hs-room{ padding:4px 4px 4px 8px !important; gap:4px; }
+.hs-list.two .hs-st, .hs-list.two .hs-eq{ display:none !important; }
+.hs-list.two .hs-top b{ font-size:13.5px; }
+.hs-list.two .hs-bub{ flex-basis:14px; width:14px; height:14px; }
+.hs-list.two .hs-line{ font-size:11px; }
+.hs-list.two .hs-mute{ min-width:44px !important; width:44px; height:auto !important; align-self:stretch; min-height:44px; padding:0; border-radius:10px; }
+.hs-list.two .hs-mt{ display:none; } .hs-list.two .hs-mi{ display:grid; place-items:center; }
+.hs-list.two .hs-mi svg{ width:24px; height:24px; }
+.hs-list.two .hs-mute:not([aria-pressed="true"]) .hs-mi svg path{ stroke:#111; } .hs-list.two .hs-mute:not([aria-pressed="true"]) .hs-mi svg path[fill]{ fill:#111; }
+
+/* two by three: the colour moves to a stripe on the card's edge, so the full name always fits (it may take two lines) */
+.hs-list.two .hs-bub{ display:none !important; }
+.hs-list.two .hs-room::before{ display:block !important; width:5px; }
+.hs-list.two .hs-room{ padding-left:11px !important; }
+.hs-list.two .hs-go{ overflow:hidden; gap:2px; }
+.hs-list.two .hs-top b{ white-space:normal !important; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; line-height:1.15; font-size:13px; }
+/* SOURCE: a fixed grid of tiles, three across, streaming above, inputs below */
+.sp-scroll{ display:flex; flex-direction:column; padding:0 0 8px !important; }
+.sp-sec{ flex:0 0 auto; margin:6px 2px 6px !important; }
+.sp-grid{ min-height:0; grid-template-columns:repeat(3,1fr) !important; grid-auto-rows:1fr; gap:7px !important; }
+#spStream{ flex:4 1 0; } #spInput{ flex:2 1 0; }
+.sp-grid li{ min-height:44px; display:flex; }
+.sp-card{ flex:1; min-height:44px !important; flex-direction:column; justify-content:center; align-items:center; text-align:center; gap:3px !important; padding:4px !important; }
+.sp-txt{ flex:0 0 auto; align-items:center; }
+.sp-txt b{ font-size:12px !important; white-space:normal !important; line-height:1.1; }
+.sp-txt span{ font-size:9.5px !important; }
+.sp-mono{ flex:0 0 28px !important; width:28px !important; height:28px !important; font-size:10.5px !important; }
+.sp-mono svg{ width:17px; height:17px; }
+
+/* SONOS RADIO HD: fifteen stations, five rows, all on the page */
+.rd-grid{ flex:1 1 auto; min-height:0; grid-template-rows:repeat(5,1fr); gap:8px !important; }
+#rdScroll{ display:flex; flex-direction:column; }
+.rd-grid li{ display:flex; min-height:44px; }
+.rd-st{ aspect-ratio:auto !important; height:auto; flex:1; gap:3px !important; }
+.rd-st svg{ width:auto !important; height:34% !important; max-height:30px; }
+
+/* ROOM PAGE: the facts sit two by two */
+.rpage{ gap:8px !important; padding:14px 16px 12px !important; }
+.rp-head h2{ font-size:22px !important; }
+#rpList{ display:grid; grid-template-columns:1fr 1fr; gap:1px; background:rgba(255,255,255,.08); }
+#rpList li{ display:grid; grid-template-columns:auto 1fr; column-gap:7px; row-gap:1px; align-items:center; padding:6px 10px; border-top:none !important; background:#0b0b0b; }
+#rpList li span{ grid-column:1 / -1; text-align:left !important; font-size:12px !important; }
+#rpList li b{ min-width:0 !important; font-size:12.5px !important; }
+#rpList li.info{ grid-column:1 / -1; }
+#rpList li.info span{ display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; white-space:normal !important; overflow:hidden; }
+.rp-spk li, #rpL li{ padding:4px 12px !important; min-height:44px; }
+.rp-done{ padding:11px !important; min-height:44px; }
+.rp-h3{ margin:2px 0 -3px !important; }
+
+/* SHEETS: full height when they need it, never a scroll */
+.panel{ max-height:100% !important; padding:14px 16px !important; }
+.spanel h2{ margin-bottom:8px; }
+.stabs{ display:grid; grid-template-columns:1fr 1.3fr 1fr; gap:6px; margin-bottom:8px; }
+.stab{ min-height:44px; border-radius:12px; border:1px solid rgba(255,255,255,.2); background:#2a2a2a; color:#fff; font:800 11.5px var(--font); letter-spacing:.06em; cursor:pointer; }
+.stab[aria-selected="true"]{ background:#ffc400; color:#1a1300; border-color:#ffc400; }
+.ssec .sgroup:first-child{ margin-top:0; padding-top:0; border-top:none; }
+#nameFields .field{ margin:5px 0; }
+.field.al{ flex-wrap:wrap; }
+.field.al input[type=time], .field.al select{ flex:1 1 40%; min-width:0; }
+.loglist li{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.row button:disabled{ opacity:.35; }
+.inst li{ padding:4px 0 !important; }
+.layers{ margin-top:8px !important; gap:6px !important; }
+.layers div{ padding:6px 8px !important; font-size:11px !important; }
+#instLead{ font-size:12.5px; }
+
+/* VOICE: the box keeps its size; older lines leave it */
+.voice{ max-height:calc(100% - 110px) !important; }
+.vhead button{ min-width:44px; }
+
+/* SETUP: every step on one page */
+.setup{ gap:10px !important; padding:16px 18px 14px !important; }
+.su-h{ font-size:22px !important; }
+.su-grid{ display:grid !important; grid-template-columns:1fr 1fr; gap:6px !important; }
+.su-grid .su-row{ padding:7px 9px; gap:8px; border-radius:14px; }
+.su-grid .su-row svg{ width:22px; height:22px; flex-basis:22px; }
+.su-grid .su-row b{ font-size:13.5px; } .su-grid .su-row span{ font-size:11px; }
+.su-sw i{ width:52px !important; height:52px !important; }
+.su-sw{ gap:6px !important; }
+.su-go{ padding:12px !important; min-height:44px; }
+.su-spk{ padding:10px !important; }
+.su-ic{ width:52px !important; height:52px !important; flex-basis:52px !important; }
+
+/* ================= v2.8: a calmer surface ================= */
+/* SONOS a little higher, the house symbol on its right */
+.header{ align-items:flex-start !important; }
+.brand{ margin-top:-2px; align-items:center; }
+.title{ gap:10px !important; }
+.hmi{ width:34px !important; height:34px !important; border-radius:10px !important; }
+.hmi svg{ width:21px !important; height:21px !important; }
+@media (max-width:390px){ .hmi{ width:30px !important; height:30px !important; } .hmi svg{ width:18px !important; height:18px !important; } }
+.hs-sum[hidden]{ display:none !important; }
+
+/* PLAYING NOW: long buttons, the Home family, shortened only by the volume rail */
+.hs-list{ grid-template-columns:1fr !important; grid-template-rows:repeat(var(--hr,6),minmax(44px,1fr)) !important; gap:5px !important; }
+.hs-room{ display:flex !important; align-items:center !important; gap:8px !important; padding:0 6px 0 12px !important; border-radius:14px !important;
+  border:1px solid rgba(255,255,255,.16) !important;
+  background:linear-gradient(180deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.04) 48%, rgba(255,255,255,.015) 52%, rgba(255,255,255,.05) 100%), #1a1a1a !important; }
+.hs-room.on{ border-color:color-mix(in srgb,var(--c) 70%,transparent) !important;
+  background:linear-gradient(180deg, rgba(255,255,255,.12) 0%, rgba(255,255,255,.04) 48%, rgba(255,255,255,.015) 52%, rgba(255,255,255,.05) 100%),
+    linear-gradient(90deg, color-mix(in srgb,var(--c) 34%,#111) 0%, #1a1a1a 85%) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 0 14px color-mix(in srgb,var(--c) 30%,transparent) !important; }
+.hs-room.sel{ border-color:#fff !important; }
+.hs-room::before{ display:none !important; }
+.hs-go{ min-height:44px !important; height:100%; justify-content:center !important; gap:1px !important; overflow:hidden; }
+.hs-top{ gap:8px !important; }
+.hs-bub{ flex:0 0 18px !important; width:18px !important; height:18px !important; }
+.hs-top b{ font-size:14.5px !important; white-space:nowrap !important; overflow:hidden; text-overflow:ellipsis; }
+.hs-st{ display:none !important; }
+.hs-eq{ display:none !important; }
+.hs-line{ padding-left:26px; font-size:11.5px !important; }
+.hs-mute{ flex:0 0 auto; min-width:64px !important; height:44px !important; min-height:44px; border-radius:10px !important; font:900 11.5px var(--font) !important; letter-spacing:.06em; text-transform:uppercase;
+  background:#fff !important; color:#111 !important; border:1px solid var(--c) !important; }
+.hs-mute[aria-pressed="true"]{ background:#c62828 !important; color:#fff !important; border-color:#ff8a8a !important; }
+.hs-mt{ display:inline !important; } .hs-mi{ display:none !important; }
+
+/* short phones: spacing gives way, buttons never shrink below 44 */
+@media (max-height:700px){
+  .hs-list{ gap:3px !important; }
+  .frame{ gap:5px !important; }
+  .modes{ padding:2px !important; }
+  .tbtn{ width:46px !important; height:46px !important; }
+  .tbtn svg{ width:55px !important; height:55px !important; }
+  .np{ padding:0 10px !important; min-height:44px; }
+  .sgroup{ margin-top:8px !important; padding-top:8px !important; }
+  .sgroup h3{ margin-bottom:5px !important; }
+}
+/* ================= v2.9: one fixed SONOS sign ================= */
+.header .brand.slot{ visibility:hidden; pointer-events:none; }
+#brandFix{ position:absolute; z-index:39; margin:0 !important; cursor:pointer; }
+#brandFix:focus-visible{ outline:2px solid #fff; outline-offset:3px; border-radius:10px; }
+.frame:has(.setup.open) #brandFix{ display:none; }          /* first-run setup is its own flow */
+/* every page keeps the corner clear for the sign */
+.hm-brand{ min-width:150px; min-height:44px; }
+.hm-foot{ position:absolute; left:0; right:0; bottom:20px; text-align:center; font-size:8.5px; letter-spacing:.22em; color:rgba(255,255,255,.4); pointer-events:none; z-index:2; }
+@media (max-height:700px){ .hm-foot{ bottom:12px; } }
+.sp-back[hidden]{ display:none !important; }
+.sp-top{ justify-content:flex-end !important; min-height:44px; }
+.gpage{ padding-top:66px !important; }
+.rpage{ padding-top:64px !important; }
+.sheet .panel{ max-height:calc(100% - 62px) !important; }
+
+@media (max-height:700px){
+  .panel{ padding:10px 14px !important; }
+  .panel h2{ margin:0 0 6px !important; font-size:18px !important; }
+  .panel .fine{ margin-top:6px !important; font-size:10.5px !important; }
+  .stabs{ margin-bottom:4px !important; }
+  .talk{ padding:12px !important; margin-top:8px !important; }
+  #icSheet .lead{ margin:4px 0 !important; }
+  #icPresets .chip, #icRooms .chip{ padding:6px 10px; }
+  #instLead{ font-size:11.5px !important; line-height:1.3; margin:0 !important; }
+  .inst{ margin-top:4px !important; }
+  .inst li{ padding:2px 0 !important; font-size:12px; }
+  .layers{ margin-top:4px !important; }
+  .layers div{ padding:4px 7px !important; line-height:1.25 !important; }
+  .row{ margin-top:8px !important; }
+}
+/* ================= v2.9.1 ================= */
+/* the room name tucks up under the SONOS sign, in the free space left of the button labels */
+.roombar{ margin-top:-22px !important; }
+.activity .a1{ max-width:calc(100% - 190px) !important; }
+.activity .a2{ width:100%; }
+.activity .a2 em{ margin-left:auto; flex:0 0 auto; align-self:center; font:800 10.5px/1 var(--font) !important; letter-spacing:.1em; padding:5px 8px; border-radius:8px;
+  border:1px solid rgba(255,255,255,.5); background:rgba(0,0,0,.35); color:#fff !important; white-space:nowrap; font-style:normal; }
+.roombar .activity{ max-width:calc(100% - 200px); min-width:150px; }
+.roombar.wide .activity{ max-width:none; }
+.activity .a1 b{ font-size:23px !important; }
+.activity .a2{ gap:8px !important; }
+.activity .a2 span{ font-size:14.5px !important; color:rgba(255,255,255,.85) !important; }
+.activity .led{ flex-basis:10px; width:10px; height:10px; }
+@media (max-width:390px){ .activity .a1 b{ font-size:21px !important; } .activity .a2 span{ font-size:13.5px !important; } }
+/* larger colour dots */
+.roombar.wide .pill{ height:50px !important; }
+.roombar.wide .pill .bub{ width:38px !important; height:38px !important; border-width:2.5px; }
+@media (max-width:370px){ .roombar.wide .pill .bub{ width:34px !important; height:34px !important; } }
+.roombar.wide .pill .pb{ right:calc(50% - 27px) !important; top:-2px !important; }
+/* the white centre dot: every room in the group, the selected room included */
+.pill.with::after{ width:11px !important; height:11px !important; z-index:2; box-shadow:0 0 0 1.5px rgba(0,0,0,.35), 0 1px 3px rgba(0,0,0,.6) !important; }
+
+/* ================= v2.9.2 ================= */
+/* four header buttons: INTERCOM · IN GROUP · ID · VOICE, all 44 px */
+.hright{ gap:8px !important; }
+.hright .icb, .hright .gsq, .hright .orb{ width:44px !important; height:44px !important; flex:0 0 44px; }
+.hright .orb svg, .hright .icb svg{ width:24px; height:24px; }
+.idh b{ font:900 16px/1 var(--font); letter-spacing:.06em; color:#fff; }
+.idh[aria-expanded="true"]{ background:radial-gradient(circle at 35% 30%, color-mix(in srgb,var(--accent) 80%,#fff), color-mix(in srgb,var(--accent) 35%,#000) 75%) !important; }
+.hright small{ font-size:8px !important; letter-spacing:.06em !important; }
+.activity .a1{ max-width:none !important; }
+@media (max-width:390px){ .title{ font-size:23px !important; letter-spacing:.1em !important; } .hright{ gap:6px !important; } .hright small{ font-size:7.5px !important; letter-spacing:.03em !important; } }
+@media (max-width:370px){ .title{ font-size:21px !important; } .hright{ gap:4px !important; } }
+/* the now-playing bar: full width, a display, not a button */
+.npwrap .np{ width:100%; cursor:default; }
+.np .npt b{ font-size:15.5px; } .np .npt span{ font-size:12.5px; }
+
+/* ================= v2.9.3: ⓘ INFO in front of the room name ================= */
+.activity .a1{ align-items:center !important; gap:10px !important; }
+.activity .a1 em.info{ order:-1; flex:0 0 auto; display:inline-flex; align-items:center; gap:5px; margin:0 !important;
+  font:900 12.5px/1 var(--font) !important; letter-spacing:.1em; font-style:normal; color:#fff !important; white-space:nowrap;
+  padding:7px 11px 7px 8px; border-radius:10px; border:1.5px solid rgba(255,255,255,.7);
+  background:linear-gradient(180deg, rgba(255,255,255,.16), rgba(255,255,255,.04) 50%, rgba(0,0,0,.2)), rgba(0,0,0,.35);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.2), 0 2px 6px rgba(0,0,0,.45); }
+.activity .a1 em.info svg{ width:17px; height:17px; flex:0 0 17px; }
+.activity:active .a1 em.info{ transform:translateY(1px); }
+/* the name row starts just under the header labels, so the button and the name never touch them */
+.roombar{ margin-top:-8px !important; }
+@media (max-height:700px){
+  .roombar{ margin-top:-10px !important; }
+  .activity .a1 em.info{ padding:5px 10px 5px 7px; }
+  .roombar.wide .pill{ height:46px !important; }
+  .roombar.wide .pill .bub{ width:36px !important; height:36px !important; }
+  .activity .a2 span{ font-size:13.5px !important; }
+}
+
+/* ================= v2.9.4: big colour dots down PLAYING NOW ================= */
+.hs-go{ position:relative; padding-left:46px !important; }
+.hs-go .hs-bub{ position:absolute; left:0; top:50%; transform:translateY(-50%);
+  width:34px !important; height:34px !important; flex:none !important; border-width:2.5px !important;
+  box-shadow:inset 0 -3px 6px rgba(0,0,0,.3), 0 2px 5px rgba(0,0,0,.5) !important; }
+.hs-room.sel .hs-bub{ border-color:#fff !important; box-shadow:0 0 0 2px rgba(255,255,255,.3), 0 2px 5px rgba(0,0,0,.5) !important; }
+.hs-line{ padding-left:0 !important; }
+@media (max-height:700px){ .hs-go{ padding-left:40px !important; } .hs-go .hs-bub{ width:30px !important; height:30px !important; } }
+
+/* ================= v2.9.5 ================= */
+/* the three tabs: no tray behind them, a touch higher */
+.modes{ background:none !important; box-shadow:none !important; border:none !important; padding:0 !important; margin-top:-3px; }
+/* the transport: one group, lined up under the room list (left column), a little smaller */
+.transport{ justify-content:space-between !important; width:calc(100% - 74px); padding:0 !important; align-self:flex-start; }
+.tbtn{ width:52px !important; height:52px !important; }
+.tbtn svg{ width:61px !important; height:61px !important; margin:-4.5px !important; }
+/* the now-playing bar takes the room */
+.npwrap .np{ min-height:64px; padding:8px 14px !important; gap:14px; }
+.npwrap .art{ width:50px !important; height:50px !important; flex:0 0 50px !important; border-radius:12px; }
+.npwrap .np .npt b{ font-size:17px !important; } .npwrap .np .npt span{ font-size:13.5px !important; margin-top:3px; }
+@media (max-height:700px){
+  .transport{ width:calc(100% - 72px); }
+  .tbtn{ width:44px !important; height:44px !important; }
+  .tbtn svg{ width:52px !important; height:52px !important; margin:-4px !important; }
+  .npwrap .np{ min-height:52px; padding:4px 12px !important; }
+  .npwrap .art{ width:40px !important; height:40px !important; flex-basis:40px !important; }
+  .npwrap .np .npt b{ font-size:15.5px !important; } .npwrap .np .npt span{ font-size:12.5px !important; }
+}
+/* Home: the same round HUSH as the panel, bigger; the house status centred underneath */
+.hm-head{ align-items:center !important; text-align:center !important; gap:6px !important; padding-top:0 !important; }
+.home .rbtn.p1.hm-p1{ width:80px !important; height:80px !important; min-height:80px !important; flex:0 0 80px !important; border-radius:50% !important; margin:0; }
+.home .rbtn.p1.hm-p1 b{ font-size:21px !important; }
+.home .rbtn.p1.hm-p1 b.rs{ font-size:15px !important; }
+.home .rbtn.p1.hm-p1 small{ font-size:8.5px !important; }
+.home .rbtn.p1.hm-p1.dim{ opacity:.55; }
+.hm-head h1{ font-size:13px !important; text-align:center; }
+.hm-dots{ justify-content:center; }
+@media (max-height:700px){ .home .rbtn.p1.hm-p1{ width:70px !important; height:70px !important; min-height:70px !important; flex-basis:70px !important; } .home .rbtn.p1.hm-p1 b{ font-size:18px !important; } }
+
+@media (max-height:660px){ .home .rbtn.p1.hm-p1{ width:62px !important; height:62px !important; min-height:62px !important; flex-basis:62px !important; } .home .rbtn.p1.hm-p1 b{ font-size:16px !important; } .hm-list{ padding-bottom:92px !important; } }
+/* ================= v2.9.6: the L-shaped now-playing bar ================= */
+.npwrap{ position:relative; }
+.npwrap .np{ border:none !important; border-top-right-radius:0 !important; background:rgba(0,0,0,.38) !important; }
+.np-ear{ position:absolute; right:0; bottom:100%; width:62px; height:62px; z-index:1;
+  background:rgba(0,0,0,.38); border-radius:20px 20px 0 0; display:flex; align-items:flex-start; justify-content:center; padding:5px 4px 0; box-sizing:border-box; }
+/* the inside corner of the L, rounded */
+.np-ear::before{ content:''; position:absolute; left:-16px; bottom:0; width:16px; height:16px; pointer-events:none;
+  background:radial-gradient(circle at 0 0, transparent 15.5px, rgba(0,0,0,.38) 16px); }
+.np-grp{ width:100%; height:calc(100% - 2px); min-height:44px; border-radius:15px; cursor:pointer; color:#fff; padding:0;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:2px;
+  border:1px solid var(--accent); background:linear-gradient(180deg,#2a2d31,#15171a);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.14), 0 3px 8px rgba(0,0,0,.5); }
+.np-grp:active{ transform:scale(.96); }
+.np-grp:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+.np-gi svg{ width:24px; height:24px; display:block; }
+.np-gl{ font:800 9px/1 var(--font); letter-spacing:.12em; }
+@media (max-height:700px){ .np-ear{ padding-top:3px; } .np-gi svg{ width:20px; height:20px; } .np-gl{ font-size:8px; } .np-grp{ gap:1px; } }
+/* the transport keeps a clear gap before the L */
+.transport{ width:calc(100% - 80px) !important; }
+
+/* ================= v2.9.7: the transport, closer and symmetrical ================= */
+.transport{ justify-content:center !important; gap:14px; width:calc(100% - 74px) !important; }
+@media (max-height:700px){ .transport{ gap:12px; width:calc(100% - 72px) !important; } }
+
+/* ================= v2.9.8 ================= */
+/* PLAYING NOW dots carry the same white centre as the top row */
+.hs-room.with .hs-bub::after{ content:''; position:absolute; left:50%; top:50%; width:11px; height:11px; transform:translate(-50%,-50%); border-radius:50%;
+  background:#fff; box-shadow:0 0 0 1.5px rgba(0,0,0,.35), 0 1px 3px rgba(0,0,0,.6); }
+/* the L: GROUP fills the raised corner with the same inset as the album art */
+.np-ear{ padding:7px 7px 0 !important; }
+@media (max-height:700px){ .np-ear{ padding:4px 4px 0 !important; } }
+.np-grp{ height:calc(100% - 3px) !important; border-radius:13px !important; }
+/* IN GROUP: dark button, rim in the room colour, the number always white and pressed in */
+.gsq, .gsq.linked{ background:linear-gradient(160deg,#2b2b2b,#141414) !important; border:1.5px solid rgba(255,255,255,.28) !important; color:#fff !important;
+  box-shadow:inset 0 2px 5px rgba(0,0,0,.75), inset 0 -1px 0 rgba(255,255,255,.08), 0 3px 8px rgba(0,0,0,.5) !important; }
+.gsq.linked{ border-color:var(--accent) !important; }
+.gsq b{ color:#fff !important; font-size:25px !important;
+  text-shadow:0 -1px 0 rgba(0,0,0,.95), 0 1px 0 rgba(255,255,255,.28), 0 0 6px rgba(255,255,255,.15) !important; }
+.gsq.bump b{ animation:gsqPop .42s cubic-bezier(.34,1.56,.64,1) !important; }
+@keyframes gsqPop{ 0%{ transform:scale(.55); opacity:.4; } 100%{ transform:scale(1); opacity:1; } }
+/* ⓘNFO: the circled i stands in for the I, tight to the letters */
+.activity .a1 em.info{ gap:1px !important; padding:6px 10px 6px 7px !important; letter-spacing:.06em !important; font-size:13.5px !important; }
+.activity .a1 em.info svg{ width:15px !important; height:15px !important; flex-basis:15px !important; margin-right:0; transform:translateY(-.5px); }
+
+/* ================= v2.9.9: rainbow rims ================= */
+.np-outline{ position:absolute; left:0; pointer-events:none; z-index:2; overflow:visible; }
+/* the PLAYING NOW tab: the same slow rainbow, 1 px */
+.modes button[data-mode="playing"], .modes button[data-mode="playing"][aria-selected="true"]{
+  border:1px solid transparent !important;
+  background:linear-gradient(180deg, #4a4a4a 0%, #2c2c2c 55%, #1e1e1e 100%) padding-box, var(--rb, linear-gradient(90deg,#ff5a5a,#ffc400,#6f98ff,#48e58c,#ff5a5a)) border-box !important;
+  background-size:100% 100%, 200% 100% !important; animation:tabRb 16s linear infinite; }
+.modes button[data-mode="playing"][aria-selected="true"]{
+  background:linear-gradient(180deg, #0a0a0a 0%, #181818 60%, #242424 100%) padding-box, var(--rb, linear-gradient(90deg,#ff5a5a,#ffc400,#6f98ff,#48e58c,#ff5a5a)) border-box !important;
+  background-size:100% 100%, 200% 100% !important; }
+@keyframes tabRb{ from{ background-position:0 0, 0% 0; } to{ background-position:0 0, -200% 0; } }
+@media (prefers-reduced-motion:reduce){ .modes button[data-mode="playing"]{ animation:none !important; } }
+
+/* ================= v2.10: one meaning for the white dot; frames that say quiet or playing ================= */
+/* the corner badges retire: the white centre carries "playing" */
+.pill .pb, .pill.busy .pb{ display:none !important; }
+.hm-bub{ position:relative; }
+.hm-bub.with::after{ content:''; position:absolute; left:50%; top:50%; width:10px; height:10px; transform:translate(-50%,-50%); border-radius:50%;
+  background:#fff; box-shadow:0 0 0 1.5px rgba(0,0,0,.35), 0 1px 3px rgba(0,0,0,.6); }
+.np-outline .glow{ filter:blur(2px); }
+/* PLAYING NOW tab: a clear white 1 px frame when quiet; the flowing rainbow, with a glow, when any room plays */
+.modes button[data-mode="playing"], .modes button[data-mode="playing"][aria-selected="true"]{ animation:none !important; }
+.frame:not(.house-live) .modes button[data-mode="playing"]{ border:1px solid rgba(255,255,255,.55) !important;
+  background:linear-gradient(180deg, #4a4a4a 0%, #2c2c2c 55%, #1e1e1e 100%) !important; }
+.frame:not(.house-live) .modes button[data-mode="playing"][aria-selected="true"]{ border-color:#fff !important;
+  background:linear-gradient(180deg, #0a0a0a 0%, #181818 60%, #242424 100%) !important; }
+.frame.house-live .modes button[data-mode="playing"]{ border-width:1.5px !important; animation:tabRb 16s linear infinite !important;
+  box-shadow:0 0 8px rgba(255,255,255,.18), 0 3px 0 #0b0b0b, 0 5px 8px rgba(0,0,0,.45) !important; }
+@media (prefers-reduced-motion:reduce){ .frame.house-live .modes button[data-mode="playing"]{ animation:none !important; } }
+
+/* ================= v2.10.1 ================= */
+/* MUTE: one button, everywhere. Green while the room plays, red while muted. 3D, white capitals. */
+.hs-mute, .hm-mbtn{ min-width:76px !important; width:76px !important; height:44px !important; min-height:44px !important; padding:0 !important;
+  border-radius:12px !important; border:1px solid rgba(0,0,0,.45) !important; color:#fff !important;
+  font:900 13px/1 var(--font) !important; letter-spacing:.08em !important; text-transform:uppercase;
+  background:linear-gradient(180deg, #1e6b3c 0%, #0f4a28 48%, #07321a 100%) !important; border-color:#2e8a53 !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.28), inset 0 -2px 0 rgba(0,0,0,.35), 0 3px 0 #031a0c, 0 5px 8px rgba(0,0,0,.5) !important;
+  text-shadow:0 -1px 0 rgba(0,0,0,.6), 0 1px 0 rgba(255,255,255,.25) !important; }
+.hs-mute[aria-pressed="true"], .hm-mbtn[aria-pressed="true"]{
+  background:linear-gradient(180deg, #ff7a7a 0%, #d93636 48%, #a51f1f 100%) !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.5), inset 0 -2px 0 rgba(0,0,0,.28), 0 3px 0 #6e1111, 0 5px 8px rgba(0,0,0,.45) !important; }
+.hs-mute:active, .hm-mbtn:active{ box-shadow:inset 0 2px 4px rgba(0,0,0,.4), 0 1px 0 rgba(0,0,0,.4) !important; }
+.hs-mute:active{ transform:translateY(2px); } .hm-mbtn:active{ transform:translateY(calc(-50% + 2px)) !important; }
+.hs-mute .hs-mt{ font:inherit; }
+.hm-list li.has-mute .hm-room{ padding-right:98px !important; }
+
+/* HOME: a bigger HUSH sits right on WHAT'S PLAYING NOW; the house status centred to its left */
+.hm-top{ display:grid !important; grid-template-columns:1fr auto; grid-template-rows:44px 1fr; column-gap:12px; align-items:stretch; padding-top:0 !important; }
+.hm-top .hm-brand{ grid-column:1; grid-row:1; }
+.hm-stat{ grid-column:1; grid-row:2; align-self:center; display:flex; flex-direction:column; align-items:flex-start; gap:6px; }
+.hm-stat h1{ margin:0; font:800 16px/1.2 var(--font); color:rgba(255,255,255,.92); text-align:left; }
+.hm-stat .hm-dots{ justify-content:flex-start; }
+.home .rbtn.p1.hm-p1{ grid-column:2; grid-row:1 / span 2; align-self:end; width:96px !important; height:96px !important; min-height:96px !important; flex:none !important; }
+.home .rbtn.p1.hm-p1 b{ font-size:25px !important; }
+.home .rbtn.p1.hm-p1 b.rs{ font-size:17px !important; }
+.home .rbtn.p1.hm-p1 small{ font-size:9.5px !important; }
+.home > .hm-wpn{ margin-top:-6px; }
+@media (max-height:700px){ .home .rbtn.p1.hm-p1{ width:80px !important; height:80px !important; min-height:80px !important; } .home .rbtn.p1.hm-p1 b{ font-size:21px !important; } .hm-stat h1{ font-size:14.5px; } }
+@media (max-height:660px){ .home .rbtn.p1.hm-p1{ width:70px !important; height:70px !important; min-height:70px !important; } .home .rbtn.p1.hm-p1 b{ font-size:18px !important; } }
+
+/* ================= v2.11: grouping rings everywhere; Home dots bigger; GROUP VOLUME ================= */
+/* a group ring: a dark gap, then the group's colour */
+.pill.grp .bub{ box-shadow:0 0 0 2.5px rgba(0,0,0,.6), 0 0 0 5px var(--g), inset 0 -3px 6px rgba(0,0,0,.3) !important; }
+.pill.grp[aria-selected="true"] .bub{ box-shadow:0 0 0 2.5px rgba(0,0,0,.6), 0 0 0 5px var(--g), 0 0 12px var(--g) !important; }
+.hs-room.grp .hs-bub{ box-shadow:0 0 0 2.5px rgba(0,0,0,.6), 0 0 0 5px var(--g) !important; }
+.hs-go{ padding-left:50px !important; }
+.hs-go .hs-bub{ left:4px !important; width:32px !important; height:32px !important; }
+@media (max-height:700px){ .hs-go{ padding-left:44px !important; } .hs-go .hs-bub{ width:28px !important; height:28px !important; } }
+.hm-bub{ flex:0 0 34px !important; width:34px !important; height:34px !important; margin-left:4px; }
+.hm-bub.grp{ box-shadow:0 0 0 2.5px rgba(0,0,0,.6), 0 0 0 5px var(--g) !important; }
+@media (max-height:700px){ .hm-bub{ flex-basis:30px !important; width:30px !important; height:30px !important; } }
+
+/* rows never grow wider than the list; long lines end in … */
+.hm-list li{ min-width:0; } .hm-list li .hm-room{ min-width:0; overflow:hidden; } .hm-txt span{ max-width:100%; }
+
+/* v2.11.2: playing = the dot breathes a soft glow in its own colour (top row, PLAYING NOW, Home) */
+@keyframes dotLive{ 0%,100%{ filter:drop-shadow(0 0 1px var(--c)); } 50%{ filter:drop-shadow(0 0 9px var(--c)) drop-shadow(0 0 3px var(--c)); } }
+.pill.live .bub, .hs-room.live .hs-bub, .hm-bub.live{ animation:dotLive 2.2s ease-in-out infinite; }
+@media (prefers-reduced-motion:reduce){ .pill.live .bub, .hs-room.live .hs-bub, .hm-bub.live{ animation:none; filter:drop-shadow(0 0 6px var(--c)); } }
+.hm-bub{ --c:inherit; }
+
+/* v2.12.1: nothing inside a card may crop the dot's glow or ring; only the text trims itself */
+.hs-go, .hs-list.two .hs-go{ overflow:visible !important; min-width:0; }
+.hs-top{ min-width:0; overflow:hidden; } .hs-line{ overflow:hidden; }
+.hm-list li .hm-room{ overflow:visible !important; } .hm-txt{ min-width:0; overflow:hidden; }
+
+/* ================= v2.12.2 ================= */
+/* rainbow rims that really move: a separate layer, free of the !important background rules that froze them */
+@keyframes rimFlow{ from{ background-position:0% 0; } to{ background-position:-200% 0; } }
+.hm-wpn, .frame.house-live .modes button[data-mode="playing"]{ position:relative; isolation:isolate; }
+.hm-wpn::after, .frame.house-live .modes button[data-mode="playing"]::after{
+  content:''; position:absolute; inset:-1.5px; border-radius:inherit; padding:1.5px; pointer-events:none; z-index:1;
+  background:var(--rb, linear-gradient(90deg,#ff5a5a,#ffc400,#6f98ff,#48e58c,#ff5a5a)); background-size:200% 100%;
+  -webkit-mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite:xor;
+  mask:linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); mask-composite:exclude;
+  animation:rimFlow 20s linear infinite; }
+.hm-wpn{ background:linear-gradient(180deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.03) 50%, rgba(255,255,255,.01) 51%, rgba(255,255,255,.04) 100%) padding-box,
+  linear-gradient(#0d0d0d,#0d0d0d) padding-box !important; background-size:100% 100%, 100% 100% !important; animation:none !important; }
+.frame.house-live .modes button[data-mode="playing"]{ border:1.5px solid transparent !important;
+  background:linear-gradient(180deg, #4a4a4a 0%, #2c2c2c 55%, #1e1e1e 100%) padding-box !important; animation:none !important; }
+.frame.house-live .modes button[data-mode="playing"][aria-selected="true"]{ background:linear-gradient(180deg, #0a0a0a 0%, #181818 60%, #242424 100%) padding-box !important; }
+@media (prefers-reduced-motion:reduce){ .hm-wpn::after, .frame.house-live .modes button[data-mode="playing"]::after{ animation:none; } }
+/* WHAT'S PLAYING NOW: bigger letters */
+.hm-wpn{ font-size:23px !important; letter-spacing:.1em !important; min-height:62px !important; }
+@media (max-width:390px){ .hm-wpn{ font-size:21.5px !important; letter-spacing:.08em !important; } }
+@media (max-width:370px){ .hm-wpn{ font-size:20px !important; letter-spacing:.06em !important; } }
+@media (max-height:700px){ .hm-wpn{ min-height:52px !important; } }
+
+/* BACK TO SQUARE ONE: a centred box over a dimmed panel; nothing is covered without you seeing why */
+.sqm{ position:absolute; inset:0; z-index:60; display:none; align-items:center; justify-content:center; padding:22px;
+  background:rgba(0,0,0,.66); -webkit-backdrop-filter:blur(3px); backdrop-filter:blur(3px); }
+.sqm.show{ display:flex; animation:idin .2s ease; }
+.sqm-card{ width:100%; max-width:340px; display:flex; flex-direction:column; align-items:center; gap:10px; text-align:center;
+  padding:22px 18px 18px; border-radius:24px; background:linear-gradient(180deg,#262626,#151515); border:1px solid rgba(255,255,255,.18);
+  box-shadow:0 20px 50px rgba(0,0,0,.7), inset 0 1px 0 rgba(255,255,255,.12); }
+.sqm-ic{ width:46px; height:46px; border-radius:10px; transform:rotate(12deg); background:linear-gradient(135deg,#3b2a8c,#22165a); border:2px solid #ffc400; box-shadow:0 4px 10px rgba(0,0,0,.5); }
+.sqm[data-state="done"] .sqm-ic{ transform:none; }
+.sqm-card b{ font:800 20px/1.2 var(--font); color:#fff; }
+.sqm-card p{ margin:0; font:500 14.5px/1.4 var(--font); color:rgba(255,255,255,.8); }
+.sqm-row{ width:100%; display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:6px; }
+.sqm-row button{ min-height:52px; border-radius:14px; font:900 15px var(--font); letter-spacing:.08em; cursor:pointer; color:#fff;
+  border:1px solid rgba(255,255,255,.3); background:linear-gradient(180deg,#3a3a3a,#1e1e1e); box-shadow:inset 0 1px 0 rgba(255,255,255,.18), 0 3px 0 #000; }
+.sqm-row button:active{ transform:translateY(2px); box-shadow:inset 0 2px 4px rgba(0,0,0,.5); }
+.sqm[data-state="ask"] #sqmB{ background:linear-gradient(180deg,#ff6b6b,#c62828); border-color:#ff9a9a; }
+.sqm[data-state="done"] #sqmB{ background:linear-gradient(180deg,#ffd54a,#e0a800); border-color:#ffe082; color:#1a1300; }
+.sqm-row button:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+#sqConfirm, #undoBar{ display:none !important; }
+
+/* v2.13: the group page always fits: the room rows share the space left, never spilling under GROUP VOLUME */
+.gpage #rcards{ flex:1 1 auto; min-height:0; gap:6px !important; }
+.gpage #rcards .grow{ min-height:44px !important; max-height:60px; }
+@media (max-height:700px){
+  .gpage{ gap:7px !important; padding-bottom:10px !important; }
+  .gpage h2{ font-size:20px !important; line-height:1.1; }
+  .gpage #rcards{ gap:3px !important; }
+  .gpage .presets{ gap:6px !important; }
+  #gLead{ display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; font-size:12.5px !important; line-height:1.3; margin:0 !important; }
+  .gpage .presets .pbtn{ min-height:44px; padding-top:0; padding-bottom:0; }
+  .gvol{ grid-template-columns:52px 1fr 52px !important; grid-template-rows:44px !important; padding:5px 8px !important; row-gap:0 !important; }
+  .gvol .gv-l{ display:none; }
+  .gv-b{ height:44px !important; font-size:26px !important; border-radius:13px !important; }
+  .gv-mid{ gap:4px !important; } .gv-mid b{ font-size:18px !important; }
+  .gv-mid b::after{ content:' GROUP VOL'; font:800 9px var(--font); letter-spacing:.12em; color:rgba(255,255,255,.65); }
+  .gpage .done{ padding:0 !important; min-height:46px; }
+}
+
+/* v2.13: a page that is closing stops catching taps at once (before, an almost invisible Home kept them for 0.4 s
+   and a quick tap on the panel landed on a Home row: the panel jumped to another room) */
+.home:not(.open), .gpage:not(.open), .rpage:not(.open), .srcp:not(.open), .sheet:not(.open), .setup:not(.open), .voice:not(.open), .idcard:not(.open){ pointer-events:none !important; }
+.home:not(.open){ transition:opacity .18s ease, visibility 0s .18s !important; }
+
+/* ================= v2.14: splash ================= */
+#splash{ position:fixed; inset:0; z-index:9999; background:#000; transition:background-color .8s ease; }
+#splash.go{ background-color:rgba(0,0,0,0); }   /* v2.14: the splash takes every tap until it is gone, so nothing half-visible gets pressed */
+#splashWord{ position:absolute; left:50%; top:50%; translate:-50% -50%; transform-origin:0 0;
+  font:900 clamp(46px,15vw,76px)/1 var(--font); letter-spacing:.12em; color:#fff; white-space:nowrap;
+  opacity:0; animation:splashIn .8s cubic-bezier(.2,0,0,1) .15s forwards;
+  transition:transform .85s cubic-bezier(.65,0,.25,1); }
+@keyframes splashIn{ from{ opacity:0; letter-spacing:.3em; filter:blur(6px); } to{ opacity:1; letter-spacing:.12em; filter:none; } }
+@media (prefers-reduced-motion:reduce){ #splashWord{ animation:none; opacity:1; } #splash{ transition:background-color .4s; } }
+
+/* ================= v2.14.1: dark candy reds ================= */
+/* Living Room's dots: deep cherry with a glossy candy shine */
+.pill .bub, .hs-bub, .hm-bub:not(.hm-empty *){
+  background:radial-gradient(circle at 32% 26%, rgba(255,255,255,.6) 0 6%, rgba(255,255,255,.18) 12%, rgba(255,255,255,0) 24%),
+    radial-gradient(circle at 50% 58%, color-mix(in srgb,var(--c) 88%,#fff) 0%, var(--c) 42%, color-mix(in srgb,var(--c) 42%,#000) 100%) !important; }
+.pill.candy .bub, .hs-room.candy .hs-bub, li.candy .hm-bub{ border-color:#e8546a !important; }
+/* HUSH: the same dark candy red, on the panel and on Home */
+.rbtn.p1:not(.hushed){
+  background:radial-gradient(circle at 33% 24%, rgba(255,255,255,.5) 0 6%, rgba(255,255,255,.15) 12%, rgba(255,255,255,0) 24%),
+    radial-gradient(circle at 50% 58%, #c8122e 0%, #8e0a1f 48%, #4a020c 100%) !important;
+  border-color:rgba(255,140,155,.6) !important; }
+/* UNMUTE: very dark red, built like the dark-green MUTE */
+.hs-mute[aria-pressed="true"], .hm-mbtn[aria-pressed="true"]{
+  background:linear-gradient(180deg, #7e0f1f 0%, #55070f 48%, #38040a 100%) !important; border-color:#a3243a !important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.25), inset 0 -2px 0 rgba(0,0,0,.35), 0 3px 0 #1c0206, 0 5px 8px rgba(0,0,0,.5) !important; }
+
+.rbtn.mute.on{ background:radial-gradient(circle at 33% 24%, rgba(255,255,255,.45) 0 6%, rgba(255,255,255,0) 22%), radial-gradient(circle at 50% 58%, #8e1424 0%, #5a0712 50%, #34030a 100%) !important; border-color:#a3243a !important; }
+
+/* GROUP VOLUME: nothing like a room slider. Big minus and plus, the level between them, framed in the group's colours */
+.gvol{ flex:0 0 auto; display:grid; grid-template-columns:64px 1fr 64px; grid-template-rows:auto 56px; align-items:center; column-gap:12px; row-gap:6px;
+  padding:10px 12px 12px; border-radius:20px; border:1px solid transparent;
+  background:linear-gradient(180deg,#1b1b1b,#0d0d0d) padding-box, var(--gb, linear-gradient(90deg,#fff,#888,#fff)) border-box;
+  background-size:100% 100%, 200% 100%; }
+.gvol.live{ animation:tabRb 20s linear infinite; border-width:1.5px; box-shadow:0 0 12px rgba(255,255,255,.12); }
+@media (prefers-reduced-motion:reduce){ .gvol.live{ animation:none; } }
+.gv-l{ grid-column:1 / -1; text-align:center; font:900 11px/1 var(--font); letter-spacing:.2em; color:rgba(255,255,255,.75); }
+.gv-b{ height:56px; border-radius:16px; cursor:pointer; color:#fff; font:300 34px/1 var(--font); padding:0 0 4px;
+  border:1px solid rgba(255,255,255,.3); background:radial-gradient(circle at 40% 25%, #555, #1a1a1a 75%);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.25), 0 3px 0 #000, 0 5px 10px rgba(0,0,0,.5); }
+.gv-b:active{ transform:translateY(2px); box-shadow:inset 0 2px 5px rgba(0,0,0,.6), 0 1px 0 #000; }
+.gv-b:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+.gv-mid{ display:flex; flex-direction:column; align-items:center; gap:7px; }
+.gv-mid b{ font:900 26px/1 var(--font); color:#fff; text-shadow:0 -1px 0 rgba(0,0,0,.9), 0 1px 0 rgba(255,255,255,.2); }
+.gv-bar{ display:block; width:100%; height:8px; border-radius:4px; background:rgba(255,255,255,.12); overflow:hidden; box-shadow:inset 0 1px 2px rgba(0,0,0,.6); }
+.gv-bar i{ display:block; height:100%; border-radius:4px; background:var(--gb); background-size:300% 100%; }
+@media (max-height:700px){ .gvol{ grid-template-rows:auto 46px; padding:7px 10px 8px; row-gap:4px; } .gv-b{ height:46px; font-size:28px; } .gv-mid b{ font-size:21px; } }
+
+/* PLAYING NOW: the white rim already marks the selected room, so the word goes and the name gets the room */
+.hs-sel{ display:none !important; }
+
+/* PLAYING NOW: every card the same height, so a room never drifts down the list */
+.hs-room{ flex:0 0 auto; height:72px; align-items:center !important; }
+.hs-go{ justify-content:center; }
+.hs-line{ display:block; max-width:100%; font-size:12px; color:rgba(255,255,255,.78); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+.hs-room.on .hs-line{ color:#fff; }
 </style>
 </head>
 <body>
+<div id="splash" aria-hidden="true"><span id="splashWord">SONOS</span></div>
 <main class="frame" id="frame" aria-label="Sonos room panel">
   <div class="ambient" aria-hidden="true"><span class="blob b1"></span><span class="blob b2"></span><span class="blob b3"></span><span class="lightwave"></span></div>
 
   <header class="header">
     <div class="brand">
       <div>
-        <div class="title">SONOS</div>
-        <div class="sub">MADE BY OVI DEMETRIAN</div>
+        <div class="title">SONOS<span class="hmi" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11l8-7 8 7"/><path d="M6 10v10h12V10"/><path d="M10 20v-6h4v6"/></svg></span></div>
       </div>
     </div>
     <div class="hright">
       <button class="icb" id="icBtn" aria-label="Intercom: talk to other rooms"><small>INTERCOM</small></button>
       <button class="gsq" id="gsq" aria-label="1 room in this group. Tap to group rooms."><b id="gsqN">1</b><small>IN GROUP</small></button>
+      <button class="icb idh" id="idBtn" aria-expanded="false" aria-controls="idCard" aria-label="Room ID: what is playing in this room"><b>ID</b><small>ROOM</small></button>
       <button class="orb" id="orb" aria-label="Talk to the panel" aria-expanded="false" aria-controls="voice"><small>VOICE</small></button>
     </div>
   </header>
 
   <section class="roombar">
-    <button class="activity" id="activity" aria-live="polite"><span class="a1"><b id="actRoom">Living Room</b><em aria-hidden="true">›</em></span><span class="a2"><i class="led" id="led"></i><span id="actText">No activity</span></span></button>
+    <button class="activity" id="activity" aria-live="polite"><span class="a1"><em class="info" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 10.8v6.4"/><circle cx="12" cy="7.2" r="1.4" fill="currentColor" stroke="none"/></svg>NFO</em><b id="actRoom">Living Room</b></span><span class="a2"><i class="led" id="led"></i><span id="actText">No activity</span></span></button>
     <div class="strip" id="strip" role="tablist" aria-label="Rooms"></div>
   </section>
 
@@ -1072,7 +1783,7 @@ body{ gap:24px; }
       <div class="grid" id="grid" role="tabpanel" aria-label="Music sources"></div>
       <div class="grid" id="gridS" role="tabpanel" aria-label="Scenes" hidden></div>
       <div class="house" id="house" role="tabpanel" aria-label="Every room and what is happening in it" hidden>
-        <p class="hs-sum" id="hsSum"></p>
+        <p class="hs-sum" id="hsSum" hidden></p>
         <ul class="hs-list" id="hsList"></ul>
       </div>
     </div>
@@ -1093,12 +1804,12 @@ body{ gap:24px; }
   </section>
 
   <div class="npwrap">
-    <button class="np" id="np" aria-label="Now playing. Tap to group rooms.">
+    <svg class="np-outline" id="npOutline" aria-hidden="true"><defs><linearGradient id="npRb" gradientUnits="userSpaceOnUse" spreadMethod="repeat"><animateTransform attributeName="gradientTransform" type="translate" from="0 0" to="0 0" dur="20s" repeatCount="indefinite"/></linearGradient></defs><path class="glow" fill="none" stroke="url(#npRb)" stroke-width="4" opacity="0"/><path class="line" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="1"/></svg>
+    <div class="np-ear" id="npEar"><button class="np-grp" id="npGroup" aria-label="Group rooms: choose which rooms play this"><span class="np-gi" aria-hidden="true"></span><span class="np-gl">GROUP</span></button></div>
+    <div class="np" id="np" role="status" aria-live="polite">
       <div class="art" id="art"></div>
       <div class="npt"><b id="npTitle">Nothing playing</b><span id="npSub">Pick a source above</span></div>
-      <div class="npgo">Group ›</div>
-    </button>
-    <button class="idbtn" id="idBtn" aria-expanded="false" aria-controls="idCard" aria-label="Show what is playing in this room">ID<small>ROOM</small></button>
+    </div>
   </div>
 
   <!-- ROOM ID CARD: what is playing in this room (placeholder fields marked) -->
@@ -1131,27 +1842,55 @@ body{ gap:24px; }
     </div>
   </section>
 
-  <div class="foot">
-    <span class="fbtns"><button class="logbtn" id="logBtn" aria-label="Open command log">📋</button><button class="logbtn fsbtn" id="fsBtn" aria-label="Full screen" aria-pressed="false" hidden><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></span>
+  <div class="foot" hidden>
+    <span class="fbtns"><button class="logbtn" id="logBtnOld" aria-hidden="true" tabindex="-1">📋</button><button class="logbtn fsbtn" id="fsBtnOld" aria-hidden="true" tabindex="-1" aria-label="Full screen" aria-pressed="false" hidden><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button></span>
     <span class="credit">© 2026 OVI DEMETRIAN · ALL RIGHTS RESERVED</span>
   </div>
+
+  <!-- v2.5 SOURCE: every service and input, black like Home -->
+  <section class="srcp" id="srcPage" aria-label="Choose a source" aria-hidden="true">
+    <div class="hm-sheen" aria-hidden="true"></div>
+    <header class="sp-top">
+      <button class="sp-back" id="spBack" aria-label="Back to the panel" hidden><span aria-hidden="true">‹</span> BACK</button>
+      <div class="sp-to"><span>Playing to</span><b id="spRoom"><i class="sp-dot"></i><em id="spRoomName">Living Room</em></b></div>
+    </header>
+    <h1 class="sp-h">SOURCE</h1>
+    <div class="sp-scroll" id="spScroll">
+      <h2 class="sp-sec">Streaming</h2>
+      <ul class="sp-grid" id="spStream"></ul>
+      <h2 class="sp-sec">In this house</h2>
+      <ul class="sp-grid" id="spInput"></ul>
+    </div>
+  </section>
+
+  <!-- v2.6 SONOS RADIO HD: very dark grey, square station tiles -->
+  <section class="srcp rdp" id="radioPage" aria-label="Sonos Radio HD stations" aria-hidden="true">
+    <header class="sp-top">
+      <button class="sp-back" id="rdBack" aria-label="Back to the panel" hidden><span aria-hidden="true">‹</span> BACK</button>
+      <div class="sp-to"><span>Playing to</span><b><i class="sp-dot"></i><em id="rdRoomName">Living Room</em></b></div>
+    </header>
+    <h1 class="rd-h" aria-label="Sonos Radio HD"><span>RADIO HD</span></h1>
+    <div class="sp-scroll" id="rdScroll">
+      <h2 class="sp-sec">Stations</h2>
+      <ul class="rd-grid" id="rdGrid"></ul>
+    </div>
+  </section>
 
   <!-- HOME: every room, nothing else -->
   <section class="home" id="home" aria-label="Home. Every room in the house" aria-hidden="true">
     <div class="hm-sheen" aria-hidden="true"></div>
     <header class="hm-top">
-      <div class="hm-brand">
-        <div class="hm-mark">SONOS</div>
-        <div class="hm-by">MADE BY OVI DEMETRIAN</div>
-      </div>
-      <div class="hm-head">
+      <div class="hm-brand" aria-hidden="true"></div>
+      <div class="hm-stat">
         <h1 id="hmHead">The house is quiet</h1>
         <div class="hm-dots" id="hmDots" aria-hidden="true"></div>
-        <button class="hm-hush" id="hmHush" aria-pressed="false">HUSH ALL</button>
       </div>
+      <button class="rbtn round p1 hm-p1" id="hmHush" aria-pressed="false"><b>HUSH</b><small>ALL ROOMS</small></button>
     </header>
     <button class="hm-go hm-wpn" id="hmGo" aria-label="What's playing now: see every room"><span class="hm-rb">WHAT’S PLAYING NOW</span></button>
     <ul class="hm-list" id="hmList"></ul>
+    <div class="hm-foot">MADE BY OVI DEMETRIAN · v2.14.2</div>
+    <button class="hm-close" id="hmClose" aria-label="Close: go to what's playing now">CLOSE</button>
 
   </section>
 
@@ -1164,36 +1903,61 @@ body{ gap:24px; }
       <button class="pbtn" id="allBtn">All rooms together</button>
     </div>
     <div class="grows" id="rcards"></div>
+    <div class="gvol" id="gvol" role="group" aria-label="Group volume">
+      <span class="gv-l" id="gvLabel">GROUP VOLUME</span>
+      <button class="gv-b" id="gvDown" aria-label="Group volume down">−</button>
+      <div class="gv-mid"><b id="gvNum">30</b><i class="gv-bar"><i id="gvFill"></i></i></div>
+      <button class="gv-b" id="gvUp" aria-label="Group volume up">+</button>
+    </div>
     <button class="done" id="doneBtn">DONE</button>
   </section>
 
   <!-- SETTINGS -->
   <div class="sheet" id="settings" role="dialog" aria-modal="true" aria-labelledby="sTitle">
-    <div class="panel">
+    <div class="panel spanel">
       <h2 id="sTitle">Settings</h2>
-      <h3 style="margin:0 0 6px;font-size:14px">Rooms</h3>
-      <div id="nameFields"></div>
-      <div class="sgroup">
-        <h3>Morning alarm</h3>
-        <div class="field" style="--c:#ffc400"><label><input type="checkbox" id="alOn"> On</label><input type="time" id="alTime" aria-label="Alarm time"><select id="alRoom" aria-label="Alarm room"></select></div>
+      <div class="stabs" role="tablist" aria-label="Settings sections">
+        <button class="stab" role="tab" data-sec="rooms" aria-selected="true">ROOMS</button>
+        <button class="stab" role="tab" data-sec="home" aria-selected="false">ALARM · LIGHTS</button>
+        <button class="stab" role="tab" data-sec="house" aria-selected="false">HOUSE</button>
       </div>
-      <div class="sgroup">
-        <h3>New speakers</h3>
-        <button class="sredo" id="sRedo">Run setup again</button>
+      <div class="ssec" data-sec="rooms">
+        <div id="nameFields"></div>
+        <p class="fine">Each colour is a room. Tick TV for rooms with a soundbar.</p>
       </div>
-      <div class="sgroup">
-        <h3>Sample house</h3>
-        <div class="presets"><button class="pbtn" id="h4">4 rooms</button><button class="pbtn" id="h6">6 rooms</button><button class="pbtn" id="hAmp">Amp Multi</button></div>
+      <div class="ssec" data-sec="home" hidden>
+        <div class="sgroup">
+          <h3>Lighting</h3>
+          <div class="field" style="--c:#ffc400"><label><input type="checkbox" id="lightOn"> Lights and shades are connected (simulated)</label></div>
+        </div>
+        <div class="sgroup">
+          <h3>Morning alarm</h3>
+          <div class="field al" style="--c:#ffc400"><label><input type="checkbox" id="alOn"> On</label><input type="time" id="alTime" aria-label="Alarm time"><select id="alRoom" aria-label="Alarm room"></select></div>
+        </div>
       </div>
-      <div class="sgroup">
-        <h3>Amp Multi demo</h3>
-        <div class="presets"><button class="pbtn" id="demoBtn">Saturday demo</button><button class="pbtn" id="instBtn">Installer view</button></div>
+      <div class="ssec" data-sec="house" hidden>
+        <div class="sgroup">
+          <h3>Record and screen</h3>
+          <div class="presets"><button class="pbtn" id="logBtn">📋 Command log</button><button class="pbtn fsbtn" id="fsBtn" aria-pressed="false" hidden><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:-3px;margin-right:4px"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg>Full screen</button></div>
+        </div>
+        <div class="sgroup">
+          <h3>New speakers</h3>
+          <button class="sredo" id="sRedo">Run setup again</button>
+        </div>
+        <div class="sgroup">
+          <h3>Sample house</h3>
+          <div class="presets"><button class="pbtn" id="h4">4 rooms</button><button class="pbtn" id="h6">6 rooms</button><button class="pbtn" id="hAmp">Amp Multi</button></div>
+        </div>
+        <div class="sgroup">
+          <h3>Amp Multi demo</h3>
+          <div class="presets"><button class="pbtn" id="demoBtn">Saturday demo</button><button class="pbtn" id="instBtn">Installer view</button></div>
+        </div>
+        <p class="fine">© 2026 Ovi Demetrian / Media Content Delivery, LLC. All rights reserved. Unofficial concept, not affiliated with Sonos, Inc. or Lutron. Simulated; remembers its state. v2.14.2</p>
       </div>
       <div class="row">
         <button id="sCancel">Cancel</button>
         <button class="primary" id="sSave">Save settings</button>
       </div>
-      <p class="fine">Each colour is a room. Tick TV for rooms with a soundbar. © 2026 Ovi Demetrian / Media Content Delivery, LLC. All rights reserved. Unofficial interface concept, not affiliated with or endorsed by Sonos, Inc. or Lutron Electronics. Music, lighting and shade controls are simulated.</p>
     </div>
   </div>
 
@@ -1231,8 +1995,9 @@ body{ gap:24px; }
   <div class="sheet" id="logSheet" role="dialog" aria-modal="true" aria-labelledby="lTitle">
     <div class="panel">
       <h2 id="lTitle">Command log</h2>
+      <p class="fine" id="logPage" style="margin:0 0 6px"></p>
       <ul class="loglist" id="logList"></ul>
-      <div class="row"><button class="primary" id="logClose">Close</button></div>
+      <div class="row"><button id="logNewer">‹ NEWER</button><button id="logOlder">OLDER ›</button><button class="primary" id="logClose">Close</button></div>
     </div>
   </div>
 
@@ -1251,6 +2016,11 @@ body{ gap:24px; }
   <!-- FIRST-RUN SETUP -->
   <section class="setup" id="setup" role="dialog" aria-modal="true" aria-labelledby="suH" aria-hidden="true"></section>
 
+  <div class="sqm" id="sqModal" role="alertdialog" aria-modal="true" aria-labelledby="sqmTitle" aria-describedby="sqmText" data-state="ask">
+    <div class="sqm-card"><span class="sqm-ic" aria-hidden="true"></span><b id="sqmTitle">Back to square one?</b><p id="sqmText"></p>
+      <div class="sqm-row"><button id="sqmA">CANCEL</button><button id="sqmB">RESET</button></div></div>
+  </div>
+  <div class="undo" id="sqConfirm" role="alertdialog" aria-label="Back to square one?"><span>Reset every room? Music stops, groups split. Lights and shades stay.</span><button class="sqno" id="sqNo">CANCEL</button><button id="sqYes">RESET</button></div>
   <div class="undo" id="undoBar" role="status" aria-live="polite"><span id="undoMsg">Back to square one.</span><button id="undoBtn">UNDO</button></div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </main>
@@ -1304,6 +2074,7 @@ const ICON = {
   relax: S('<path d="M15 8h18c0 10-3 17-9 17s-9-7-9-17zM24 25v14M17 40h14"/><path d="M16 14h16" opacity=".5"/>'),
   goodnight: S('<path d="M33 31A14 14 0 1 1 21 10a11 11 0 0 0 12 21z"/><path d="M37 9v6M34 12h6"/>'),
   intercom: S('<circle cx="24" cy="24" r="4.5" fill="#fff" stroke="none"/><path d="M16 16a11 11 0 0 0 0 16M32 16a11 11 0 0 1 0 16M10 10a19 19 0 0 0 0 28M38 10a19 19 0 0 1 0 28"/>'),
+  alarm: S('<circle cx="24" cy="26" r="15"/><path d="M24 17v9l6 4M9 11l6-5M39 11l-6-5"/>'),
   mic: S('<rect x="18" y="6" width="12" height="22" rx="6" fill="#fff"/><path d="M11 23a13 13 0 0 0 26 0M24 36v6"/>'),
   lights: S('<path d="M17 28a11 11 0 1 1 14 0c-2 2-3 4-3 6h-8c0-2-1-4-3-6z"/><path d="M20 39h8M21 43h6"/>'),
   shades: S('<rect x="9" y="7" width="30" height="34" rx="2"/><path d="M9 22h30M14 12h20M14 17h20"/><circle cx="24" cy="26" r="1.6" fill="#fff" stroke="none"/>')
@@ -1311,12 +2082,12 @@ const ICON = {
 
 /* ============ ROOMS (every colour is a room) ============ */
 const PALETTE = [
-  { a:'#5e0712', b:'#1c0105', ta:'#b0232f', tb:'#650c16', c:'#ff4d5e', def:'Living Room', tv:true,  dev:['Arc Ultra','Sub 4'] },
+  { a:'#5e0712', b:'#1c0105', ta:'#b0232f', tb:'#650c16', c:'#c4122b', def:'Living Room', tv:true,  dev:['Arc Ultra','Sub 4'] },
   { a:'#a07a0c', b:'#523b02', ta:'#7c5c08', tb:'#453200', c:'#ffc400', def:'Kitchen',     tv:false, dev:['Era 100'] },
   { a:'#06124a', b:'#01020c', ta:'#2346b0', tb:'#0f2366', c:'#6f98ff', def:'Bedroom',     tv:true,  dev:['Beam','Era 100'] },
-  { a:'#0a6a2e', b:'#012609', ta:'#26a052', tb:'#0f5426', c:'#48e58c', def:'Patio',       tv:false, dev:['Move 2'] },
-  { a:'#3a1066', b:'#12031f', ta:'#7a3fc4', tb:'#40187a', c:'#b58cff', def:'Office',      tv:false, dev:['Era 300'] },
-  { a:'#07504e', b:'#011a19', ta:'#1f9e96', tb:'#0c5550', c:'#3fe0d0', def:'Den',         tv:true,  dev:['Ray'] }
+  { a:'#044a1c', b:'#011806', ta:'#167a3a', tb:'#073d18', c:'#22b455', def:'Patio',       tv:false, dev:['Move 2'] },
+  { a:'#2c0b50', b:'#0e0219', ta:'#6233a8', tb:'#341263', c:'#8c5ce6', def:'Office',      tv:false, dev:['Era 300'] },
+  { a:'#0a5a78', b:'#011824', ta:'#1593c2', tb:'#0a4f6e', c:'#2ed3ff', def:'Den',         tv:true,  dev:['Ray'] }
 ];
 /* THE HOUSE: which palette colours are rooms, in order. Everything else counts rooms from here, never a fixed four. */
 let roomPal = [0,1,2,3,4,5];   /* v2.4.1: default house is all six rooms */
@@ -1327,14 +2098,34 @@ const pal = i => PALETTE[roomPal[i]];
 const SOURCES = {
   fav:       { label:'Favorites', tracks:['Sunday Morning Mix','Dinner for Two','Late Night Standards'] },
   playlists: { label:'Playlists', tracks:['Möbius Bar Sessions','Desert Drive','Pam-Pam Classics'] },
-  radio:     { label:'Radio', tracks:['Desert Jazz FM','Morning News Hour','Classic Soul 24/7'] },
+  radio:     { label:'Sonos Radio HD', tracks:['Desert Jazz FM','Morning News Hour','Classic Soul 24/7','Lo-Fi Lounge','Classical Morning','Desert Blues','Country Roads','Hip-Hop Classics','Ambient Sleep','Latin Heat','Indie Mix','Reggae Sunsplash','Blues Highway','Electronic Drift','80s Hits'] },
   library:   { label:'Music Library', tracks:['Vinyl Rips, Vol. 3','1995 Studio Masters','Home Recordings'] },
   tv:        { label:'TV Audio', tracks:['TV sound'] },
   podcasts:  { label:'Podcasts', tracks:['Episode 12: Listening Rooms','Episode 13: The Final Ten Feet'] },
-  linein:    { label:'Source', tracks:['Turntable'] },
+  linein:    { label:'Turntable', tracks:['Turntable'] },
   phone:     { label:'From Your Phone', tracks:['Streaming from phone'] },
-  rain:      { label:'Rain Sounds', tracks:['Rain on the Roof'] }   /* only reachable from another controller in the demo */
+  rain:      { label:'Rain Sounds', tracks:['Rain on the Roof'] },   /* only reachable from another controller in the demo */
+  /* v2.5: services and inputs on the SOURCE screen (demo titles, nothing is connected) */
+  spotify:   { label:'Spotify',       tracks:['Your Mix','Liked Songs','New Releases'] },
+  applemusic:{ label:'Apple Music',   tracks:['Favourites Mix','Recently Added','New Music'] },
+  ytmusic:   { label:'YouTube Music', tracks:['Your Supermix','Liked Music','Discover Mix'] },
+  amazon:    { label:'Amazon Music',  tracks:['My Discovery Mix','Recently Played'] },
+  tidal:     { label:'TIDAL',         tracks:['My Daily Discovery','Hi-Res Favourites'] },
+  qobuz:     { label:'Qobuz',         tracks:['Hi-Res Picks','Jazz Essentials'] },
+  pandora:   { label:'Pandora',       tracks:['Thumbprint Radio','Desert Blues Radio'] },
+  deezer:    { label:'Deezer',        tracks:['Flow','Favourite Tracks'] },
+  siriusxm:  { label:'SiriusXM',      tracks:['Jazz Channel','Classic Rock Channel'] },
+  iheart:    { label:'iHeartRadio',   tracks:['Phoenix Local','Soft Rock Station'] },
+  tunein:    { label:'TuneIn',        tracks:['World Radio','Local News'] },
+  soundcloud:{ label:'SoundCloud',    tracks:['Your Likes','Möbius Bar Demos'] },
+  tvin:      { label:'TV',            tracks:['TV sound'] },
+  bt:        { label:'Bluetooth',     tracks:['Phone over Bluetooth'] },
+  airplay:   { label:'AirPlay',       tracks:['AirPlay from iPhone'] },
+  cd:        { label:'CD Player',     tracks:['Disc 1'] }
 };
+const SRC_STREAM = ['spotify','applemusic','ytmusic','amazon','tidal','qobuz','pandora','deezer','siriusxm','iheart','tunein','soundcloud'];
+const SRC_INPUT  = ['linein','cd','tvin','bt','airplay'];
+const SRC_PAGE   = [...SRC_STREAM, ...SRC_INPUT];
 const SCENES = {
   morning:   { label:'Morning',   light:70,  shades:'open',   src:'radio',     track:1, vol:20 },
   dinner:    { label:'Dinner',    light:40,  shades:'half',   src:'fav',       track:1, vol:28 },
@@ -1350,7 +2141,7 @@ const SCENE_TILES = [
   ['settings','SETTINGS'],['square','BACK TO SQUARE ONE'],['group','GROUP']
 ];
 const TILES = [
-  ['fav','FAVORITES'],['playlists','PLAYLISTS'],['radio','RADIO'],
+  ['fav','FAVORITES'],['playlists','PLAYLISTS'],['radio','SONOS RADIO HD'],
   ['library','LIBRARY'],['rooms','ROOMS'],['tv','TV'],
   ['podcasts','PODCASTS'],['linein','SOURCE'],['phone','PHONE'],
   ['settings','SETTINGS'],['square','BACK TO SQUARE ONE'],['group','GROUP']
@@ -1363,6 +2154,8 @@ try { const t = JSON.parse(localStorage.getItem('sonosPanelTV')||'null'); if (Ar
 let devices = roomPal.map(x => PALETTE[x].dev.slice());
 try { const dv = JSON.parse(localStorage.getItem('sonosPanelDevices')||'null'); if (Array.isArray(dv) && dv.length===N()) devices = dv; } catch(e) {}
 let alarm = { on:false, time:'07:00', room:0 }, alarmFired = '';
+let lighting = true;   /* v2.6.2: does this house have lights and shades the panel can drive? */
+try { const lg = localStorage.getItem('sonosPanelLighting'); if (lg !== null) lighting = lg === '1'; } catch(e) {}
 try { const a = JSON.parse(localStorage.getItem('sonosPanelAlarm')||'null'); if (a && a.time) alarm = a; } catch(e) {}
 if (!(alarm.room < N())) alarm.room = 0;
 function saveHouse(){
@@ -1413,11 +2206,12 @@ function buildGrid(el, tiles){
     const b = document.createElement('button');
     b.className = 'tile' + (id==='rooms'?' rooms':'') + (id==='square'?' square':'') + (id==='group'?' group':'');
     b.dataset.id = id;
-    b.innerHTML = (id==='rooms' ? '<i class="ri"></i>' : ICON[id]) + (id==='rooms' ? '<span class="rw">SONOS</span><span class="rl">ROOMS</span>' : `<span>${label}</span>`) +
-                  (id==='group' ? '<span class="hint">HOLD</span><span class="ring"></span>' : '') +
+    b.innerHTML = (id==='rooms' ? '<i class="ri"></i>' : ICON[id]) + (id==='rooms' ? '<span class="rw">SONOS</span><span class="rl">ROOMS</span>' : id==='radio' ? '<span class="rh1">SONOS</span><span class="rh2">RADIO HD</span>' : `<span>${label}</span>`) +
+                  
                   (id==='lights' || id==='shades' || id==='morning' ? '<span class="lvl"></span>' : '');
-    if (id==='group') b.setAttribute('aria-label','Group rooms. Hold to open grouping.');
-    if (id==='rooms') b.setAttribute('aria-label','Sonos Rooms. Tap to go to the next room.');
+    if (id==='group') b.setAttribute('aria-label','Group rooms. Tap to choose which rooms play together.');
+    if (id==='radio') b.setAttribute('aria-label','Sonos Radio HD');
+    if (id==='rooms') b.setAttribute('aria-label','Sonos Rooms. Tap to switch to the next room.');
     el.appendChild(b);
   });
 }
@@ -1460,23 +2254,26 @@ function buildStrip(){
     const b = document.createElement('button');
     b.className = 'pill'; b.setAttribute('role','tab');
     b.innerHTML = '<span class="pl"></span><i class="bub"></i><span class="pb" aria-hidden="true"><i></i><i></i><i></i></span>';
-    b.addEventListener('click', () => { if (i === cur) openRoomPage(); else goRoom(i); });
+    b.addEventListener('click', () => { if (i !== cur) goRoom(i); else buzz(); });
     stripEl.appendChild(b);
   });
 }
 function renderStrip(){
   if (stripEl.children.length !== N()) buildStrip();
+  stripEl.parentElement.classList.toggle('wide', N() > 4);
   [...stripEl.children].forEach((b,i) => {
-    b.style.setProperty('--c', pal(i).c);
+    b.style.setProperty('--c', pal(i).c); b.classList.toggle('candy', roomPal[i] === 0);
     b.querySelector('.pl').textContent = shorts[i] || (N() > 4 ? shortName(names[i]) : names[i]);
-    const here = i === cur, withMe = !here && members(cur).includes(i);
+    const here = i === cur, inGroup = members(cur).includes(i), withMe = !here && inGroup;
     b.setAttribute('aria-selected', here ? 'true' : 'false');
-    b.classList.toggle('with', withMe);
+    b.classList.toggle('with', !!grpColour(i));   /* v2.11.2: white centre = in a group */
+    b.classList.toggle('live', roomLive(i));      /* playing = the dot breathes */
+    b.classList.toggle('grp', !!grpColour(i)); b.style.setProperty('--g', grpColour(i) || 'transparent');
     const busy = !!(lead(i).playing && lead(i).source), quiet = busy && rooms[i].muted;
     b.classList.toggle('busy', busy);
     b.classList.toggle('quiet', quiet);
     const status = busy ? (quiet ? ', playing, muted' : ', playing') : '';
-    b.setAttribute('aria-label', names[i] + status + (here ? ', selected. Open room activity.' : withMe ? ', grouped with this room' : ''));
+    b.setAttribute('aria-label', names[i] + status + (here ? ', selected' : withMe ? ', grouped with this room' : ''));
   });
 }
 
@@ -1508,8 +2305,8 @@ function render(){
   else if (L.source) act.push('Paused');
   if (m.length === N()) act.push('all rooms together');
   else if (others.length) act.push('with ' + listNames(others));
-  if (R0.light) act.push('lights ' + R0.light + '%');
-  if (R0.shades && R0.shades !== 'open') act.push('shades ' + R0.shades);
+  if (lighting && R0.light) act.push('lights ' + R0.light + '%');
+  if (lighting && R0.shades && R0.shades !== 'open') act.push('shades ' + R0.shades);
   if (L.sleepAt) act.push('sleep timer on');
   if (R0.muted) act.push('muted');
   if (ace && ace.linked && members(cur).includes(ace.room)) act.push(ace.name + ' on headphones');
@@ -1524,12 +2321,15 @@ function render(){
   /* v2.3.3: the "playing elsewhere" strip is retired; the bubbles' badges and PLAYING NOW carry that job */
   if (mode === 'playing') renderHouse();
   if ($('home').classList.contains('open')) renderHome();
+  if ($('srcPage').classList.contains('open')) renderSourcePage();
+  if ($('radioPage').classList.contains('open')) renderRadioPage();
 
   const R = rooms[cur];
   allTiles('.tile').forEach(t => {
     const id = t.dataset.id;
     if (id==='rooms') t.querySelector('.ri').outerHTML = `<i class="ri">${ICON.rooms(cur)}</i>`;
-    if (SOURCES[id]) t.classList.toggle('active', L.source === id);
+    if (id === 'linein') t.classList.toggle('active', SRC_PAGE.includes(L.source));
+    else if (SOURCES[id]) t.classList.toggle('active', L.source === id);
     if (SCENES[id]) t.classList.toggle('active', R.scene === id);
     if (id==='lights') t.querySelector('.lvl').textContent = R.light ? R.light + '%' : 'OFF';
     if (id==='shades') t.querySelector('.lvl').textContent = R.shades.toUpperCase();
@@ -1537,6 +2337,7 @@ function render(){
     if (id==='tv' || id==='cinema') t.classList.toggle('na', !tvOK(cur));
   });
 
+  syncLightTiles();
   const vol = Math.round(m.reduce((s,k)=>s+rooms[k].vol,0)/m.length);
   const allMuted = m.every(k => rooms[k].muted);
   $('volRead').innerHTML = (allMuted ? '—' : vol) + `<small>${m.length>1?'GROUP':'VOL'}</small>`;
@@ -1567,11 +2368,27 @@ function render(){
   if (hush && !L.playing){ $('npSub').textContent = 'Every room hushed. Tap RESUME to bring it back.'; }
   if ($('gpage').classList.contains('open')) renderGroup();
   if ($('idCard').classList.contains('open')) renderID();
-  fitRooms();
+  { const cs = ALL().map(i => pal(i).c); frame.style.setProperty('--rb', `linear-gradient(90deg, ${[...cs, cs[0]].join(', ')})`); }
+  frame.classList.toggle('house-live', houseLive());
+  fitRooms(); sizeEar();
+  saveLive();
 }
 
 
 
+/* v2.6.2: LIGHTS and SHADES exist only where the house has lighting; otherwise the same two places are SLEEP and ALARM */
+function syncLightTiles(){
+  const sMin = lead(cur).sleepAt ? Math.max(1, Math.ceil((lead(cur).sleepAt - Date.now())/60000)) + ' MIN' : 'OFF';
+  [['lights','LIGHTS','Lights','SLEEP','Sleep timer','goodnight', lighting ? (rooms[cur].light ? rooms[cur].light + '%' : 'OFF') : sMin],
+   ['shades','SHADES','Shades','ALARM','Morning alarm settings','alarm', lighting ? rooms[cur].shades.toUpperCase() : (alarm.on ? alarm.time : 'OFF')]
+  ].forEach(([id, L1, A1, L2, A2, ic, lv]) => allTiles(`.tile[data-id="${id}"]`).forEach(t => {
+    const face = lighting ? id : L2;
+    if (t.dataset.face !== face){ t.dataset.face = face;
+      t.innerHTML = (lighting ? ICON[id] : ICON[ic]) + `<span>${lighting ? L1 : L2}</span><span class="lvl"></span>`;
+      t.setAttribute('aria-label', lighting ? A1 : A2); }
+    t.querySelector('.lvl').textContent = lv;
+  }));
+}
 /* v2.0.3: PLAYING tab, every room in the house with everything happening in it */
 function roomActs(i){
   const R = rooms[i], L = lead(i), m = members(i), others = m.filter(k => k !== i), src = L.source ? SOURCES[L.source] : null, a = [];
@@ -1580,8 +2397,8 @@ function roomActs(i){
   if (m.length === N() && N() > 1) a.push(['', 'All rooms together']);
   else if (others.length) a.push(['', 'With ' + listNames(others)]);
   if (R.scene && SCENES[R.scene]) a.push(['', SCENES[R.scene].label + ' scene']);
-  if (R.light) a.push(['', 'Lights ' + R.light + '%']);
-  if (R.shades && R.shades !== 'open') a.push(['', 'Shades ' + R.shades]);
+  if (lighting && R.light) a.push(['', 'Lights ' + R.light + '%']);
+  if (lighting && R.shades && R.shades !== 'open') a.push(['', 'Shades ' + R.shades]);
   if (L.sleepAt && L.playing) a.push(['', 'Sleep in ' + Math.max(1, Math.ceil((L.sleepAt - Date.now())/60000)) + ' min']);
   if (hasTV[i] && L.source === 'tv') a.push(['', 'TV sound']);
   if (ace && ace.linked && m.includes(ace.room)) a.push(['', ace.name + ' on headphones']);
@@ -1589,20 +2406,25 @@ function roomActs(i){
   if (R.by) a.push(['', 'Changed by ' + R.by]);
   return a;
 }
+const roomLive = i => !!(lead(i).playing && lead(i).source && !rooms[i].muted);
+const grpColour = i => members(i).length > 1 ? pal(coordOf(i)).c : '';   /* v2.11: the ring colour of a group = the room it plays from */
+const houseLive = () => ALL().some(roomLive);
 function renderHouse(){
   const all = ALL();
   const playingN = all.filter(i => lead(i).playing && lead(i).source && !rooms[i].muted).length;
   $('hsSum').textContent = playingN ? `Music in ${playingN} of ${all.length} rooms` : `No music in any room`;
+  $('hsList').style.setProperty('--hr', all.length);   /* v2.8: one long button per room, like Home */
   $('hsList').innerHTML = all.map(i => {
     const R = rooms[i], L = lead(i), src = !!L.source, acts = roomActs(i);
     const st = !src ? ['', 'Idle'] : !L.playing ? ['pause', 'Paused'] : R.muted ? ['mute', 'Muted'] : ['play', 'Playing'];
     const name = esc(disp(i)), canMute = src && L.playing;
-    return `<li class="hs-room${i === cur ? ' sel' : ''}${acts.length ? '' : ' idle'}${st[0] === 'play' ? ' on' : ''}" style="--c:${pal(i).c}">
+    const inMine = !!grpColour(i);
+    return `<li class="hs-room${roomPal[i] === 0 ? ' candy' : ''}${inMine ? ' with' : ''}${roomLive(i) ? ' live' : ''}${grpColour(i) ? ' grp' : ''}${i === cur ? ' sel' : ''}${acts.length ? '' : ' idle'}${st[0] === 'play' ? ' on' : ''}" style="--c:${pal(i).c};--g:${grpColour(i) || 'transparent'}">
       <button class="hs-go" data-room="${i}" aria-label="${name}, ${st[1]}${acts.length ? '. ' + esc(acts.map(x => x[1]).join(', ')) : ', nothing happening'}${i === cur ? '. Selected' : '. Tap to control this room'}">
         <span class="hs-top"><i class="hs-bub"></i><b>${name}</b><i class="hs-st ${st[0]}">${st[1]}</i>${i === cur ? '<i class="hs-sel">Selected</i>' : ''}<span class="hm-eq hs-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></span>
-        ${acts.length ? `<span class="hs-acts">${acts.map(([c,t]) => `<span class="${c}">${esc(t)}</span>`).join('')}</span>` : '<span class="hs-none">Nothing happening</span>'}
+        <span class="hs-line">${acts.length ? esc(acts.map(x => x[1]).join(' · ')) : 'Nothing happening'}</span>
       </button>
-      ${canMute ? `<button class="hs-mute" data-mute="${i}" aria-pressed="${R.muted}" aria-label="${R.muted ? 'Unmute' : 'Mute'} ${name}">${R.muted ? 'Unmute' : 'Mute'}</button>` : ''}
+      ${canMute ? `<button class="hs-mute" data-mute="${i}" aria-pressed="${R.muted}" aria-label="${R.muted ? 'Unmute' : 'Mute'} ${name}"><span class="hs-mt">${R.muted ? 'Unmute' : 'Mute'}</span><span class="hs-mi">${R.muted ? ICON.muted : ICON.speaker}</span></button>` : ''}
     </li>`;
   }).join('');
 }
@@ -1661,17 +2483,91 @@ document.getElementById('elsewhere').addEventListener('click', e => {
 function fitRoomName(){
   const b = $('actRoom'), row = b.parentElement; b.style.removeProperty('font-size');
   let f = parseFloat(getComputedStyle(b).fontSize);
-  while (row.scrollWidth > row.clientWidth + 0.5 && f > 14){ f -= 0.5; b.style.setProperty('font-size', f + 'px', 'important'); }
+  const labs = [...document.querySelectorAll('.hright small')].map(e => e.getBoundingClientRect());
+  const lim = labs.length ? Math.min(...labs.map(l => l.left)) - 8 : Infinity, bot = labs.length ? Math.max(...labs.map(l => l.bottom)) : 0;
+  const tooWide = () => row.scrollWidth > row.clientWidth + 0.5 || (b.getBoundingClientRect().top < bot && b.getBoundingClientRect().right > lim);
+  while (tooWide() && f > 14){ f -= 0.5; b.style.setProperty('font-size', f + 'px', 'important'); }
 }
 window.addEventListener('resize', () => fitRoomName());
+
+/* v2.5 SOURCE screen */
+const SRC_MONO = { spotify:'Sp', applemusic:'AM', ytmusic:'YT', amazon:'Am', tidal:'Ti', qobuz:'Qo', pandora:'Pa', deezer:'De',
+  siriusxm:'XM', iheart:'iH', tunein:'Tu', soundcloud:'SC', cd:'CD', bt:'BT', airplay:'AP' };
+const SRC_NOTE = { linein:'Line-in', cd:'Line-in 2', tvin:'HDMI', bt:'Pair a device', airplay:'From Apple devices' };
+function srcCard(id){
+  const L = lead(cur), on = L.source === id && L.playing, paused = L.source === id && !L.playing;
+  const off = id === 'tvin' && !tvOK(cur);
+  const mono = id === 'linein' ? ICON.linein : id === "tvin" ? ICON.tv : SRC_MONO[id];
+  const sub = on ? 'Playing' : paused ? 'Paused' : off ? 'No TV here' : (SRC_NOTE[id] || '');
+  return `<li><button class="sp-card${on ? ' on' : ''}${off ? ' off' : ''}" data-src="${id}" aria-pressed="${on}"
+    aria-label="${esc(SOURCES[id].label)}${on ? ', playing in ' + esc(disp(cur)) : ''}${off ? ', no TV in this room' : ''}">
+    <span class="sp-mono" aria-hidden="true">${mono}</span><span class="sp-txt"><b>${esc(SOURCES[id].label)}</b>${sub ? `<span>${esc(sub)}</span>` : ''}</span></button></li>`;
+}
+const spEmpty = t => `<li><div class="sp-card sp-empty" aria-hidden="true"><span class="sp-mono">+</span><span class="sp-txt"><b>Add</b><span>${t}</span></span></div></li>`;
+function renderSourcePage(){
+  const rc = pal(cur).c; $('srcPage').style.setProperty('--rc', rc);
+  $('spRoomName').textContent = disp(cur);
+  $('spStream').innerHTML = SRC_STREAM.map(srcCard).join('');
+  $('spInput').innerHTML = SRC_INPUT.map(srcCard).join('');
+}
+function openSourcePage(){
+  renderSourcePage(); $('spScroll').scrollTop = 0;
+  const s = $('srcPage'); s.classList.add('open'); s.setAttribute('aria-hidden','false'); $('frame').classList.add('src-open');
+  log(`Source screen (${names[cur]})`); buzz();
+  setTimeout(() => { try{ $('spBack').focus({ preventScroll:true }); }catch(e){} }, 300);
+}
+function closeSourcePage(){
+  const s = $('srcPage'); s.classList.remove('open'); s.setAttribute('aria-hidden','true'); $('frame').classList.remove('src-open');
+}
+$('spBack').addEventListener('click', () => { closeSourcePage(); buzz(); });
+$('srcPage').addEventListener('click', e => {
+  const c = e.target.closest('[data-src]'); if (!c) return;
+  const id = c.dataset.src;
+  if (id === 'tvin' && !tvOK(cur)){ toast(`No TV in ${names[cur]}. Tick TV for this room in Settings.`); return; }
+  const L = lead(cur);
+  if (L.source === id && !L.playing){ L.playing = true; log(`Resume ${SOURCES[id].label} in ${listNames(members(cur))}`); buzz(); }
+  else if (!(L.source === id && L.playing)){ Object.assign(L, { source:id, track:0, playing:true }); log(`Play ${SOURCES[id].label} in ${listNames(members(cur))}`); buzz(); }
+  closeSourcePage(); render();
+  toast(`${SOURCES[id].label} in ${listNames(members(cur))}`);
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('srcPage').classList.contains('open')){ closeSourcePage(); } });
+
+
+/* v2.6 SONOS RADIO HD screen: three demo stations, the rest are places for stations to come */
+const RD_SLOTS = 15;
+function renderRadioPage(){
+  const L = lead(cur); $('radioPage').style.setProperty('--rc', pal(cur).c); $('rdRoomName').textContent = disp(cur);
+  const st = SOURCES.radio.tracks;
+  $('rdGrid').innerHTML = st.map((t, k) => {
+    const on = L.source === 'radio' && L.track === k && L.playing;
+    return `<li><button class="rd-st${on ? ' on' : ''}" data-st="${k}" aria-pressed="${on}" aria-label="${esc(t)}${on ? ', playing in ' + esc(disp(cur)) : ''}">
+      <span class="rd-eq" aria-hidden="true"><i></i><i></i><i></i></span>${ICON.radio}<b>${esc(t)}</b></button></li>`;
+  }).join('');
+}
+function openRadioPage(){
+  renderRadioPage(); $('rdScroll').scrollTop = 0;
+  const s = $('radioPage'); s.classList.add('open'); s.setAttribute('aria-hidden','false'); $('frame').classList.add('rd-open');
+  log(`Sonos Radio HD screen (${names[cur]})`); buzz();
+}
+function closeRadioPage(){ const s = $('radioPage'); s.classList.remove('open'); s.setAttribute('aria-hidden','true'); $('frame').classList.remove('rd-open'); }
+$('rdBack').addEventListener('click', () => { closeRadioPage(); buzz(); });
+$('radioPage').addEventListener('click', e => {
+  const b = e.target.closest('[data-st]'); if (!b) return;
+  const k = +b.dataset.st, L = lead(cur);
+  Object.assign(L, { source:'radio', track:k, playing:true });
+  log(`Play ${SOURCES.radio.tracks[k]} (Sonos Radio HD) in ${listNames(members(cur))}`); buzz();
+  closeRadioPage(); render(); toast(`${SOURCES.radio.tracks[k]} in ${listNames(members(cur))}`);
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('radioPage').classList.contains('open')) closeRadioPage(); });
+
 /* v2.2 HOME */
 const HOME_SLOTS = 12, HOME_VISIBLE = 9.35;   /* nine places plus a peek of the tenth, so the list says 'there is more below' */   /* v2.3: nine places; rooms you have, then empty places for rooms to come */
 function renderHome(){
   const all = ALL(), on = all.filter(i => lead(i).playing && lead(i).source && !rooms[i].muted);
   { const cs = all.map(i => pal(i).c); $('hmGo').style.setProperty('--rb', `linear-gradient(90deg, ${[...cs, ...cs, cs[0]].join(', ')})`); }
   const hb = $('hmHush'), quiet = !hush && !all.some(i => lead(i).playing && lead(i).source);
-  hb.textContent = hush ? 'RESUME ALL' : 'HUSH ALL';
-  hb.classList.toggle('rs', !!hush); hb.classList.toggle('dim', quiet);
+  hb.innerHTML = hush ? '<b class="rs">RESUME</b><small>ALL ROOMS</small>' : '<b>HUSH</b><small>ALL ROOMS</small>';
+  hb.classList.toggle('hushed', !!hush); hb.classList.remove('dim');   /* v2.11.1: always ready, never faded */
   hb.setAttribute('aria-pressed', !!hush);
   hb.setAttribute('aria-label', hush ? 'Every room is hushed. Bring the music back.' : 'Hush: silence every room');
   $('hmHead').textContent = hush ? 'Every room hushed' : on.length ? `Music in ${on.length} ${on.length === 1 ? 'room' : 'rooms'}` : 'The house is quiet';
@@ -1682,25 +2578,26 @@ function renderHome(){
     let line = src ? (L.playing ? src.tracks[L.track % src.tracks.length] + ' · ' + src.label : 'Paused · ' + src.label) : 'Quiet';
     if (others.length) line += ' · with ' + listNames(others);
     const name = esc(disp(i));
-    return `<li class="${playing ? 'has-mute' : ''}" style="--c:${pal(i).c}"><button class="hm-room${playing ? ' on' : ''}${playing && R.muted ? ' muted' : ''}" data-home="${i}" style="--c:${pal(i).c}"
+    return `<li class="${playing ? 'has-mute' : ''}${roomPal[i] === 0 ? ' candy' : ''}" style="--c:${pal(i).c}"><button class="hm-room${playing ? ' on' : ''}${playing && R.muted ? ' muted' : ''}" data-home="${i}" style="--c:${pal(i).c}"
       aria-label="${name}. ${playing ? (R.muted ? 'Playing, muted' : 'Playing') : src ? 'Paused' : 'Quiet'}. ${esc(line)}. Open this room.">
-      <i class="hm-bub"></i>
+      <i class="hm-bub${playing && !R.muted ? ' live' : ''}${grpColour(i) ? ' grp with' : ''}" style="--g:${grpColour(i) || 'transparent'}"></i>
       <span class="hm-txt"><b>${name}</b><span>${esc(line)}</span></span>
       <span class="hm-mute">Muted</span>
       <span class="hm-eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
     </button>${playing ? `<button class="hm-mbtn" data-hmute="${i}" aria-pressed="${R.muted}" aria-label="${R.muted ? 'Unmute' : 'Mute'} ${name}">${R.muted ? 'UNMUTE' : 'MUTE'}</button>` : ''}</li>`;
-  }).join('') + Array.from({ length: Math.max(0, HOME_SLOTS - all.length) }, () =>
-    `<li><div class="hm-room hm-empty" aria-hidden="true"><i class="hm-bub"></i><span class="hm-txt"><b>Room</b><span>Ready for the next room</span></span></div></li>`).join('');
+  }).join('');
 }
 /* v2.3.1: each place is sized so nine fill the screen; the rest wait below a short scroll */
 function sizeHome(){
   const L = $('hmList'); if (!L || !$('home').classList.contains('open')) return;
   const gap = parseFloat(getComputedStyle(L).rowGap) || 7;
-  const h = Math.max(44, Math.floor((L.clientHeight - gap * Math.floor(HOME_VISIBLE) - 6) / HOME_VISIBLE));
+  const cs = getComputedStyle(L), inner = L.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+  const n = ALL().length, h = Math.max(44, Math.min(86, Math.floor((inner - gap * (n - 1) - 10) / n)));   /* v2.7: every room on the page */
   L.style.setProperty('--row', h + 'px');
 }
 window.addEventListener('resize', sizeHome);
 function openHome(silent){
+  closeSourcePage(); closeRadioPage();
   renderHome();
   const h = $('home'); h.classList.add('open'); h.setAttribute('aria-hidden','false'); $('frame').classList.add('home-open');
   sizeHome(); $('hmList').scrollTop = 0;
@@ -1713,6 +2610,7 @@ function closeHome(){
 /* v2.3.5: the way out of Home without choosing: back to the room you were in */
 function continueFromHome(){ setMode('playing', true); closeHome(); log("What's playing now"); buzz(); render(); }
 $('hmGo').addEventListener('click', continueFromHome);
+$('hmClose').addEventListener('click', continueFromHome);
 $('hmHush').addEventListener('click', () => { priorityOne(); render(); renderHome(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('home').classList.contains('open')) continueFromHome(); });
 $('hmList').addEventListener('click', e => {
@@ -1721,10 +2619,42 @@ $('hmList').addEventListener('click', e => {
   const b = e.target.closest('[data-home]'); if (!b) return;
   cur = +b.dataset.home; setMode('music', true); closeHome(); log(`Room: ${names[cur]}`); buzz(); render();
 });
-{ const br = document.querySelector('.brand');
-  br.setAttribute('role','button'); br.setAttribute('tabindex','0'); br.setAttribute('aria-label','Home: every room');
-  br.addEventListener('click', () => openHome());
-  br.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); openHome(); } }); }
+/* v2.9: ONE SONOS SIGN, FIXED IN THE CORNER OF EVERY SCREEN.
+   The header keeps an invisible copy as the slot; the real sign lives above every page at exactly that spot. */
+const brandSlot = document.querySelector('.header .brand');
+brandSlot.setAttribute('aria-hidden','true'); brandSlot.classList.add('slot');
+const brandFix = brandSlot.cloneNode(true);
+brandFix.classList.remove('slot'); brandFix.id = 'brandFix'; brandFix.removeAttribute('aria-hidden');
+brandFix.setAttribute('role','button'); brandFix.setAttribute('tabindex','0');
+$('frame').appendChild(brandFix);
+function placeBrand(){
+  const f = $('frame'), fr = f.getBoundingClientRect(), r = brandSlot.getBoundingClientRect();
+  brandFix.style.left = (r.left - fr.left - f.clientLeft) + 'px';
+  brandFix.style.top  = (r.top  - fr.top  - f.clientTop)  + 'px';
+}
+function brandLabel(){
+  brandFix.setAttribute('aria-label', $('home').classList.contains('open') || anyPageOpen() ? 'SONOS: back to the panel' : 'SONOS: Home, every room');
+}
+const anyPageOpen = () => !!(document.querySelector('.sheet.open') || $('srcPage').classList.contains('open') || $('radioPage').classList.contains('open')
+  || $('gpage').classList.contains('open') || $('rpage').classList.contains('open') || $('voice').classList.contains('open') || $('idCard').classList.contains('open'));
+function brandTap(){
+  if (anyPageOpen()){                       /* any page or sheet: back to the panel */
+    document.querySelectorAll('.sheet.open').forEach(x => x.classList.remove('open'));
+    closeSourcePage(); closeRadioPage(); closeGroup(true); closeRoomPage();
+    if ($('voice').classList.contains('open')) closeVoice();
+    if ($('idCard').classList.contains('open')) toggleID(false);
+    log('Back to the panel'); buzz(); render(); return;
+  }
+  if ($('home').classList.contains('open')) return continueFromHome();   /* Home: back to the panel */
+  openHome();                                                            /* the panel: Home */
+}
+brandFix.addEventListener('click', brandTap);
+brandFix.addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); brandTap(); } });
+window.addEventListener('resize', placeBrand);
+document.addEventListener('fullscreenchange', () => setTimeout(placeBrand, 120));
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(placeBrand);
+new MutationObserver(brandLabel).observe($('frame'), { subtree:true, attributes:true, attributeFilter:['class'] });
+placeBrand(); brandLabel();
 
 /* ============ ROOM ID CARD ============ */
 function renderID(){
@@ -1734,7 +2664,7 @@ function renderID(){
     const src = SOURCES[L.source];
     $('idArt').innerHTML = L.playing ? ICON.eq : ICON.note;
     $('idTitle').textContent = src.tracks[L.track % src.tracks.length];
-    $('idArtist').innerHTML = ph('Artist name placeholder');
+    $('idArtist').textContent = src.label;
   } else {
     $('idArt').innerHTML = ICON.note;
     $('idTitle').textContent = `${names[cur]} is quiet`;
@@ -1744,21 +2674,19 @@ function renderID(){
   $('idRows').innerHTML = `
     <dt>Room</dt><dd>${names[cur]}</dd>
     <dt>Status</dt><dd>${L.source ? (L.playing ? 'Playing' : 'Paused') : 'Idle'}</dd>
-    <dt>Source</dt><dd>${L.source ? SOURCES[L.source].label : ph('None yet')}</dd>
+    <dt>Source</dt><dd>${L.source ? SOURCES[L.source].label : 'None yet'}</dd>
     <dt>Also in</dt><dd>${others.length ? listNames(others) : 'No other rooms'}</dd>
     <dt>Volume</dt><dd>${m.every(k=>rooms[k].muted) ? 'Muted' : vol}</dd>
-    <dt>Lights</dt><dd>${rooms[cur].light ? rooms[cur].light+'%' : 'Off'}</dd>
-    <dt>Shades</dt><dd>${rooms[cur].shades[0].toUpperCase()+rooms[cur].shades.slice(1)}</dd>
+    ${lighting ? `<dt>Lights</dt><dd>${rooms[cur].light ? rooms[cur].light+'%' : 'Off'}</dd>
+    <dt>Shades</dt><dd>${rooms[cur].shades[0].toUpperCase()+rooms[cur].shades.slice(1)}</dd>` : ''}
     <dt>Scene</dt><dd>${rooms[cur].scene ? SCENES[rooms[cur].scene].label : 'None'}</dd>
     <dt>Sleep</dt><dd>${L.sleepAt ? 'Fades out in ' + Math.max(1, Math.ceil((L.sleepAt-Date.now())/60000)) + ' min' : 'Off'}</dd>
-    <dt>Album</dt><dd>${ph('Placeholder')}</dd>
-    <dt>Quality</dt><dd>${ph('Format placeholder')}</dd>
-    <dt>Speaker</dt><dd>${ph('Model and IP placeholder')}</dd>`;
+    <dt>Speakers</dt><dd>${esc((devices[cur] || []).join(', ') || 'None yet')}</dd>`;
   const q = $('idQueue'); q.innerHTML = '';
   if (L.source && SOURCES[L.source].tracks.length > 1){
     const tr = SOURCES[L.source].tracks, n = tr.length;
     q.innerHTML = '<h4>Up next</h4>';
-    for (let d = 1; d < n; d++){
+    for (let d = 1; d < Math.min(n, 3); d++){
       const idx = (L.track + d) % n, b = document.createElement('button');
       b.innerHTML = `${tr[idx]}<span>Play now</span>`;
       b.addEventListener('click', () => { L.track = idx; L.playing = true; log(`Play now: ${tr[idx]}`); buzz(); render(); });
@@ -1788,6 +2716,11 @@ $('sleepBtn').addEventListener('click', () => {
   const next = SLEEP_STEPS.find(v => v > now) ?? 0;
   setSleep(cur, next); toast(next ? `Music fades out in ${next} minutes` : 'Sleep timer off'); buzz();
 });
+/* v2.13: never rebuild the screen under a finger; a background update waits until the finger lifts */
+let fingerDown = false, renderOwed = false, lastSleepSig = '';
+document.addEventListener('pointerdown', () => { fingerDown = true; }, true);
+['pointerup','pointercancel'].forEach(ev => document.addEventListener(ev, () => { fingerDown = false; if (renderOwed){ renderOwed = false; setTimeout(render, 0); } }, true));
+function quietRender(){ if (fingerDown) renderOwed = true; else render(); }
 setInterval(() => {
   const now = Date.now(); let changed = false;
   rooms.forEach((r,i) => {
@@ -1802,7 +2735,9 @@ setInterval(() => {
     alarmFired = key; cur = alarm.room; applyScene('morning');
     log(`Morning alarm in ${names[alarm.room]}`); toast(`Good morning. Morning alarm in ${names[alarm.room]}.`); changed = true;
   }
-  if (changed) render(); else if (rooms.some(r => r.sleepAt)) render();
+  /* redraw only when something you can see has changed: a timer ended, the alarm fired, or a sleep countdown reached a new minute */
+  const sig = rooms.map(r => r.sleepAt ? Math.max(1, Math.ceil((r.sleepAt - now) / 60000)) : '').join();
+  if (changed || sig !== lastSleepSig){ lastSleepSig = sig; quietRender(); }
 }, 5000);
 
 /* ============ LOG / TOAST (Law Eight: keep the record) ============ */
@@ -1836,7 +2771,7 @@ function applyScene(id){
   if (id === 'cinema' && !tvOK(cur)){ toast(`Cinema needs a TV room. ${names[cur]} has none.`); return false; }
   if (sc.all) ALL().forEach(k => { if (k !== cur) joinGroup(k, cur); });
   const m = sc.everywhere ? ALL() : members(cur);
-  m.forEach(k => Object.assign(rooms[k], { light:sc.light, shades:sc.shades, scene:id }));
+  m.forEach(k => Object.assign(rooms[k], lighting ? { light:sc.light, shades:sc.shades, scene:id } : { scene:id }));
   if (sc.stop){ rooms.forEach(r => r.playing = false); }
   else {
     Object.assign(lead(cur), { source:sc.src, track:sc.track, playing:true });
@@ -1844,14 +2779,18 @@ function applyScene(id){
   }
   const where = sc.everywhere ? 'every room' : listNames(m);
   const what = sc.stop ? 'music off' : SOURCES[sc.src].tracks[sc.track];
-  log(`Scene ${sc.label} in ${where}: lights ${sc.light ? sc.light+'%' : 'off'}, shades ${sc.shades}, ${what}`);
+  log(`Scene ${sc.label} in ${where}: ${lighting ? `lights ${sc.light ? sc.light+'%' : 'off'}, shades ${sc.shades}, ` : ''}${what}`);
   toast(`${sc.label} set in ${where}`); buzz(); render();
 }
 grids.forEach(g => g.addEventListener('click', e => {
   const t = e.target.closest('.tile'); if (!t) return;
   const id = t.dataset.id;
+  if (id === 'linein') return openSourcePage();
+  if (id === 'radio') return openRadioPage();
   if (SOURCES[id]) return pickSource(id);
   if (SCENES[id]) return applyScene(id);
+  if (id === 'lights' && !lighting) return $('sleepBtn').click();
+  if (id === 'shades' && !lighting) return openSettings();
   if (id === 'lights'){
     const R = rooms[cur]; R.light = LIGHT_STEPS[(LIGHT_STEPS.indexOf(R.light)+1) % LIGHT_STEPS.length]; R.scene = null;
     log(`Lights ${R.light ? R.light+'%' : 'off'} in ${names[cur]}`); buzz(); return render();
@@ -1860,29 +2799,11 @@ grids.forEach(g => g.addEventListener('click', e => {
     const R = rooms[cur]; R.shades = SHADE_STEPS[(SHADE_STEPS.indexOf(R.shades)+1) % 3]; R.scene = null;
     log(`Shades ${R.shades} in ${names[cur]}`); buzz(); return render();
   }
-  if (id === 'rooms') return goRoom((cur+1)%N());
+  if (id === 'rooms'){ buzz(); return goRoom((cur + 1) % N()); }
   if (id === 'settings') return openSettings();
-  if (id === 'square'){ if (squareHeld){ squareHeld = false; } else wrongPress(t); return; }
-  if (id === 'group'){ if (t.dataset.held) delete t.dataset.held; else toast('Hold GROUP to choose which rooms play together'); }
+  if (id === 'square'){ if (squareHeld){ squareHeld = false; } else openSqConfirm(); return; }
+  if (id === 'group'){ buzz(); return openGroup(); }
 }));
-
-/* hold GROUP to open grouping page */
-allTiles('.tile.group').forEach(g => {
-  let raf, start;
-  const HOLD = 650;
-  const tick = () => {
-    const pct = Math.min(100, (performance.now()-start)/HOLD*100);
-    g.style.setProperty('--p', pct);
-    if (pct >= 100){ end(); g.dataset.held = '1'; buzz(); openGroup(); return; }
-    raf = requestAnimationFrame(tick);
-  };
-  const end = () => { cancelAnimationFrame(raf); g.classList.remove('holding'); g.style.setProperty('--p', 0); };
-  g.addEventListener('pointerdown', e => { delete g.dataset.held; try{ g.setPointerCapture(e.pointerId); }catch(_){} start = performance.now(); g.classList.add('holding'); raf = requestAnimationFrame(tick); });
-  ['pointerup','pointerleave','pointercancel'].forEach(ev => g.addEventListener(ev, end));
-  g.addEventListener('contextmenu', e => e.preventDefault());
-  g.addEventListener('keydown', e => { if (e.key==='Enter' || e.key===' '){ e.preventDefault(); openGroup(); } });
-});
-
 
 /* water drop: three rings spread from where you touched, in the room's colour */
 function waterDrop(t, e){
@@ -1909,8 +2830,8 @@ function renderRoomPage(){
     ['Source',  !!src, src ? src.label : 'None'],
     ['Volume',  !R.muted && !!(L.playing && src), R.muted ? 'Muted' : String(R.vol)],
     ['Group',   others.length > 0, m.length === N() ? 'All rooms together' : others.length ? 'With ' + listNames(others) : 'On its own'],
-    ['Lights',  R.light > 0, R.light ? R.light + '%' : 'Off'],
-    ['Shades',  R.shades !== 'open', R.shades.charAt(0).toUpperCase() + R.shades.slice(1)],
+    ...(lighting ? [['Lights',  R.light > 0, R.light ? R.light + '%' : 'Off'],
+    ['Shades',  R.shades !== 'open', R.shades.charAt(0).toUpperCase() + R.shades.slice(1)]] : []),
     ['Sleep',   !!mins, mins ? 'Fades out in ' + mins + ' min' : 'Off'],
     ['TV',      hasTV[cur] && L.source === 'tv', hasTV[cur] ? (L.source === 'tv' ? 'TV sound on' : 'Connected') : 'None']
   ];
@@ -1919,7 +2840,8 @@ function renderRoomPage(){
   $('rpName').textContent = disp(cur);
   $('rpSum').textContent = n ? `${n} ${n === 1 ? 'thing' : 'things'} happening in this room` : 'Nothing is happening in this room right now';
   $('rpList').innerHTML = rows.map(([k,on,v]) => `<li class="${on === 'info' ? 'info' : on ? '' : 'idle'}"><i class="led${on === true ? ' on' : ''}"></i><b>${k}</b><span>${esc(v)}</span></li>`).join('');
-  const d = (devices[cur] || []).map(x => `<li>${ICON.speaker}<b>${esc(x)}</b><span>${L.playing && src ? 'Playing' : 'Ready'}</span></li>`);
+  const dv = devices[cur] || [];
+  const d = dv.length ? [`<li>${ICON.speaker}<b>${esc(dv.join(' · '))}</b><span>${L.playing && src ? 'Playing' : 'Ready'}</span></li>`] : [];
   if (portable && portable.at === cur){
     const home = portable.at === portable.home, to = home ? tvRoom() : portable.home;
     d.push(`<li>${ICON.speaker}<b>${esc(portable.model)}</b><span>${home ? 'Portable' : 'Rear surround'}</span>` +
@@ -1943,7 +2865,47 @@ function closeRoomPage(){ const r = $('rpage'); r.classList.remove('open'); r.se
 $('activity').addEventListener('click', openRoomPage);
 $('rpDone').addEventListener('click', () => { closeRoomPage(); buzz(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape' && $('rpage').classList.contains('open')) closeRoomPage(); });
-$('np').addEventListener('click', openGroup);
+/* v2.9.6: the L. The raised corner of the now-playing bar holds GROUP */
+$('npGroup').querySelector('.np-gi').innerHTML = ICON.group;
+$('npGroup').addEventListener('click', () => { buzz(); openGroup(); });
+function sizeEar(){
+  const t = document.querySelector('.transport'), n = $('np'); if (!t || !n) return;
+  const h = n.getBoundingClientRect().top - t.getBoundingClientRect().top;
+  if (h > 0) $('npEar').style.height = Math.round(h) + 'px';
+  const th = Math.round(n.getBoundingClientRect().height);            /* v2.9.8: both arms of the L are the same thickness */
+  $('npEar').style.width = th + 'px';
+  t.style.setProperty('width', `calc(100% - ${th + 12}px)`, 'important');
+  drawOutline();
+}
+window.addEventListener('resize', sizeEar);
+/* v2.9.9: one 1 px outline around the whole L; rainbow of the room colours, flowing only while music plays here */
+function drawOutline(){
+  const svg = $('npOutline'), n = $('np'), e = $('npEar'); if (!svg) return;
+  const nr = n.getBoundingClientRect(), er = e.getBoundingClientRect();
+  const W = nr.width, H = nr.height, E = er.height, T = er.width; if (!W || !E) return;
+  svg.setAttribute('width', W); svg.setAttribute('height', E + H); svg.style.top = (-E) + 'px';
+  svg.setAttribute('viewBox', `0 0 ${W} ${E + H}`);
+  const o = .5, R = 20, F = 16, x0 = o, x1 = W - o, y0 = o, yb = E + o, y1 = E + H - o, ex = W - T + o;
+  const d = (
+    `M${x0 + R},${yb} L${ex - F},${yb} A${F},${F} 0 0 0 ${ex},${yb - F} L${ex},${y0 + R} A${R},${R} 0 0 1 ${ex + R},${y0} ` +
+    `L${x1 - R},${y0} A${R},${R} 0 0 1 ${x1},${y0 + R} L${x1},${y1 - R} A${R},${R} 0 0 1 ${x1 - R},${y1} ` +
+    `L${x0 + R},${y1} A${R},${R} 0 0 1 ${x0},${y1 - R} L${x0},${yb + R} A${R},${R} 0 0 1 ${x0 + R},${yb} Z`);
+  svg.querySelectorAll('path').forEach(pth => pth.setAttribute('d', d));
+  const g = $('npRb'), cs = ALL().map(i => pal(i).c), span = W + E;
+  g.setAttribute('x1', 0); g.setAttribute('y1', 0); g.setAttribute('x2', span); g.setAttribute('y2', 0);
+  const key = cs.join() + span;
+  if (g.dataset.k !== key){
+    g.dataset.k = key;
+    [...g.querySelectorAll('stop')].forEach(x => x.remove());
+    [...cs, cs[0]].forEach((c, k, arr) => { const st = document.createElementNS('http://www.w3.org/2000/svg','stop'); st.setAttribute('offset', k / (arr.length - 1)); st.setAttribute('stop-color', c); g.insertBefore(st, g.firstChild ? g.querySelector('animateTransform') : null); });
+    g.querySelector('animateTransform').setAttribute('to', `${span} 0`);
+  }
+  const live = roomLive(cur), still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  svg.querySelector('.line').setAttribute('stroke', live ? 'url(#npRb)' : 'rgba(255,255,255,.55)');
+  svg.querySelector('.line').setAttribute('stroke-width', live ? '1.5' : '1');
+  svg.querySelector('.glow').setAttribute('opacity', live ? '.45' : '0');
+  try { live && !still ? svg.unpauseAnimations() : svg.pauseAnimations(); } catch(_){}
+}
 $('gsq').addEventListener('click', () => { buzz(); openGroup(); });
 $('idBtn').addEventListener('click', () => { buzz(); toggleID(); });
 $('idClose').addEventListener('click', () => toggleID(false));
@@ -1957,8 +2919,8 @@ function stepVol(d){
   m.forEach(k => { rooms[k].muted = false; rooms[k].vol = Math.max(0, Math.min(100, rooms[k].vol + d)); });
   log(`Volume ${d>0?'up':'down'} in ${listNames(m)}`); buzz(); render();
 }
-$('volUp').addEventListener('click', () => stepVol(4));
-$('volDown').addEventListener('click', () => stepVol(-4));
+$('volUp').addEventListener('click', () => stepVol(2));
+$('volDown').addEventListener('click', () => stepVol(-2));
 $('muteBtn').addEventListener('click', () => {
   const m = members(cur), to = !m.every(k => rooms[k].muted);
   m.forEach(k => rooms[k].muted = to);
@@ -2064,6 +3026,7 @@ document.addEventListener('click', e => {
   if (squareHeld || performance.now() < swallowUntil){ squareHeld = false; swallowUntil = 0; e.stopPropagation(); e.preventDefault(); }
 }, true);
 function backToSquareOne(){
+  closeSqConfirm();
   undoSnap = { rooms: JSON.parse(JSON.stringify(rooms)), cur, mode, hush };
   const keep = rooms.map(r => ({ light:r.light, shades:r.shades }));   // never plunge anyone into the dark
   allTiles('.tile.square').forEach(sq => { sq.classList.add('straight'); setTimeout(()=>sq.classList.remove('straight'), 900); });
@@ -2074,16 +3037,39 @@ function backToSquareOne(){
   closeGroup(true); toggleID(false); document.querySelectorAll('.sheet.open').forEach(s => s.classList.remove('open'));
   log('Back to square one: rooms ungrouped, music stopped, volumes reset. Lights and shades left as they were.');
   $('toast').classList.remove('show');
-  const bar = $('undoBar'); $('undoMsg').textContent = 'Back to square one. Every room is on its own.';
-  bar.classList.add('show'); clearTimeout(undoTimer); undoTimer = setTimeout(() => { bar.classList.remove('show'); undoSnap = null; }, 10000);
-  render(); openHome(true);
+  render(); sqModal('done');
 }
-$('undoBtn').addEventListener('click', () => {
+function doUndo(){
   if (!undoSnap) return;
   rooms = undoSnap.rooms; cur = undoSnap.cur; hush = undoSnap.hush; setMode(undoSnap.mode, true);
   undoSnap = null; clearTimeout(undoTimer); $('undoBar').classList.remove('show'); closeHome();
   log('Undo: house restored to how it was'); toast('Undone. Everything is back how it was.'); buzz(); render();
-});
+}
+$('undoBtn').addEventListener('click', doUndo);
+/* v2.6.1: a tap asks on screen; the hold still works as a shortcut */
+let sqTimer = null;
+function sqModal(state){
+  const m = $('sqModal'); m.dataset.state = state;
+  if (state === 'ask'){
+    $('sqmTitle').textContent = 'Back to square one?';
+    $('sqmText').textContent = 'Every room stops and goes back to playing on its own. Volumes return to 30. Lights and shades stay as they are.';
+    $('sqmA').textContent = 'CANCEL'; $('sqmB').textContent = 'RESET';
+  } else {
+    $('sqmTitle').textContent = 'Done. Every room is on its own.';
+    $('sqmText').textContent = 'Changed your mind? UNDO puts the whole house back exactly how it was.';
+    $('sqmA').textContent = 'UNDO'; $('sqmB').textContent = 'OK';
+  }
+  $('toast').classList.remove('show'); m.classList.add('show'); buzz();
+  setTimeout(() => { try { (state === 'ask' ? $('sqmA') : $('sqmB')).focus({ preventScroll:true }); } catch(e) {} }, 50);
+}
+function closeSqModal(){ $('sqModal').classList.remove('show'); }
+$('sqmA').addEventListener('click', () => { const st = $('sqModal').dataset.state; closeSqModal(); if (st === 'ask') buzz(); else doUndo(); });
+$('sqmB').addEventListener('click', () => { if ($('sqModal').dataset.state === 'ask') backToSquareOne(); else { closeSqModal(); undoSnap = null; buzz(); openHome(true); } });
+function openSqConfirm(){ sqModal('ask'); return; const c = $('sqConfirm'); $('toast').classList.remove('show'); c.classList.add('show'); buzz();
+  clearTimeout(sqTimer); sqTimer = setTimeout(closeSqConfirm, 8000); setTimeout(() => { try{ $('sqNo').focus({ preventScroll:true }); }catch(e){} }, 50); }
+function closeSqConfirm(){ closeSqModal(); return; clearTimeout(sqTimer); $('sqConfirm').classList.remove('show'); }
+$('sqNo').addEventListener('click', () => { closeSqConfirm(); buzz(); });
+$('sqYes').addEventListener('click', () => { closeSqConfirm(); backToSquareOne(); });
 /* hold the square: it straightens as the hold fills, then springs */
 allTiles('.tile.square').forEach(sq => {
   let raf, start;
@@ -2098,8 +3084,8 @@ allTiles('.tile.square').forEach(sq => {
   sq.addEventListener('pointerdown', e => { squareHeld = false; try{ sq.setPointerCapture(e.pointerId); }catch(_){} audio(); start = performance.now(); sq.classList.add('arming'); raf = requestAnimationFrame(tick); });
   ['pointerup','pointerleave','pointercancel'].forEach(ev => sq.addEventListener(ev, end));
   sq.addEventListener('contextmenu', e => e.preventDefault());
-  sq.setAttribute('aria-label', 'Back to square one. Hold to reset every room. Undo appears afterwards.');
-  sq.addEventListener('keydown', e => { if (e.key==='Enter' || e.key===' '){ e.preventDefault(); backToSquareOne(); } });
+  sq.setAttribute('aria-label', 'Back to square one. Tap to reset every room; you confirm first, and Undo appears afterwards.');
+  sq.addEventListener('keydown', e => { if (e.key==='Enter' || e.key===' '){ e.preventDefault(); openSqConfirm(); } });
 });
 
 /* ============ GROUPING PAGE ============ */
@@ -2118,8 +3104,20 @@ function closeGroup(silent){
 }
 function renderGroup(){
   const m = members(cur);
-  $('gLead').innerHTML = `Tap a room to add it to <b>${esc(names[cur])}</b> or take it out.`;
+  const L0 = lead(cur), src0 = L0.source ? SOURCES[L0.source] : null;
+  $('gTitle').textContent = m.length > 1 ? `${m.length} rooms together` : 'Group rooms';
+  $('gLead').innerHTML = `Tap a room to add it to <b>${esc(names[cur])}</b> or take it out. ` +
+    (src0 && L0.playing ? `Every room in the group plays <b>${esc(src0.tracks[L0.track % src0.tracks.length])}</b>.`
+      : `<b>Nothing is playing yet.</b> Pick a source and ${m.length > 1 ? 'all ' + m.length + ' rooms' : 'the group'} will play it.`);
   $('onlyBtn').textContent = `${names[cur]} only`;
+  { /* v2.11: GROUP VOLUME, every room in the group moves together */
+    const v = Math.round(m.reduce((a,k) => a + rooms[k].vol, 0) / m.length), cs = m.map(k => pal(k).c);
+    $('gvNum').textContent = m.every(k => rooms[k].muted) ? '—' : v; $('gvFill').style.width = v + '%';
+    $('gvLabel').textContent = m.length > 1 ? `GROUP VOLUME · ${m.length} ROOMS` : `${names[cur].toUpperCase()} VOLUME`;
+    const g = cs.length > 1 ? [...cs, cs[0]] : [cs[0], '#ffffff', cs[0], '#ffffff', cs[0]];
+    $('gvol').style.setProperty('--gb', `linear-gradient(90deg, ${g.join(', ')})`);
+    $('gvol').classList.toggle('live', !!(L0.playing && L0.source));
+  }
   const rows = $('rcards'); rows.innerHTML = ''; rows.dataset.n = N();
   ALL().forEach(i => {
     const inG = m.includes(i), here = i === cur, L = lead(i);
@@ -2133,7 +3131,11 @@ function renderGroup(){
     row.querySelector('.gtog').addEventListener('click', () => {
       if (here){ toast(`${names[cur]} is the room you are grouping from`); return; }
       if (inG){ removeFromGroup(i); log(`Remove ${names[i]} from group`); }
-      else { joinGroup(i, cur); log(`Add ${names[i]} to ${names[cur]}`); }
+      else {
+        const was = (lead(i).playing && lead(i).source && members(i).length === 1) ? SOURCES[lead(i).source].label : null;
+        joinGroup(i, cur); log(`Add ${names[i]} to ${names[cur]}`);
+        if (was) toast(`${names[i]} stopped ${was} and joined ${names[cur]}`);
+      }
       buzz(); render(); renderGroup();
     });
     const inp = row.querySelector('input'), out = row.querySelector('output');
@@ -2152,14 +3154,28 @@ $('allBtn').addEventListener('click', () => {
   ALL().forEach(k => { if (k !== cur) joinGroup(k, cur); });
   log('All rooms together'); buzz(); render(); renderGroup();
 });
+function groupVol(d){
+  const m = members(cur);
+  m.forEach(k => { rooms[k].muted = false; rooms[k].vol = Math.max(0, Math.min(100, rooms[k].vol + d)); });
+  log(`Group volume ${d > 0 ? 'up' : 'down'}: ${listNames(m)}`); buzz(); render(); renderGroup();
+}
+$('gvUp').addEventListener('click', () => groupVol(2));
+$('gvDown').addEventListener('click', () => groupVol(-2));
 $('doneBtn').addEventListener('click', () => { closeGroup(false); buzz(); });
 
 /* ============ SETTINGS ============ */
+function setSettingsTab(sec){
+  document.querySelectorAll('.stab').forEach(t => t.setAttribute('aria-selected', t.dataset.sec === sec));
+  document.querySelectorAll('.ssec').forEach(x => x.hidden = x.dataset.sec !== sec);
+}
+document.querySelectorAll('.stab').forEach(t => t.addEventListener('click', () => { setSettingsTab(t.dataset.sec); buzz(); }));
 function openSettings(){
+  setSettingsTab('rooms');
   const f = $('nameFields'); f.innerHTML = '';
   ALL().forEach(i => { const p = pal(i);
     f.insertAdjacentHTML('beforeend', `<div class="field" style="--c:${p.c}"><i></i><input aria-label="Name for room ${i+1}" maxlength="18" value="${names[i].replace(/"/g,'&quot;')}"><label><input type="checkbox" class="tvbox" ${hasTV[i]?'checked':''}> TV</label></div>`);
   });
+  $('lightOn').checked = lighting;
   $('alOn').checked = alarm.on; $('alTime').value = alarm.time;
   $('alRoom').innerHTML = names.map((n,i)=>`<option value="${i}" ${i===alarm.room?'selected':''}>${n}</option>`).join('');
   $('settings').classList.add('open');
@@ -2168,16 +3184,25 @@ $('sCancel').addEventListener('click', () => $('settings').classList.remove('ope
 $('sSave').addEventListener('click', () => {
   const vals = [...$('nameFields').querySelectorAll('input:not([type=checkbox])')].map((inp,i) => inp.value.trim() || pal(i).def);
   names = vals; hasTV = [...$('nameFields').querySelectorAll('.tvbox')].map(c => c.checked);
+  lighting = $('lightOn').checked; try { localStorage.setItem('sonosPanelLighting', lighting ? '1' : '0'); } catch(e) {}
   alarm = { on:$('alOn').checked, time:$('alTime').value || '07:00', room:+$('alRoom').value };
   saveHouse();
   $('settings').classList.remove('open'); log('Settings saved'); toast('Settings saved'); render();
 });
 
 /* ============ LOG SHEET ============ */
-$('logBtn').addEventListener('click', () => {
-  $('logList').innerHTML = logEntries.length ? logEntries.map(e => `<li><time>${e.t}</time>${e.msg}</li>`).join('') : '<li>No commands yet. Tap a source to start.</li>';
-  $('logSheet').classList.add('open');
-});
+/* v2.7: the record turns pages; it never scrolls */
+const LOG_PAGE = 8; let logPg = 0;
+function renderLog(){
+  const pages = Math.max(1, Math.ceil(logEntries.length / LOG_PAGE)); logPg = Math.min(logPg, pages - 1);
+  const slice = logEntries.slice(logPg * LOG_PAGE, logPg * LOG_PAGE + LOG_PAGE);
+  $('logList').innerHTML = slice.length ? slice.map(e => `<li><time>${e.t}</time>${esc(e.msg)}</li>`).join('') : '<li>No commands yet. Tap a source to start.</li>';
+  $('logPage').textContent = `Page ${logPg + 1} of ${pages} · newest first`;
+  $('logNewer').disabled = logPg === 0; $('logOlder').disabled = logPg >= pages - 1;
+}
+$('logBtn').addEventListener('click', () => { logPg = 0; renderLog(); $('logSheet').classList.add('open'); });
+$('logNewer').addEventListener('click', () => { logPg = Math.max(0, logPg - 1); renderLog(); buzz(); });
+$('logOlder').addEventListener('click', () => { logPg++; renderLog(); buzz(); });
 $('logClose').addEventListener('click', () => $('logSheet').classList.remove('open'));
 document.querySelectorAll('.sheet').forEach(s => s.addEventListener('click', e => { if (e.target === s) s.classList.remove('open'); }));
 document.addEventListener('keydown', e => {
@@ -2195,7 +3220,8 @@ let rec = null, listening = false, speakOut = true, pending = null;
 
 function bubble(who, text){
   const b = document.createElement('div'); b.className = 'bub ' + who; b.textContent = text;
-  $('vLog').appendChild(b); $('vLog').scrollTop = $('vLog').scrollHeight;
+  const v = $('vLog'); v.appendChild(b);
+  while (v.children.length > 1 && v.scrollHeight > v.clientHeight + 1) v.firstElementChild.remove();   /* v2.7: older lines go to the command log, the box never scrolls */
 }
 function say(text){
   bubble('panel', text); log('Voice reply: ' + text);
@@ -2216,10 +3242,7 @@ function chips(list){
     b.addEventListener('click', () => handle(t)); c.appendChild(b);
   });
 }
-const defaultChips = () => chips([
-  `Dinner in the ${names[1]} and ${names[3]}`, 'Goodnight in 30 minutes', `Play jazz in the ${names[2]}`,
-  'Wake me at 7', "What's playing?", 'Group all rooms'
-]);
+const defaultChips = () => chips([`Dinner in the ${names[1]}`, `Play jazz in the ${names[2] || names[0]}`, "What's playing?", 'Group all rooms']);
 
 function openVoice(){
   const v = $('voice'); v.classList.add('open'); $('orb').setAttribute('aria-expanded','true');
@@ -2352,7 +3375,7 @@ function understand(t){
     if (id === 'cinema' && !tvOK(cur)) return say(`The ${names[cur]} has no TV. Try Cinema in the ${names[hasTV.indexOf(true)] || 'TV room'}.`);
     applyScene(id); m = members(cur);
     const S = SCENES[id];
-    return say(`${m.length > 1 && R.list.length > 1 ? listNames(m) + ' grouped. ' : ''}${S.label} is set in ${where(m)}: lights ${S.light ? S.light + '%' : 'off'}, ${SOURCES[S.src].tracks[S.track]} playing.`);
+    return say(`${m.length > 1 && R.list.length > 1 ? listNames(m) + ' grouped. ' : ''}${S.label} is set in ${where(m)}: ${lighting ? `lights ${S.light ? S.light + '%' : 'off'}, ` : ''}${SOURCES[S.src].tracks[S.track]} playing.`);
   }
 
   if (/\b(ungroup|separate|split|by itself|on its own|alone)\b/.test(t) || (/\bonly\b/.test(t) && R.list.length === 1)){
@@ -2375,6 +3398,7 @@ function understand(t){
   if (/louder|volume up|turn it up|pump it|crank/.test(t)){ m = focus(R.list); m.forEach(k => { rooms[k].vol = Math.min(100, rooms[k].vol + 8); rooms[k].muted = false; }); return say(`Louder in ${where(m)}.`); }
   if (/quieter|softer|volume down|turn it down|too loud|lower the/.test(t)){ m = focus(R.list); m.forEach(k => rooms[k].vol = Math.max(0, rooms[k].vol - 8)); return say(`Softer in ${where(m)}.`); }
 
+  if (!lighting && /\blights?\b|\bdim\b|shades?|blinds|curtains|drapes/.test(t)) return say('This house has no lighting system connected to the panel.');
   if (/\blights?\b|\bdim\b/.test(t)){
     const targets = R.list.length ? R.list : [cur];
     let lv = null; const pc = t.match(/(\d{1,3})\s*(%|percent)/);
@@ -2392,11 +3416,14 @@ function understand(t){
   }
 
   const srcWord = [
+    ['spotify',-1,/spotify/],['applemusic',-1,/apple music/],['ytmusic',-1,/you ?tube/],['amazon',-1,/amazon/],['tidal',-1,/\btidal\b/],
+    ['qobuz',-1,/qobuz/],['pandora',-1,/pandora/],['deezer',-1,/deezer/],['siriusxm',-1,/sirius/],['iheart',-1,/i ?heart/],
+    ['tunein',-1,/tune ?in\b/],['soundcloud',-1,/sound ?cloud/],['airplay',-1,/air ?play/],['bt',-1,/bluetooth/],['cd',-1,/\bcd\b/],
     ['radio',0,/\bjazz\b/],['radio',1,/\bnews\b/],['radio',2,/\bsoul\b/],
     ['playlists',0,/m[öo]bius/],['playlists',1,/desert drive/],['playlists',2,/pam.?pam/],
     ['fav',-1,/favou?rites?/],['playlists',-1,/playlists?/],['radio',-1,/\bradio\b|station/],
     ['library',-1,/library|my music|vinyl|collection/],['tv',-1,/\btv\b|television/],['podcasts',-1,/podcast/],
-    ['linein',-1,/line.?in|\bsource\b|turntable|record player/],['phone',-1,/my phone|\bphone\b/]
+    ['linein',-1,/line.?in|turntable|record player/],['phone',-1,/my phone|\bphone\b/]
   ];
   const sw = srcWord.find(([,,re]) => re.test(t));
   if (sw){
@@ -2499,6 +3526,7 @@ function openSetup(){
 function closeSetup(){
   const s = $('setup'); s.classList.remove('open'); s.setAttribute('aria-hidden','true'); suTint(null); su = null;
   try { localStorage.setItem('sonosPanelSetup','done'); } catch(e) {}
+  setupDone = true;
   render();
 }
 function suProg(){
@@ -2514,8 +3542,8 @@ function drawSetup(){
   if (su.step === 'welcome'){
     h = `<div class="su-top"><span class="su-step">First-time setup</span>${suProg()}</div>
       <h2 class="su-h" id="suH" tabindex="-1">Let's set up your house</h2>
-      <p class="lead">In this demo the panel finds <b>${n} sample speakers</b>. Nothing here is connected to a real system. You'll give each one a room and a colour. That colour is how you'll always know where your music is playing.</p>
-      <div class="su-list">${FOUND.map(f => `<div class="su-row">${ICON.speaker}<div><b>${f.model}</b><span>${f.kind}, not set up yet</span></div></div>`).join('')}</div>
+      <p class="lead">The panel found <b>${n} sample speakers</b> (a demo, nothing real is connected). Give each one a room and a colour; that colour is how you'll always know where your music is playing.</p>
+      <div class="su-list su-grid">${FOUND.map(f => `<div class="su-row">${ICON.speaker}<div><b>${f.model}</b><span>${f.kind.split(',')[0]}</span></div></div>`).join('')}</div>
       <button class="su-go" id="suNext">Set up the first speaker</button>
       <button class="su-alt" id="suSkip">Skip and use the sample house</button>
       <button class="su-alt" id="suDemo">Or try the Amp Multi Saturday demo</button>`;
@@ -2738,13 +3766,107 @@ $('dmHide').addEventListener('click', () => { $('demo').hidden = true; $('demoCh
 $('demoChip').addEventListener('click', () => { $('demo').hidden = false; $('demoChip').hidden = true; renderDemo(); });
 $('demoBtn').addEventListener('click', startDemo);
 
-log('Panel ready'); render();
-let setupDone = false;
-try { setupDone = localStorage.getItem('sonosPanelSetup') === 'done'; } catch(e) {}
-if (/[?&#]demo\b/.test(location.search + location.hash)) startDemo();
+/* ============ v2.12: THE PANEL REMEMBERS ============
+   Three layers, newest wins:
+   1. localStorage  - survives closing the browser (works on the GitHub page)
+   2. history.state - survives a reload or Android discarding the tab, even where storage is blocked
+   3. window.name   - the same, as a second net
+   Saved: rooms (groups, source, track, play, volume, mute, lights, shades, scene, sleep), the room you're on,
+   the tab, HUSH and its RESUME list, the Amp Multi house, the listener and portable, and the command log. */
+const LIVE_KEY = 'sonosPanelLive', LIVE_V = 1;
+let liveReady = false, liveTimer = null;
+function liveSnap(){
+  return { v:LIVE_V, t:Date.now(), pal:roomPal, amp:zones.length > 0, rooms, cur, mode,
+    home:$('home').classList.contains('open'), setup:setupDone, hush, lastResume, portable, ace, log:logEntries.slice(0, 40) };
+}
+function writeLive(){
+  if (!liveReady) return;
+  const snap = liveSnap(), json = JSON.stringify(snap);
+  try { localStorage.setItem(LIVE_KEY, json); } catch(e) {}
+  try { history.replaceState(Object.assign({}, history.state || {}, { [LIVE_KEY]:snap }), ''); } catch(e) {}
+  try { window.name = LIVE_KEY + ':' + json; } catch(e) {}
+}
+function saveLive(){ if (!liveReady) return; clearTimeout(liveTimer); liveTimer = setTimeout(writeLive, 400); }
+addEventListener('pagehide', () => { clearTimeout(liveTimer); writeLive(); });
+document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden'){ clearTimeout(liveTimer); writeLive(); } });
+function readLive(){
+  const c = [];
+  try { c.push(JSON.parse(localStorage.getItem(LIVE_KEY) || 'null')); } catch(e) {}
+  try { c.push(history.state && history.state[LIVE_KEY]); } catch(e) {}
+  try { if (window.name.startsWith(LIVE_KEY + ':')) c.push(JSON.parse(window.name.slice(LIVE_KEY.length + 1))); } catch(e) {}
+  return c.filter(x => x && x.v === LIVE_V && Array.isArray(x.rooms)).sort((a, b) => b.t - a.t)[0] || null;
+}
+function restoreLive(){
+  const S = readLive(); if (!S) return null;
+  if (S.amp) useAmpHouse(true);
+  else if (JSON.stringify(S.pal) !== JSON.stringify(roomPal)) return null;      /* a different house: start clean */
+  if (S.rooms.length !== N()) return null;
+  const base = () => ({ vol:30, muted:false, coord:0, playing:false, source:null, track:0, light:0, shades:'open', scene:null, sleepAt:null, by:null });
+  rooms = S.rooms.map((x, i) => {
+    const r0 = Object.assign(base(), x);
+    r0.coord = Number.isInteger(r0.coord) && r0.coord >= 0 && r0.coord < N() ? r0.coord : i;
+    r0.vol = Math.max(0, Math.min(100, +r0.vol || 0));
+    if (r0.source && !SOURCES[r0.source]) { r0.source = null; r0.playing = false; }
+    return r0;
+  });
+  rooms.forEach((r0, i) => { if (rooms[r0.coord].coord !== r0.coord) r0.coord = i; });   /* every group must lead from a real leader */
+  cur = Number.isInteger(S.cur) && S.cur >= 0 && S.cur < N() ? S.cur : 0;
+  hush = S.hush && Array.isArray(S.hush.paused) ? S.hush : null;
+  lastResume = S.lastResume || '';
+  if (S.amp){ if (S.portable) portable = S.portable; if (S.ace) ace = S.ace; }
+  if (Array.isArray(S.log)) logEntries = S.log.filter(e => e && e.t && e.msg);
+  return S;
+}
+
+{ const f = $('frame'); f.addEventListener('scroll', () => { if (f.scrollTop || f.scrollLeft){ f.scrollTop = 0; f.scrollLeft = 0; } }); }
+const isDemo = /[?&#]demo\b/.test(location.search + location.hash);
+const restored = isDemo ? null : restoreLive();
+if (restored){
+  const g = ALL().filter(i => members(i).length > 1 && coordOf(i) === i).length, p = ALL().filter(i => roomLive(i)).length;
+  log(`Panel restored as you left it${g ? `: ${g} group${g > 1 ? 's' : ''}` : ''}${p ? `, music in ${p} room${p > 1 ? 's' : ''}` : ''}`);
+} else log('Panel ready');
+render();
+let setupDone = !!(restored && restored.setup);
+try { setupDone = setupDone || localStorage.getItem('sonosPanelSetup') === 'done'; } catch(e) {}
+if (isDemo) startDemo();
 else if (!setupDone) openSetup();
-/* v2.2: the app opens on HOME */
-setMode('music', true); render(); openHome(true);
+/* v2.2: the app opens on HOME; v2.12: a restored panel returns to the tab it was on */
+/* v2.14: the app always opens on HOME; the house itself (groups, music, volumes) is still remembered */
+setMode(restored && ['music','playing','scenes'].includes(restored.mode) ? restored.mode : 'music', true); render(); openHome(true);
+liveReady = true; writeLive();
+/* v2.14: SPLASH. Total black, a big white SONOS; it glides into the corner sign while the black fades to Home */
+(function splash(){
+  const sp = $('splash'), w = $('splashWord'), bf = $('brandFix'); if (!sp) return;
+  bf.style.opacity = '0';
+  let done = false;
+  const finish = () => { if (done) return; done = true; bf.style.transition = 'opacity .2s ease'; bf.style.opacity = ''; sp.remove();
+    if (restored) setTimeout(() => toast('Welcome back: the house is as you left it'), 250); };
+  let started = false;
+  const go = () => {
+    if (started) return; started = true;
+    placeBrand();
+    const tn = [...bf.querySelector('.title').childNodes].find(n => n.nodeType === 3 && n.textContent.trim());
+    let tr = null; if (tn){ const rg = document.createRange(); rg.selectNodeContents(tn); tr = rg.getBoundingClientRect(); }
+    const wr = w.getBoundingClientRect();
+    const glide = tr && tr.width > 0 && !matchMedia('(prefers-reduced-motion: reduce)').matches;
+    sp.classList.add('go');
+    if (glide){
+      /* measure the splash word exactly like the corner sign (as text), so it lands on the same pixel */
+      const rg2 = document.createRange(); rg2.selectNodeContents(w.firstChild); const wt = rg2.getBoundingClientRect();
+      const k = tr.width / wt.width, dx = tr.left - wr.left - k * (wt.left - wr.left), dy = tr.top - wr.top - k * (wt.top - wr.top);
+      w.style.transform = `translate(${dx}px, ${dy}px) scale(${k})`;
+    }
+    setTimeout(finish, glide ? 900 : 500);
+  };
+  /* a tap skips the splash and does nothing else: the splash keeps the whole gesture, so nothing underneath is pressed */
+  sp.addEventListener('pointerdown', e => { e.preventDefault(); sp.classList.add('hold'); go(); });
+  const release = e => { if (e) { e.preventDefault(); e.stopPropagation(); } setTimeout(() => sp.classList.remove('hold'), 0); };
+  sp.addEventListener('click', release, true);
+  sp.addEventListener('pointercancel', () => release());
+  setTimeout(() => sp.classList.remove('hold'), 3200);
+  (document.fonts && document.fonts.ready ? document.fonts.ready : Promise.resolve()).then(() => setTimeout(go, 1150));
+  setTimeout(go, 2500);   /* never wait longer than this, fonts or not */
+})();
 </script>
 </body>
 </html>
