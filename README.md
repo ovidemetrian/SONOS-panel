@@ -3,7 +3,7 @@
 > A whole-home audio controller built on one idea: the house should be understood at a glance.
 
 **▶ Live demo:** [ovidemetrian.github.io/SONOS-panel](https://ovidemetrian.github.io/SONOS-panel/)
-**▶ Saturday demo (Amp Multi house):** [ovidemetrian.github.io/SONOS-panel/?demo](https://ovidemetrian.github.io/SONOS-panel/?demo)
+**▶ Guided tour (watch it play itself):** [ovidemetrian.github.io/SONOS-panel/demo.html](https://ovidemetrian.github.io/SONOS-panel/demo.html)
 Open it on any phone or tablet. No install, no account, no sign-in.
 
 ---
@@ -135,7 +135,7 @@ The proposed path is a small hub inside the house that talks to the speakers ove
 - Phone-native layout that fits every screen without scrolling, from small Android phones to large iPhones
 - Saves its state on the device, in three layers, so it survives reloads even where browser storage is restricted
 - Voice features depend on the browser's speech support, which varies by browser and device
-- Add `?demo` to the address to open straight into the Saturday demo
+- `demo.html` (or `?demo`) opens the guided tour: a finger walks through six rooms, Home, Group, Scenes, HUSH and Square One. Touch the screen to take over. The Amp Multi Saturday demo is still in Settings › HOUSE.
 - **All music, lighting, shade, speaker, headphone and network behaviour is simulated.** This is an interface concept and does not connect to real speakers or smart-home devices.
 
 ### Tested
